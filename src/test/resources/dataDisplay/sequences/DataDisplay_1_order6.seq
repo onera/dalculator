@@ -1,0 +1,41 @@
+products(MCS('Display_Obs.Out.lost')) = 
+{'DC.fail_loss', 'DL.fail_loss', 'DR.fail_loss'}
+{'SC.fail_loss', 'SL.fail_loss', 'SR.fail_loss'}
+{'DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SL_to_DL.fail_loss', 'SR.fail_loss'}
+{'DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SR_to_DR.fail_loss', 'DL.fail_loss'}
+{'DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DL.fail_loss', 'SR.fail_loss'}
+{'DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'SL.fail_loss', 'SR.fail_loss'}
+{'DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'DF_SR_to_DL.fail_loss', 'DR.fail_loss'}
+{'DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'DR.fail_loss', 'SR.fail_loss'}
+{'DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'SC.fail_loss', 'SR.fail_loss'}
+{'DC.fail_loss', 'DF_SR_to_DL.fail_loss', 'DR.fail_loss', 'SL.fail_loss'}
+{'DC.fail_loss', 'DF_SR_to_DR.fail_loss', 'DL.fail_loss', 'SC.fail_loss'}
+{'DC.fail_loss', 'DL.fail_loss', 'SC.fail_loss', 'SR.fail_loss'}
+{'DC.fail_loss', 'DR.fail_loss', 'SL.fail_loss', 'SR.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'SL.fail_loss', 'SR.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SL_to_DC.fail_loss', 'DL.fail_loss', 'DR.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SR_to_DL.fail_loss', 'DR.fail_loss', 'SL.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DL.fail_loss', 'DR.fail_loss', 'SL.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DR.fail_loss', 'SL.fail_loss', 'SR.fail_loss'}
+{'DF_SL_to_DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'SC.fail_loss', 'SR.fail_loss'}
+{'DF_SL_to_DC.fail_loss', 'DF_SR_to_DR.fail_loss', 'DL.fail_loss', 'SC.fail_loss'}
+{'DF_SL_to_DC.fail_loss', 'DL.fail_loss', 'DR.fail_loss', 'SC.fail_loss'}
+{'DF_SL_to_DC.fail_loss', 'DL.fail_loss', 'SC.fail_loss', 'SR.fail_loss'}
+{'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss', 'SC.fail_loss', 'SL.fail_loss'}
+{'DF_SR_to_DL.fail_loss', 'DR.fail_loss', 'SC.fail_loss', 'SL.fail_loss'}
+{'DF_SR_to_DR.fail_loss', 'DL.fail_loss', 'SC.fail_loss', 'SL.fail_loss'}
+{'DL.fail_loss', 'DR.fail_loss', 'SC.fail_loss', 'SL.fail_loss'}
+{'DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SL_to_DL.fail_loss', 'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss'}
+{'DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss', 'SL.fail_loss'}
+{'DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss', 'SC.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SL_to_DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'SR.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SL_to_DC.fail_loss', 'DF_SR_to_DR.fail_loss', 'DL.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SL_to_DC.fail_loss', 'DL.fail_loss', 'SR.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss', 'SL.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SR_to_DR.fail_loss', 'DL.fail_loss', 'SL.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SL_to_DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'DF_SR_to_DL.fail_loss', 'DR.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SL_to_DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'DR.fail_loss', 'SR.fail_loss'}
+{'DF_SL_to_DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss', 'SC.fail_loss'}
+{'DF_SL_to_DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'DF_SR_to_DL.fail_loss', 'DR.fail_loss', 'SC.fail_loss'}
+{'DF_SC_to_DC.fail_loss', 'DF_SC_to_DR.fail_loss', 'DF_SL_to_DC.fail_loss', 'DF_SL_to_DL.fail_loss', 'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss'}
+end

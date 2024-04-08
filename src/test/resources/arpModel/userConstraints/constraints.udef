@@ -1,0 +1,39 @@
+//constraint L1 <=C
+Dal('Accumulator' Lt B)
+//constraint L2 = L2 = U1 = U2
+Dal('Alt_EmerMeterValve_L' Eq 'Alt_EmerMeterValve_R')
+//constraint L4 = L5 = U3 = U4
+Dal('CCF_HW_COM_MON_Incorrect' Eq 'CCF_HW_COM_MON_Loss')
+//constraint L6 = L7 = U5 = U6
+Dal('CCF_SW_COM_Incorrect' Eq 'CCF_SW_COM_Loss')
+//constraint L8 = L9 = U7 = U8
+Dal('CCF_SW_MON_Incorrect' Eq 'CCF_SW_MON_Loss')
+//constraint L10 = L11 = L12 = L13 = U9 = U10= U11
+Dal('Command1' Eq 'Command2')
+//constraint >= L6
+Dal('Command1' Ge 'CCF_SW_COM_Incorrect')
+Dal('Command2' Ge 'CCF_SW_COM_Incorrect')
+//constraint L15 = L16
+Dal('HYD1' Eq 'HYD2')
+//constraint L15, L16 >= B
+Dal('HYD1' Ge B)
+Dal('HYD2' Ge B)
+//constraint L17 = L18 = L19 = L20 = U13 = U14 = U15
+Dal('InternalPower1' Eq 'InternalPower2')
+//constraint L21 = L22 = L23
+Dal('IsolationValve1' Eq 'IsolationValve2')
+//constraint L24 = L25 = L26 = U16 = U17 = U18
+Dal('Monitor1' Eq 'Monitor2')
+//constraint  >= L8
+Dal('Monitor1' Ge 'CCF_SW_MON_Incorrect')
+Dal('Monitor2' Ge 'CCF_SW_MON_Incorrect')
+//constraint L27 = L28 = L29 = L30 = U19 = U20 = U21
+Dal('PWR1' Eq 'PWR2')
+//constraint L27, L28 >= C
+Dal('PWR1' Ge C)
+Dal('PWR2' Ge C)
+//constraint L31 = L32 = L33 = U22 = U23 = U24
+Dal('PowerMonitor1' Eq 'PowerMonitor2')
+//constraint L34 = L35=  L36 = U25 = U26 = U27 => natively considered
+//constraint L37 = L38 = L39 => natively considered
+//constraint L40 = L41 => natively considered

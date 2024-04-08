@@ -1,0 +1,52 @@
+Coloc('DL', 'SL', 'DF_SL_to_DL', 'DF_SL_to_DR')
+
+Dal('DF_SR_to_DR' Eq B)
+Dal('DL' Eq 'DF_SR_to_DR')
+
+Cost('DL', A) = 166
+Cost('DL', B) = 158
+Cost('DL', C) = 137
+Cost('DL', D) = 105
+Cost('DL', E) = 100
+
+Cost('DR', A) = 322
+Cost('DR', B) = 307
+Cost('DR', C) = 267
+Cost('DR', D) = 205
+Cost('DR', E) = 200
+
+Cost('SL', A) = 10
+Cost('SL', B) = 9
+Cost('SL', C) = 8
+Cost('SL', D) = 6
+Cost('SL', E) = 5
+
+Cost('SR', A) = 48
+Cost('SR', B) = 46
+Cost('SR', C) = 40
+Cost('SR', D) = 31
+Cost('SR', E) = 30
+
+Cost('DF_SL_to_DR', A) = 73
+Cost('DF_SL_to_DR', B) = 70
+Cost('DF_SL_to_DR', C) = 61
+Cost('DF_SL_to_DR', D) = 47
+Cost('DF_SL_to_DR', E) = 45
+
+Cost('DF_SL_to_DL', A) = 423
+Cost('DF_SL_to_DL', B) = 403
+Cost('DF_SL_to_DL', C) = 350
+Cost('DF_SL_to_DL', D) = 269
+Cost('DF_SL_to_DL', E) = 256
+
+Cost('DF_SR_to_DL', A) = 150
+Cost('DF_SR_to_DL', B) = 143
+Cost('DF_SR_to_DL', C) = 124
+Cost('DF_SR_to_DL', D) = 95
+Cost('DF_SR_to_DL', E) = 90
+
+Cost('DF_SR_to_DR', A) = 3
+Cost('DF_SR_to_DR', B) = 3
+Cost('DF_SR_to_DR', C) = 2
+Cost('DF_SR_to_DR', D) = 2
+Cost('DF_SR_to_DR', E) = 2

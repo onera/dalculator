@@ -1,0 +1,75 @@
+/*
+orders(MCS('FC_Untimely_Braking')) =
+orders	product-number
+1	2
+2	15
+3	47
+total	64
+end
+*/
+products(MCS('FC_Untimely_Braking')) =
+{'CCF_HW_COM_MON_Incorrect'}
+{'ElectricalBrakeUnit.Intempestive_Braking'}
+{'CCF_SW_COM_Incorrect', 'CCF_SW_MON_Incorrect'}
+{'CCF_SW_COM_Incorrect', 'Monitor1.Incorrect_Behavior'}
+{'CCF_SW_COM_Incorrect', 'Monitor2.Incorrect_Behavior'}
+{'CCF_SW_COM_Incorrect', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'CCF_SW_COM_Incorrect', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'CCF_SW_MON_Incorrect', 'Command1.Incorrect_Behavior'}
+{'Command1.Incorrect_Behavior', 'Monitor1.Incorrect_Behavior'}
+{'Command1.Incorrect_Behavior', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'Command2.Incorrect_Behavior', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'InternalPower1.Degraded', 'PowerMonitor1.Incorrect'}
+{'InternalPower1.Degraded', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'InternalPower2.Degraded', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'PWR1.Degraded', 'PowerMonitor1.Incorrect'}
+{'PWR1.Degraded', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'PWR2.Degraded', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'Alt_EmerMeterValve_L.Untimely_On', 'Alt_EmerMeterValve_R.Untimely_On', 'CCF_HW_COM_MON_Loss'}
+{'Alt_EmerMeterValve_L.Untimely_On', 'Alt_EmerMeterValve_R.Untimely_On', 'CCF_SW_COM_Incorrect'}
+{'Alt_EmerMeterValve_L.Untimely_On', 'Alt_EmerMeterValve_R.Untimely_On', 'CCF_SW_COM_Loss'}
+{'Alt_EmerMeterValve_L.Untimely_On', 'Alt_EmerMeterValve_R.Untimely_On', 'CCF_SW_MON_Loss'}
+{'Alt_EmerMeterValve_L.Untimely_On', 'Alt_EmerMeterValve_R.Untimely_On', 'Selection_Mgt.Loss'}
+{'CCF_HW_COM_MON_Loss', 'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior'}
+{'CCF_HW_COM_MON_Loss', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'CCF_SW_COM_Incorrect', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'CCF_SW_COM_Incorrect', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'CCF_SW_COM_Loss', 'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior'}
+{'CCF_SW_COM_Loss', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'CCF_SW_MON_Incorrect', 'Command1.Loss', 'Command2.Incorrect_Behavior'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'InternalPower1.Degraded'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'InternalPower1.Loss'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'Monitor1.Loss'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'PWR1.Degraded'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'PWR1.Loss'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'PowerMonitor1.Incorrect'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'PowerMonitor1.Loss'}
+{'CCF_SW_MON_Loss', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'Command1.Incorrect_Behavior', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'Command1.Incorrect_Behavior', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'Command1.Incorrect_Behavior', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'Command1.Loss', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'Command1.Loss', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'Command1.Loss', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'Command2.Incorrect_Behavior', 'InternalPower1.Degraded', 'Monitor2.Incorrect_Behavior'}
+{'Command2.Incorrect_Behavior', 'InternalPower1.Loss', 'Monitor2.Incorrect_Behavior'}
+{'Command2.Incorrect_Behavior', 'Monitor1.Loss', 'Monitor2.Incorrect_Behavior'}
+{'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior', 'PWR1.Degraded'}
+{'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior', 'PWR1.Loss'}
+{'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior', 'PowerMonitor1.Incorrect'}
+{'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior', 'PowerMonitor1.Loss'}
+{'InternalPower1.Degraded', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower1.Degraded', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower1.Loss', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower1.Loss', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'Monitor1.Loss', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'PWR1.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'PWR1.Loss', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'PowerMonitor1.Incorrect', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'PowerMonitor1.Loss', 'PowerMonitor2.Incorrect'}
+{'Monitor1.Loss', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'PWR1.Degraded', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'PWR1.Loss', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'PWR2.Degraded', 'PowerMonitor1.Incorrect', 'PowerMonitor2.Incorrect'}
+{'PWR2.Degraded', 'PowerMonitor1.Loss', 'PowerMonitor2.Incorrect'}
+end

@@ -1,0 +1,13 @@
+Coloc('DL', 'SL', 'DF_SL_to_DL', 'DF_SL_to_DR', 'DF_SR_to_DR')
+Cost('DL', A) = 500
+Cost('DL', B) = 200
+Cost('SL', B) = 200
+Cost('DF_SL_to_DL', D) = 300
+Cost('DR', C) = 150
+Cost('DR', C) = 200
+Cost('SR', C) = 345
+Dal('SR' Ge C)
+Dal('DF_SL_to_DL' Eq B)
+Dal('DR' Lt 'DL')
+
+

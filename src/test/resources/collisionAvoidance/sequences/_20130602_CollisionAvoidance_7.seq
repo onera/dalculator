@@ -1,0 +1,52 @@
+products(MCS('ACFT.status_risk.true')) = 
+{'ACFT.comms_failure', 'airborne_VHF_antenna_1.system_failure', 'airborne_VHF_antenna_2.system_failure'}
+{'ACFT.comms_failure', 'airborne_VHF_antenna_1.system_failure', 'environmental_conditions.bad_propagation_2'}
+{'ACFT.comms_failure', 'airborne_VHF_antenna_2.system_failure', 'environmental_conditions.bad_propagation_1'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_1', 'environmental_conditions.bad_propagation_2'}
+{'ACFT.TCAS_failure', 'ATC_detection.fail_negative'}
+{'ACFT.TCAS_failure', 'ATC_detection.fail_negative', 'pilot_detection.fail_negative'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_3', 'environmental_conditions.bad_propagation_4', 'environmental_conditions.bad_propagation_5', 'environmental_conditions.bad_propagation_6'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_3', 'environmental_conditions.bad_propagation_4', 'environmental_conditions.bad_propagation_5', 'ground_VHF_antenna_1.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_3', 'environmental_conditions.bad_propagation_4', 'environmental_conditions.bad_propagation_6', 'ground_VHF_antenna_2.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_3', 'environmental_conditions.bad_propagation_4', 'ground_VHF_antenna_1.system_failure', 'ground_VHF_antenna_2.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_3', 'environmental_conditions.bad_propagation_5', 'environmental_conditions.bad_propagation_6', 'ground_VHF_antenna_3.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_3', 'environmental_conditions.bad_propagation_5', 'ground_VHF_antenna_1.system_failure', 'ground_VHF_antenna_3.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_3', 'environmental_conditions.bad_propagation_6', 'ground_VHF_antenna_2.system_failure', 'ground_VHF_antenna_3.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_3', 'ground_VHF_antenna_1.system_failure', 'ground_VHF_antenna_2.system_failure', 'ground_VHF_antenna_3.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_4', 'environmental_conditions.bad_propagation_5', 'environmental_conditions.bad_propagation_6', 'ground_VHF_antenna_4.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_4', 'environmental_conditions.bad_propagation_5', 'ground_VHF_antenna_1.system_failure', 'ground_VHF_antenna_4.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_4', 'environmental_conditions.bad_propagation_6', 'ground_VHF_antenna_2.system_failure', 'ground_VHF_antenna_4.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_4', 'ground_VHF_antenna_1.system_failure', 'ground_VHF_antenna_2.system_failure', 'ground_VHF_antenna_4.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_5', 'environmental_conditions.bad_propagation_6', 'ground_VHF_antenna_3.system_failure', 'ground_VHF_antenna_4.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_5', 'ground_VHF_antenna_1.system_failure', 'ground_VHF_antenna_3.system_failure', 'ground_VHF_antenna_4.system_failure'}
+{'ACFT.comms_failure', 'environmental_conditions.bad_propagation_6', 'ground_VHF_antenna_2.system_failure', 'ground_VHF_antenna_3.system_failure', 'ground_VHF_antenna_4.system_failure'}
+{'ACFT.comms_failure', 'ground_VHF_antenna_1.system_failure', 'ground_VHF_antenna_2.system_failure', 'ground_VHF_antenna_3.system_failure', 'ground_VHF_antenna_4.system_failure'}
+{'ACFT.TCAS_failure', 'processing_equipment_1.fail_loss', 'processing_equipment_2.fail_loss'}
+{'ACFT.TCAS_failure', 'processing_equipment_1.fail_loss', 'processing_equipment_2.fail_negative'}
+{'ACFT.TCAS_failure', 'processing_equipment_1.fail_loss', 'processing_equipment_3.fail_loss'}
+{'ACFT.TCAS_failure', 'processing_equipment_1.fail_loss', 'processing_equipment_3.fail_negative'}
+{'ACFT.TCAS_failure', 'processing_equipment_1.fail_negative', 'processing_equipment_2.fail_loss'}
+{'ACFT.TCAS_failure', 'processing_equipment_1.fail_negative', 'processing_equipment_2.fail_negative'}
+{'ACFT.TCAS_failure', 'processing_equipment_1.fail_negative', 'processing_equipment_3.fail_loss'}
+{'ACFT.TCAS_failure', 'processing_equipment_1.fail_negative', 'processing_equipment_3.fail_negative'}
+{'ACFT.TCAS_failure', 'processing_equipment_2.fail_loss', 'processing_equipment_3.fail_loss'}
+{'ACFT.TCAS_failure', 'processing_equipment_2.fail_loss', 'processing_equipment_3.fail_negative'}
+{'ACFT.TCAS_failure', 'processing_equipment_2.fail_negative', 'processing_equipment_3.fail_loss'}
+{'ACFT.TCAS_failure', 'processing_equipment_2.fail_negative', 'processing_equipment_3.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_loss', 'ATCRBS_transponder_2.fail_loss', 'ATCRBS_transponder_3.fail_loss'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_loss', 'ATCRBS_transponder_2.fail_loss', 'ATCRBS_transponder_3.fail_loss', 'pilot_detection.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_loss', 'ATCRBS_transponder_2.fail_loss', 'ATCRBS_transponder_3.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_loss', 'ATCRBS_transponder_2.fail_loss', 'ATCRBS_transponder_3.fail_negative', 'pilot_detection.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_loss', 'ATCRBS_transponder_2.fail_negative', 'ATCRBS_transponder_3.fail_loss'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_loss', 'ATCRBS_transponder_2.fail_negative', 'ATCRBS_transponder_3.fail_loss', 'pilot_detection.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_loss', 'ATCRBS_transponder_2.fail_negative', 'ATCRBS_transponder_3.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_loss', 'ATCRBS_transponder_2.fail_negative', 'ATCRBS_transponder_3.fail_negative', 'pilot_detection.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_negative', 'ATCRBS_transponder_2.fail_loss', 'ATCRBS_transponder_3.fail_loss'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_negative', 'ATCRBS_transponder_2.fail_loss', 'ATCRBS_transponder_3.fail_loss', 'pilot_detection.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_negative', 'ATCRBS_transponder_2.fail_loss', 'ATCRBS_transponder_3.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_negative', 'ATCRBS_transponder_2.fail_loss', 'ATCRBS_transponder_3.fail_negative', 'pilot_detection.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_negative', 'ATCRBS_transponder_2.fail_negative', 'ATCRBS_transponder_3.fail_loss'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_negative', 'ATCRBS_transponder_2.fail_negative', 'ATCRBS_transponder_3.fail_loss', 'pilot_detection.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_negative', 'ATCRBS_transponder_2.fail_negative', 'ATCRBS_transponder_3.fail_negative'}
+{'ACFT.TCAS_failure', 'ATCRBS_transponder_1.fail_negative', 'ATCRBS_transponder_2.fail_negative', 'ATCRBS_transponder_3.fail_negative', 'pilot_detection.fail_negative'}
+end

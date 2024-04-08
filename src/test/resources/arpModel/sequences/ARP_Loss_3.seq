@@ -1,0 +1,131 @@
+/*
+orders(MCS('FC_Loss_of_Braking')) =
+orders	product-number
+1	2
+2	26
+3	92
+total	120
+end
+*/
+products(MCS('FC_Loss_of_Braking')) =
+{'CCF_HW_COM_MON_Incorrect'}
+{'ElectricalBrakeUnit.Not_Braking'}
+{'Accumulator.Failure', 'SelectorValve.Stuck_Middle'}
+{'CCF_HW_COM_MON_Loss', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'CCF_HW_COM_MON_Loss', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'CCF_SW_COM_Incorrect', 'CCF_SW_MON_Incorrect'}
+{'CCF_SW_COM_Incorrect', 'Monitor1.Incorrect_Behavior'}
+{'CCF_SW_COM_Incorrect', 'Monitor2.Incorrect_Behavior'}
+{'CCF_SW_COM_Incorrect', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'CCF_SW_COM_Incorrect', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'CCF_SW_COM_Loss', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'CCF_SW_COM_Loss', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'CCF_SW_MON_Incorrect', 'Command1.Incorrect_Behavior'}
+{'Command1.Incorrect_Behavior', 'Monitor1.Incorrect_Behavior'}
+{'Command1.Incorrect_Behavior', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'Command1.Loss', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'Command2.Incorrect_Behavior', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'Command2.Loss', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'InternalPower1.Degraded', 'PowerMonitor1.Incorrect'}
+{'InternalPower1.Degraded', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'InternalPower1.Loss', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'InternalPower2.Degraded', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'InternalPower2.Loss', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'PWR1.Degraded', 'PowerMonitor1.Incorrect'}
+{'PWR1.Degraded', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'PWR1.Loss', 'Selection_Mgt.Cmd1_Untimely_sel'}
+{'PWR2.Degraded', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'PWR2.Loss', 'Selection_Mgt.Cmd2_Untimely_sel'}
+{'Accumulator.Failure', 'CCF_HW_COM_MON_Loss', 'HYD2.Loss'}
+{'Accumulator.Failure', 'CCF_HW_COM_MON_Loss', 'IsolationValve2.Always_Off'}
+{'Accumulator.Failure', 'CCF_HW_COM_MON_Loss', 'SelectorValve.Stuck_Normal'}
+{'Accumulator.Failure', 'CCF_HW_COM_MON_Loss', 'ShutOff_Valve.Untimely_On'}
+{'Accumulator.Failure', 'CCF_SW_COM_Incorrect', 'HYD2.Loss'}
+{'Accumulator.Failure', 'CCF_SW_COM_Incorrect', 'IsolationValve2.Always_Off'}
+{'Accumulator.Failure', 'CCF_SW_COM_Incorrect', 'SelectorValve.Stuck_Normal'}
+{'Accumulator.Failure', 'CCF_SW_COM_Incorrect', 'ShutOff_Valve.Untimely_On'}
+{'Accumulator.Failure', 'CCF_SW_COM_Loss', 'HYD2.Loss'}
+{'Accumulator.Failure', 'CCF_SW_COM_Loss', 'IsolationValve2.Always_Off'}
+{'Accumulator.Failure', 'CCF_SW_COM_Loss', 'SelectorValve.Stuck_Normal'}
+{'Accumulator.Failure', 'CCF_SW_COM_Loss', 'ShutOff_Valve.Untimely_On'}
+{'Accumulator.Failure', 'CCF_SW_MON_Loss', 'HYD2.Loss'}
+{'Accumulator.Failure', 'CCF_SW_MON_Loss', 'IsolationValve2.Always_Off'}
+{'Accumulator.Failure', 'CCF_SW_MON_Loss', 'SelectorValve.Stuck_Normal'}
+{'Accumulator.Failure', 'CCF_SW_MON_Loss', 'ShutOff_Valve.Untimely_On'}
+{'Accumulator.Failure', 'HYD1.Loss', 'HYD2.Loss'}
+{'Accumulator.Failure', 'HYD1.Loss', 'IsolationValve2.Always_Off'}
+{'Accumulator.Failure', 'HYD1.Loss', 'SelectorValve.Stuck_Normal'}
+{'Accumulator.Failure', 'HYD2.Loss', 'IsolationValve1.Always_Off'}
+{'Accumulator.Failure', 'HYD2.Loss', 'Selection_Mgt.Loss'}
+{'Accumulator.Failure', 'HYD2.Loss', 'SelectorValve.Stuck_Alternate'}
+{'Accumulator.Failure', 'HYD2.Loss', 'ShutOff_Valve.Untimely_Off'}
+{'Accumulator.Failure', 'IsolationValve1.Always_Off', 'IsolationValve2.Always_Off'}
+{'Accumulator.Failure', 'IsolationValve1.Always_Off', 'SelectorValve.Stuck_Normal'}
+{'Accumulator.Failure', 'IsolationValve2.Always_Off', 'Selection_Mgt.Loss'}
+{'Accumulator.Failure', 'IsolationValve2.Always_Off', 'SelectorValve.Stuck_Alternate'}
+{'Accumulator.Failure', 'IsolationValve2.Always_Off', 'ShutOff_Valve.Untimely_Off'}
+{'Accumulator.Failure', 'Selection_Mgt.Loss', 'SelectorValve.Stuck_Normal'}
+{'Accumulator.Failure', 'Selection_Mgt.Loss', 'ShutOff_Valve.Untimely_On'}
+{'Accumulator.Failure', 'SelectorValve.Stuck_Normal', 'ShutOff_Valve.Untimely_Off'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'CCF_HW_COM_MON_Loss'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'CCF_SW_COM_Incorrect'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'CCF_SW_COM_Loss'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'CCF_SW_MON_Loss'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'HYD1.Loss'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'IsolationValve1.Always_Off'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'Selection_Mgt.Loss'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'SelectorValve.Stuck_Alternate'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'SelectorValve.Stuck_Middle'}
+{'Alt_EmerMeterValve_L.Untimely_Off', 'Alt_EmerMeterValve_R.Untimely_Off', 'ShutOff_Valve.Untimely_Off'}
+{'CCF_HW_COM_MON_Loss', 'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior'}
+{'CCF_HW_COM_MON_Loss', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'CCF_HW_COM_MON_Loss', 'HYD2.Loss', 'IsolationValve2.Always_On'}
+{'CCF_SW_COM_Incorrect', 'HYD2.Loss', 'IsolationValve2.Always_On'}
+{'CCF_SW_COM_Incorrect', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'CCF_SW_COM_Incorrect', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'CCF_SW_COM_Loss', 'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior'}
+{'CCF_SW_COM_Loss', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'CCF_SW_COM_Loss', 'HYD2.Loss', 'IsolationValve2.Always_On'}
+{'CCF_SW_MON_Incorrect', 'Command1.Loss', 'Command2.Incorrect_Behavior'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'InternalPower1.Degraded'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'InternalPower1.Loss'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'Monitor1.Loss'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'PWR1.Degraded'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'PWR1.Loss'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'PowerMonitor1.Incorrect'}
+{'CCF_SW_MON_Incorrect', 'Command2.Incorrect_Behavior', 'PowerMonitor1.Loss'}
+{'CCF_SW_MON_Loss', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'CCF_SW_MON_Loss', 'HYD2.Loss', 'IsolationValve2.Always_On'}
+{'Command1.Incorrect_Behavior', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'Command1.Incorrect_Behavior', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'Command1.Incorrect_Behavior', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'Command1.Loss', 'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior'}
+{'Command1.Loss', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'Command1.Loss', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'Command2.Incorrect_Behavior', 'InternalPower1.Degraded', 'Monitor2.Incorrect_Behavior'}
+{'Command2.Incorrect_Behavior', 'InternalPower1.Loss', 'Monitor2.Incorrect_Behavior'}
+{'Command2.Incorrect_Behavior', 'Monitor1.Loss', 'Monitor2.Incorrect_Behavior'}
+{'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior', 'PWR1.Degraded'}
+{'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior', 'PWR1.Loss'}
+{'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior', 'PowerMonitor1.Incorrect'}
+{'Command2.Incorrect_Behavior', 'Monitor2.Incorrect_Behavior', 'PowerMonitor1.Loss'}
+{'HYD1.Loss', 'HYD2.Loss', 'IsolationValve2.Always_On'}
+{'HYD2.Loss', 'IsolationValve1.Always_Off', 'IsolationValve2.Always_On'}
+{'HYD2.Loss', 'IsolationValve2.Always_On', 'Selection_Mgt.Loss'}
+{'HYD2.Loss', 'IsolationValve2.Always_On', 'SelectorValve.Stuck_Alternate'}
+{'HYD2.Loss', 'IsolationValve2.Always_On', 'ShutOff_Valve.Untimely_Off'}
+{'InternalPower1.Degraded', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower1.Degraded', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower1.Loss', 'InternalPower2.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower1.Loss', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'Monitor1.Loss', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'PWR1.Degraded', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'PWR1.Loss', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'PowerMonitor1.Incorrect', 'PowerMonitor2.Incorrect'}
+{'InternalPower2.Degraded', 'PowerMonitor1.Loss', 'PowerMonitor2.Incorrect'}
+{'Monitor1.Loss', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'PWR1.Degraded', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'PWR1.Loss', 'PWR2.Degraded', 'PowerMonitor2.Incorrect'}
+{'PWR2.Degraded', 'PowerMonitor1.Incorrect', 'PowerMonitor2.Incorrect'}
+{'PWR2.Degraded', 'PowerMonitor1.Loss', 'PowerMonitor2.Incorrect'}
+end

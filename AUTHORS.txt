@@ -1,0 +1,11 @@
+* Dalculator Authors and contributors:
+**************************************************
+Main authors:
+  Remi DELMAS      : Remi DOT Delams AT onera DOT fr
+  Kevin DELMAS     : Kevin DOT Delmas AT onera DOT fr
+  Christel SEGUIN  : Christel DOT Seguin AT onera DOT fr
+  Pierre BIEBER    : Pierre DOT Bieber AT onera DOT fr
+
+Contributors:
+  Laura Chambert :  Laura DOT Chambert AT laposte DOT net
+**************************************************

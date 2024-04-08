@@ -1,0 +1,13 @@
+products(MCS('Display_Obs.O.lost')) = 
+{'DL.fail_loss', 'DR.fail_loss'}
+{'SL.fail_loss', 'SR.fail_loss'}
+{'DF_SL_to_DL.fail_loss', 'DF_SL_to_DR.fail_loss', 'SR.fail_loss'}
+{'DF_SL_to_DL.fail_loss', 'DF_SR_to_DL.fail_loss', 'DR.fail_loss'}
+{'DF_SL_to_DL.fail_loss', 'DR.fail_loss', 'SR.fail_loss'}
+{'DF_SL_to_DR.fail_loss', 'DF_SR_to_DR.fail_loss', 'DL.fail_loss'}
+{'DF_SL_to_DR.fail_loss', 'DL.fail_loss', 'SR.fail_loss'}
+{'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss', 'SL.fail_loss'}
+{'DF_SR_to_DL.fail_loss', 'DR.fail_loss', 'SL.fail_loss'}
+{'DF_SR_to_DR.fail_loss', 'DL.fail_loss', 'SL.fail_loss'}
+{'DF_SL_to_DL.fail_loss', 'DF_SL_to_DR.fail_loss', 'DF_SR_to_DL.fail_loss', 'DF_SR_to_DR.fail_loss'}
+end
