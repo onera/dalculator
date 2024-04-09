@@ -21,7 +21,11 @@ javacOptions += "-Xlint:deprecation"
 // compile order
 Compile / compileOrder := CompileOrder.Mixed
 
+//Uncomment to define GUI as entrypoint
 assembly / mainClass := Some("dalculator.gui.DalculatorGraphicalInterface")
+
+//Uncomment to define CLI as entrypoint
+//assembly / mainClass := Some("dalculator.cli.CLI")
 
 // scalaz
   libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.7"

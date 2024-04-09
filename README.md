@@ -35,28 +35,23 @@ The compilation of the DALCulator can be easily performed
 with [SBT](https://www.scala-sbt.org/). Installation procedures may vary depending on your system (Windows, OSX, Linux),
 please follow the official guidelines for your system.
 
-### Generate the standalone JAR with GUI
-To generate the standalone JAR with the GUI run:
+### Generate the standalone JAR 
+To generate the standalone JAR, run:
 ```sbtshell
  sbt assembly
 ```
 
+Note that the entrypoint is specified in the `build.sbt` file.
+You can select the main class (here GUI or CLI) by commenting/uncommenting the following lines:
+```scala
+//Uncomment to define GUI as entrypoint
+assembly / mainClass := Some("dalculator.gui.DalculatorGraphicalInterface")
+
+//Uncomment to define CLI as entrypoint
+assembly / mainClass := Some("dalculator.cli.CLI")
+```
+
 ## Running the DALculator
-
-### Installing the SAT4J Pseudo-Boolean solver
-
-The SAT4J solver can be freely obtained from the sat4j.org website. Version 2.2 or superior should be used. 
-The files org.sat4j.core.jar, org.sat4j.pb.jar  and sat4j-pb.jar that come in the solver distribution archive shall be placed in the `src/resources` folder.
-
-### Installing the WBO Pseudo-Boolean solver (optional)
-
-The tool wbo1.4b-fixed can be obtained by contacting its author, Vasco Manquinho from INESC-ID in Portugal. 
-The binary of the solver must be placed in the `src/resources` folder.
-
-### Installing the lp_solve MILP solver (optional)
-
-On a debian-based system, lp_solve is available in the standard package repositories can be  installed using the apt-get package installation utility.  
-Just make sure that the package is installed on the system and that the lp_solve command is available in the user's $PATH.
 
 ### Run using the standalone JAR
 To use the standalone JAR with the GUI run:
@@ -64,6 +59,17 @@ To use the standalone JAR with the GUI run:
  java -jar [PATH_TO_JAR]
 ```
 Note that by default the standalone JAR path is `target/scala-2.13/dalculator-assembly-X.Y.jar` (where X.Y is the version number).
+
+### Installing the WBO Pseudo-Boolean solver (optional)
+The tool wbo1.4b-fixed can be obtained by contacting its author, Vasco Manquinho from INESC-ID in Portugal. 
+The binary of the solver must be placed in the `src/resources` folder.
+
+### Installing the lp_solve MILP solver (optional)
+
+The budget allocation analysis relies on the MILP solver.
+On a debian-based system, lp_solve is available in the standard package repositories can be  installed using the apt-get package installation utility.  
+Just make sure that the package is installed on the system and that the lp_solve command is available in the user's $PATH.
+
 
 ## Theory behind the tool
 The formal theory on which the DALculator is based is described in references:
