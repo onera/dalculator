@@ -1,4 +1,4 @@
-<div align="center">
+<div style="text-align: center;">
         <picture>
                 <img src="dalculatorLogo.png" alt="Library Banner">
         </picture>
@@ -6,7 +6,7 @@
 <br>
 
 <!-- Badge section -->
-<div align="center">
+<div style="text-align: center;">
    <a href="https://github.com/onera/pml-analyzer/blob/master/README.md">
         <img alt="License LGPL" src="https://img.shields.io/badge/scala-2.13.4+-red"></a>
    <a href="https://github.com/onera/pml-analyzer/LICENSE">
