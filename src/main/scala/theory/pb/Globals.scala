@@ -25,15 +25,12 @@ object Globals {
   /**
    * Path to the sat4j-pb solver.
    * */
-  val sat4jPath: String =
-    (for (inLib <- FileManager.libraryDirectory.locate("sat4j-pb.jar"))
-      yield inLib.getAbsolutePath).get
+  val sat4jPath: String = FileManager.extractResourceAsTemporaryFile("sat4j-pb.jar").get
 
   /**
    * Path to the wbo solver.
    * */
-  val wboPath: String = (for (inLib <- FileManager.libraryDirectory.locate("wbo1.4b-fixed"))
-    yield inLib.getAbsolutePath).get
+  val wboPath: String = FileManager.extractResourceAsTemporaryFile("wbo1.4b-fixed").get
 
 //  /**
 //   * Path to the pwbo solver.

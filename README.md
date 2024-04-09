@@ -21,19 +21,49 @@ You can however send feedback, comments, suggestions or bug reports the authors 
 ## Purpose of the tool
 The purpose of the DALculator is to derive function independence requirements, DAL levels for functions, and failure probability budget by analyzing sets of minimal cut sets describing failure conditions.
 
-## Installing the DALculator 
-Unziping the dalculator.zip archive will create a folder named “dalculator”  which contains the jar files needed to run the DALculator GUI and core algorithms. 
+## Compiling the DALculator 
+### Java 8
 
-However, the DALculator needs third party constraint solvers to be installed on the system to function properly: At least one of the SAT4J or WBO Pseudo-boolean solvers is needed to compute the function independence and DAL allocation (having both is better), and the lp_solve MILP solver is needed to solve the budget allocation problem. Directions on how to obtain and install these third party solvers follow in the next subsection.
+You need a working installation of the Java Runtime Environment
+version 8 (either OpenJDK or Oracle will do).  Installation procedures
+may vary depending on your system (Windows, OSX, Linux), please follow
+the official guidelines for your system.
 
-Once third party solvers are set up properly, you can run the DALculator by opening a terminal, changing the current working directory to the dalculator directory created when unzipping the archive, and running the command “./run_dalculator”, which will launch the GUI. 
+### SBT
 
-### 1.1  Installing the SAT4J Pseudo-Boolean solver
-The SAT4J solver can be freely obtained from the sat4j.org website. Version 2.2 or superior should be used. The files org.sat4j.core.jar, org.sat4j.pb.jar  and sat4j-pb.jar that come in the solver distribution archive shall be placed in the dalculator/lib folder.
-### 1.2  Installing the WBO Pseudo-Boolean solver
-The tool wbo1.4b-fixed can be obtained by contacting its author, Vasco Manquinho from INESC-ID in Portugal. Full contact details are available here : Contact. The binary of  the solver must be placed in the dalculator/lib folder.
-### 1.3  Installing the lp_solve MILP solver
-On a debian-based system, lp_solve is available in the standard package repositories can be  installed using the apt-get package installation utility.  Just make sure that the package is installed on the system and that the lp_solve command is available in the user's $PATH.
+The compilation of the DALCulator can be easily performed
+with [SBT](https://www.scala-sbt.org/). Installation procedures may vary depending on your system (Windows, OSX, Linux),
+please follow the official guidelines for your system.
+
+### Generate the standalone JAR with GUI
+To generate the standalone JAR with the GUI run:
+```sbtshell
+ sbt assembly
+```
+
+## Running the DALculator
+
+### Installing the SAT4J Pseudo-Boolean solver
+
+The SAT4J solver can be freely obtained from the sat4j.org website. Version 2.2 or superior should be used. 
+The files org.sat4j.core.jar, org.sat4j.pb.jar  and sat4j-pb.jar that come in the solver distribution archive shall be placed in the `src/resources` folder.
+
+### Installing the WBO Pseudo-Boolean solver (optional)
+
+The tool wbo1.4b-fixed can be obtained by contacting its author, Vasco Manquinho from INESC-ID in Portugal. 
+The binary of the solver must be placed in the `src/resources` folder.
+
+### Installing the lp_solve MILP solver (optional)
+
+On a debian-based system, lp_solve is available in the standard package repositories can be  installed using the apt-get package installation utility.  
+Just make sure that the package is installed on the system and that the lp_solve command is available in the user's $PATH.
+
+### Run using the standalone JAR
+To use the standalone JAR with the GUI run:
+```shell
+ java -jar [PATH_TO_JAR]
+```
+Note that by default the standalone JAR path is `target/scala-2.13/dalculator-assembly-X.Y.jar` (where X.Y is the version number).
 
 ## Theory behind the tool
 The formal theory on which the DALculator is based is described in references:
