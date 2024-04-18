@@ -111,7 +111,7 @@ public class DalculatorGui extends javax.swing.JFrame {
         logo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("DALculator v1.0 - ONERA - 2011");
+        setTitle("DALculator v2.0 - ONERA - 2011 - 2024");
 
         topPanel.setBorder(null);
 

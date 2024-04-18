@@ -17,7 +17,7 @@
 
 package dalculator
 
-import dalculator.cli.DalculatorParameters
+import dalculator.cli.{CLI, DalculatorParameters}
 import dalculator.model.DalLevel._
 import dalculator.model._
 import dalculator.solver.SolveDal
@@ -25,7 +25,7 @@ import dalculator.translator.ModelParser
 import dalculator.utils.FileManager
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
-import preprocessor.analysis.AnalysisTypes.{DALAnalysis, MCS, MCSAnalysis, OCASFile}
+import preprocessor.analysis.AnalysisTypes.{DALAnalysis, MCS, MCSAnalysis, OCASFile, ResourceAnalysis}
 import preprocessor.ast.FC
 import preprocessor.composer.all._
 import preprocessor.transformers.all._
@@ -46,6 +46,17 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
             .value)
         .value)
     for{u <- udef} yield {writer.write(s"\nCost = ${SolveDal.allocCost(dalAnalysis.value, u)}")}
+    writer.close()
+  }
+
+  private def exportResourceAnalysis(resAnalysis: ResourceAnalysis, filename: String): Unit = {
+    val writer = new FileWriter(FileManager.analysisDirectory.getFile(filename))
+    for(r <- resAnalysis.result) yield {
+      writer.write(s"Considering the following constraints:\n")
+      r._2.collect({case x:IndepCstr => x}).foreach(x => writer.write(x.toString+"\n"))
+      writer.write(s"The following allocation is acceptable:\n")
+      r._3.foreach(x => writer.write(x.toString+"\n"))
+    }
     writer.close()
   }
 
@@ -84,6 +95,14 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
       writer.write(s"${completedSizes.mkString(" & ")} \\\\\n")
     }
     writer.close()
+  }
+
+  "For reduced FCS, the dalculator CLI" should "find a valid resource allocation" in {
+    for {
+      commandFile <- FileManager.extractResourceAsFile("fcs/commandFiles/analyse_port_colocation_nozones.txt")
+    } yield {
+      CLI.main(Array(commandFile))
+    }
   }
 
   "For ARP example limited to order 3, the dalculator" should "find a valid DAL allocation" in {

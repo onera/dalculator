@@ -122,7 +122,7 @@ object ModelParser extends RegexParsers {
         }
     }
 
-  def booleanParam: Parser[String] = "indepEnabled" | "dalEnabled" | "dalImportIndep" | "budgetEnabled" | "budgetImportIndep"
+  def booleanParam: Parser[String] = "indepEnabled" | "indepSaveAlloc" | "dalEnabled" | "dalImportIndep" | "budgetEnabled" | "budgetImportIndep"
 
   def booleanValue: Parser[Boolean] = ("true" | "false") ^^ {
     case "true" => true
@@ -134,6 +134,11 @@ object ModelParser extends RegexParsers {
       println(param, value)
       param match {
         case "indepEnabled" => params.indepEnabled = value
+        case "dalEnabled" => params.dalEnabled = value
+        case "dalImportIndep" => params.dalImportIndep = value
+        case "budgetEnabled" => params.budgetEnabled = value
+        case "budgetImportIndep" => params.budgetImportIndep = value
+        case "indepSaveAlloc" =>  params.indepSaveAlloc = value
         case _ =>
       }
   }
@@ -207,8 +212,10 @@ object ModelParser extends RegexParsers {
 
   /** Rule for user defined collocation constraints.
    * Unknown identifiers will be discarded
+   * FIXME Do not override identifier check => need to parse MCS first
    */
-  def coloc: Parser[UserDefinedConstraint] = ("Coloc(" ~> repsep(qident, ",") <~ ")") ^^ (l => ColocCstr(l.flatMap(fname => Item.get(fname))))
+  def coloc: Parser[UserDefinedConstraint] = ("Coloc(" ~> repsep(qident, ",") <~ ")") ^^ (l =>
+    ColocCstr(l.map(fname => Item(fname))))
 
   /** Rule for user defined independence constraints.
    * Unknown identifiers will be discarded
