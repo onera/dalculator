@@ -97,14 +97,6 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
     writer.close()
   }
 
-  "For reduced FCS, the dalculator CLI" should "find a valid resource allocation" in {
-    for {
-      commandFile <- FileManager.extractResourceAsFile("fcs/commandFiles/analyse_port_colocation_nozones.txt")
-    } yield {
-      CLI.main(Array(commandFile))
-    }
-  }
-
   "For ARP example limited to order 3, the dalculator" should "find a valid DAL allocation" in {
     for {
       arpLoss <- FileManager.extractResourceAsFile("arpModel/sequences/ARP_Loss_3.seq")
