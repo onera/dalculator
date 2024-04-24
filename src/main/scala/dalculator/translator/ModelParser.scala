@@ -19,7 +19,7 @@ package dalculator.translator
 
 import dalculator.cli.DalculatorParameters
 import dalculator.model._
-import theory.pb.solver.{OpbSolver, Sat4jBoth, Sat4jCP, Sat4jRes, WBOCores, WBOLinear, WBOLinearCores}
+import theory.pb.solver.{OpbSolver, Sat4jBoth, Sat4jCP, Sat4jRes}
 
 import java.io.{FileNotFoundException, FileReader}
 import scala.util.parsing.combinator.RegexParsers
@@ -143,13 +143,10 @@ object ModelParser extends RegexParsers {
       }
   }
 
-  def solverValue: Parser[OpbSolver] = ("sat4jboth" | "sat4jcp" | "sat4jres" | "wbocores" | "wbolinear" | "wbolinearcores") ^^ {
+  def solverValue: Parser[OpbSolver] = ("sat4jboth" | "sat4jcp" | "sat4jres" ) ^^ {
     case "sat4jboth" => Sat4jBoth
     case "sat4jcp" => Sat4jCP
     case "sat4jres" => Sat4jRes
-    case "wbocores" => WBOCores
-    case "wbolinear" => WBOLinear
-    case "wbolinearcores" => WBOLinearCores
   }
 
   def solverParam: Parser[String] = "indepSolver" | "solver" | "dalSolver"

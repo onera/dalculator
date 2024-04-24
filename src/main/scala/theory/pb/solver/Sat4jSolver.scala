@@ -40,8 +40,8 @@ object Sat4jCP extends Sat4jSolver("""java -Xms256M -jar """ + sat4jPath + """ C
 
 object Sat4jRes extends Sat4jSolver("""java -Xms256M -jar """ + sat4jPath + """ Resolution""")
 
-object WBOCores extends OpbSolver(wboPath + """ -file-format=opb -search-mode=1""")
-
-object WBOLinear extends OpbSolver(wboPath + """ -file-format=opb -search-mode=0""")
-
-object WBOLinearCores extends OpbSolver(wboPath + """ -file-format=opb -search-mode=2""")
+//object WBOCores extends OpbSolver(wboPath + """ -file-format=opb -search-mode=1""")
+//
+//object WBOLinear extends OpbSolver(wboPath + """ -file-format=opb -search-mode=0""")
+//
+//object WBOLinearCores extends OpbSolver(wboPath + """ -file-format=opb -search-mode=2""")
