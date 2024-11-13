@@ -1,0 +1,38 @@
+/*
+orders(MCS('VBCL_U.O.true')) = 
+orders	product-number
+1	1
+2	22
+3	4
+total	27
+end
+*/
+products(MCS('VBCL_U.O.true')) =
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmCmd.stuck_on_false'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmElecPartial.stuck_on_false'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmElecPartial.stuck_on_true'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmElecTotal.stuck_on_false'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_false'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmLink.stuck_on_false'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmLink.stuck_on_true'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmPilotParam.stuck_on_false'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmPilotParam.stuck_on_true'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_true'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmVisualGuideParam.stuck_on_false'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'SafetyMonitoring.Monitoring.alarmVisualGuideParam.stuck_on_true'}
+{'SafetyMonitoring.Monitoring.alarmCmd.stuck_on_false', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmElecPartial.stuck_on_false', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmElecPartial.stuck_on_true', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmElecTotal.stuck_on_false', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmLink.stuck_on_false', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmLink.stuck_on_true', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmPilotParam.stuck_on_false', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmVisualGuideParam.stuck_on_false', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'LinkTelemetry.fail_loss', 'Control.FlightPlanSetting.VBCLFlightPlanData.fail_err', 'SafetyMonitoring.Monitoring.alarmLink.stuck_on_true'}
+{'LinkTelemetry.fail_loss', 'Control.FlightPlanSetting.VBCLFlightPlanData.fail_loss', 'SafetyMonitoring.Monitoring.alarmLink.stuck_on_true'}
+{'LinkTelemetry.fail_loss', 'Control.TrajectoryControl.Nav.fail_err', 'SafetyMonitoring.Monitoring.alarmLink.stuck_on_true'}
+{'LinkTelemetry.fail_loss', 'Control.TrajectoryControl.Nav.fail_loss', 'SafetyMonitoring.Monitoring.alarmLink.stuck_on_true'}
+end
