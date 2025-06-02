@@ -1,0 +1,390 @@
+<?xml version='1.0'?>
+<fmeagen>
+	<define>
+		<param name="select.state" value="none" />
+		<param name="select.flow" value="UA_situation_assessment.*_failed|FAZERFunctionalArchitecture\.(EL\.O|SH\.O|FT\.O|RB\.O|CL\.O)|(FlightControlLoss_CAT\.O|LandImmediately_CAT\.O|LandASAPossible_HAZ\.O|LandASAPracticable_MAJ\.O|FlightControlRecovery_MIN\.O|ContinuedMission_NSE\.O)" />
+		<param name="onlychange" value="true" />
+	</define>
+	<result>
+		<tr id="70" evt="FAZERPhysicalArchitecture.FAZERAvionics.Baro.fail_err">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="71" evt="FAZERPhysicalArchitecture.FAZERAvionics.Baro.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="72" evt="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.fail_err">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="73" evt="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="74" evt="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.fail_err">
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="75" evt="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="76" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPS.fail_err">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="77" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPS.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="78" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.fail_err">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="79" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="80" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMU.fail_err">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="81" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMU.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="82" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.fail_err">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="83" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="84" evt="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.fail_err">
+		</tr>
+		<tr id="85" evt="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.fail_loss">
+		</tr>
+		<tr id="86" evt="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.SH.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="87" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotMCU_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="88" evt="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_err">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="89" evt="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_loss">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="90" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuMCU_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="91" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu3_3V.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuMCU_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="92" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu5V.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuMCU_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="93" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.fail_err">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="94" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.fail_loss">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="95" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.fail_err">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="96" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.fail_loss">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="97" evt="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.fail_err">
+		</tr>
+		<tr id="98" evt="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.fail_loss">
+		</tr>
+		<tr id="99" evt="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.fail_err">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="100" evt="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="101" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.fail_err">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="102" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.fail_loss">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="103" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.fail_err">
+		</tr>
+		<tr id="104" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.fail_loss">
+		</tr>
+		<tr id="105" evt="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.fail_err">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="106" evt="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.fail_loss">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="107" evt="FAZERPhysicalArchitecture.GPSJamming.fail">
+			<flow  name="FAZERFunctionalArchitecture.EL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.guideParam_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPossible_HAZ.O" 	value="true"/>
+		</tr>
+		<tr id="108" evt="FAZERPhysicalArchitecture.PowerManagement.Bat.fail_partial">
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_partial_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="110" evt="FAZERPhysicalArchitecture.PowerManagement.alternator.fail">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="111" evt="FAZERPhysicalArchitecture.PowerManagement.mainReg1.fail">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="112" evt="FAZERPhysicalArchitecture.PowerManagement.mainReg2.fail">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="113" evt="FAZERPhysicalArchitecture.PowerManagement.regHighTension1.fail">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="114" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension0.fail">
+			<flow  name="FAZERFunctionalArchitecture.SH.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="115" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension1.fail">
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotMCU_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="116" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension2.fail">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="117" evt="FAZERPhysicalArchitecture.PowerManagement.regOp.fail">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="118" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="119" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L2.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="120" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L3.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="121" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L4.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="123" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.motor.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="124" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.servoMotor.fail_err">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="125" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.servoMotor.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="126" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert1.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="127" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert2.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="129" evt="FAZERPhysicalArchitecture.no_jamming_2_4GHz.fail">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="130" evt="FAZERPhysicalArchitecture.no_jamming_444MHz.fail">
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
+		</tr>
+		<tr id="131" evt="FAZERPhysicalArchitecture.no_jamming_868_MHz.fail">
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="132" evt="FAZERPhysicalArchitecture.switch1.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+		<tr id="133" evt="FAZERPhysicalArchitecture.switch2.fail_loss">
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.FlightControlLoss_CAT.O" 	value="true"/>
+		</tr>
+	</result>
+	<model>
+		<flow name="FAZERFunctionalArchitecture.CL.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.EL.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.FT.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.RB.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.SH.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_partial_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_total_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.guideParam_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.link_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotMCU_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotParam_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.secuMCU_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="GroundRiskPolicy.ContinuedMission_NSE.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="GroundRiskPolicy.FlightControlLoss_CAT.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="GroundRiskPolicy.FlightControlRecovery_MIN.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="GroundRiskPolicy.LandASAPossible_HAZ.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="GroundRiskPolicy.LandASAPracticable_MAJ.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="GroundRiskPolicy.LandImmediately_CAT.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.Baro.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.Baro.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.GPS.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.GPS.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.IMU.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.IMU.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu3_3V.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu5V.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.GPSJamming.fail"></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.Bat.fail_partial">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.alternator.fail"></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.mainReg1.fail"></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.mainReg2.fail"></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.regHighTension1.fail"></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.regLowTension0.fail"></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.regLowTension1.fail"></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.regLowTension2.fail"></event>
+		<event name="FAZERPhysicalArchitecture.PowerManagement.regOp.fail"></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L2.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L3.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L4.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.motor.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.servoMotor.fail_err"></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.servoMotor.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert1.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert2.fail_loss"></event>
+		<event name="FAZERPhysicalArchitecture.no_jamming_2_4GHz.fail"></event>
+		<event name="FAZERPhysicalArchitecture.no_jamming_444MHz.fail"></event>
+		<event name="FAZERPhysicalArchitecture.no_jamming_868_MHz.fail"></event>
+		<event name="FAZERPhysicalArchitecture.switch1.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERPhysicalArchitecture.switch2.fail_loss">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<nodeproperty name="projectName" value="withoutProcedures"/>
+		<nodeproperty name="projectVersion" value="8"/>
+		<nodeproperty name="projectConfig" value="material"/>
+		<nodeproperty name="currentDate" value="2025-06-02 15:08:20"/>
+	</model>
+</fmeagen>

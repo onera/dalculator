@@ -1,0 +1,7 @@
+nomSensor_failed,nominal sensor fault
+secuSensor_failed,secu sensor fault
+pilotMCU_failed,pilot mcu fault
+secuMCU_failed,secu mcu fault
+guideParam_failed,guide param acquisition fault
+elec_partial_failed,low battery fault
+traj_failed,trajectory fault
