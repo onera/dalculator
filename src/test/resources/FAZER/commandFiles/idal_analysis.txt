@@ -1,5 +1,5 @@
 loadSeq(A,2,-5.0,src/test/resources/FAZER/sequences/MAT_VBCL_ERR.O.seq)
-loadSeq(A,2,-5.0,src/test/resources/FAZER/sequences/MAT_VBCL_OK.O.seq)
+loadSeq(C,2,-5.0,src/test/resources/FAZER/sequences/MAT_VBCL_OK.O.seq)
 loadSeq(A,2,-5.0,src/test/resources/FAZER/sequences/MAT_VBCL_U.O.seq)
 dalEnabled = true
 dalResultsFile = VBCL_IDAL_Alloc.txt
