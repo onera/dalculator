@@ -43,7 +43,6 @@ object CLI {
         ModelParser.loadParamsFile(opt, params)
         // run specified commands
         DalculatorCore(params)
-        System.exit(0)
       }
     }
   }

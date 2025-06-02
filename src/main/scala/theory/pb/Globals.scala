@@ -30,7 +30,7 @@ object Globals {
   /**
    * Path to the wbo solver.
    * */
-  val wboPath: String = FileManager.extractResourceAsTemporaryFile("wbo1.4b-fixed").get
+//  val wboPath: String = FileManager.extractResourceAsTemporaryFile("wbo1.4b-fixed").get
 
 //  /**
 //   * Path to the pwbo solver.

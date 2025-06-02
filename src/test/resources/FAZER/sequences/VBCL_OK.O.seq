@@ -1,0 +1,10 @@
+/*
+orders(MCS('VBCL_OK.O.true')) = 
+orders	product-number
+1	1
+total	1
+end
+*/
+products(MCS('VBCL_OK.O.true')) =
+{'FlightParamAcquisition.GuideFun.fail_loss'}
+end

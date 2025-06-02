@@ -1,0 +1,37 @@
+/*
+orders(MSS('VBCL_OK.O.true')) = 
+orders	product-number
+1	1
+2	26
+total	27
+end
+*/
+products(MCS('VBCL_OK.O.true')) =
+{'GPSJamming.fail'}
+{'GPS.fail_err', 'GPSSecu.fail_loss'}
+{'GPS.fail_err', 'SecurityMCU.MCUFail.fail_loss'}
+{'GPS.fail_err', 'SecurityMCU.regSecu3_3V.fail_loss'}
+{'GPS.fail_err', 'SecurityMCU.regSecu5V.fail_loss'}
+{'GPS.fail_loss', 'GPSSecu.fail_err'}
+{'GPS.fail_loss', 'GPSSecu.fail_loss'}
+{'GPS.fail_loss', 'SecurityMCU.MCUFail.fail_loss'}
+{'GPS.fail_loss', 'SecurityMCU.regSecu3_3V.fail_loss'}
+{'GPS.fail_loss', 'SecurityMCU.regSecu5V.fail_loss'}
+{'GPSSecu.fail_err', 'GPS.fail_loss'}
+{'GPSSecu.fail_err', 'PilotMCU.MCUFail.fail_loss'}
+{'GPSSecu.fail_err', 'PowerManagement.regLowTension1.fail'}
+{'GPSSecu.fail_loss', 'GPS.fail_err'}
+{'GPSSecu.fail_loss', 'GPS.fail_loss'}
+{'GPSSecu.fail_loss', 'PilotMCU.MCUFail.fail_loss'}
+{'GPSSecu.fail_loss', 'PowerManagement.regLowTension1.fail'}
+{'PilotMCU.MCUFail.fail_loss', 'GPSSecu.fail_err'}
+{'PilotMCU.MCUFail.fail_loss', 'GPSSecu.fail_loss'}
+{'PowerManagement.regLowTension1.fail', 'GPSSecu.fail_err'}
+{'PowerManagement.regLowTension1.fail', 'GPSSecu.fail_loss'}
+{'SecurityMCU.MCUFail.fail_loss', 'GPS.fail_err'}
+{'SecurityMCU.MCUFail.fail_loss', 'GPS.fail_loss'}
+{'SecurityMCU.regSecu3_3V.fail_loss', 'GPS.fail_err'}
+{'SecurityMCU.regSecu3_3V.fail_loss', 'GPS.fail_loss'}
+{'SecurityMCU.regSecu5V.fail_loss', 'GPS.fail_err'}
+{'SecurityMCU.regSecu5V.fail_loss', 'GPS.fail_loss'}
+end

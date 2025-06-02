@@ -128,7 +128,7 @@ class DalculatorGuiWithListener extends DalculatorGui with ActionListener {
 
           params.indepSolver = this.indepSolverGroup.getSelection.getActionCommand match {
             case "sat4jboth" => Sat4jBoth
-            case "wbo" => WBOCores
+//            case "wbo" => WBOCores
           }
 
           try {
@@ -157,7 +157,7 @@ class DalculatorGuiWithListener extends DalculatorGui with ActionListener {
 
           params.dalSolver = this.dalSolverGroup.getSelection.getActionCommand match {
             case "sat4jboth" => Sat4jBoth
-            case "wbo" => WBOCores
+//            case "wbo" => WBOCores
           }
 
           params.dalRule = this.dalRuleGroup.getSelection.getActionCommand match {

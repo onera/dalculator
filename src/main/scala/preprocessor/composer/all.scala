@@ -24,6 +24,7 @@ object all
     with MCSComposerInstances
     with MSSComposerInstances
     with OrderInstances
+    with ResourceComposerInstances
     with ReliabilityComposerInstances
     with ResultFileComposerInstances
     with ShowInstances

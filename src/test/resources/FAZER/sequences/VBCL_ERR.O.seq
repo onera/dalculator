@@ -1,0 +1,57 @@
+/*
+orders(MCS('VBCL_ERR.O.true')) = 
+orders	product-number
+2	15
+3	32
+total	47
+end
+*/
+products(MCS('VBCL_ERR.O.true')) =
+{'Control.TrajectoryControl.GuideVBL.fail_err', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'Control.TrajectoryControl.GuideVBL.fail_loss', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'Control.PropulsionControl.PropulsionControl.fail_err'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'Control.PropulsionControl.PropulsionControl.fail_loss'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'Control.TrajectoryControl.ActuatorsControl.fail_err'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'Control.TrajectoryControl.ActuatorsControl.fail_loss'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'Control.TrajectoryControl.GuideVBL.fail_err'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'Control.TrajectoryControl.GuideVBL.fail_loss'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'Control.TrajectoryControl.Pilot.fail_err'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'Control.TrajectoryControl.Pilot.fail_loss'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'FlightParamAcquisition.PilotFun.fail_err'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'FlightParamAcquisition.PilotFun.fail_loss'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'FlightParamAcquisition.VBContengencyDetector.fail_err'}
+{'FlightParamAcquisition.GuideFun.fail_loss', 'FlightParamAcquisition.VBContengencyDetector.fail_loss'}
+{'FlightParamAcquisition.VBContengencyDetector.fail_err', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'Control.TrajectoryControl.GuideVBL.fail_err', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true'}
+{'Control.TrajectoryControl.GuideVBL.fail_loss', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true'}
+{'FlightParamAcquisition.VBContengencyDetector.fail_err', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true'}
+{'FlightParamAcquisition.VBContengencyDetector.fail_loss', 'SafetyMonitoring.Monitoring.alarmVisualGuideParam.stuck_on_false', 'FlightParamAcquisition.GuideFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.PropulsionControl.PropulsionControl.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.PropulsionControl.PropulsionControl.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.TrajectoryControl.ActuatorsControl.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.TrajectoryControl.ActuatorsControl.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.TrajectoryControl.GuideVBL.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.TrajectoryControl.GuideVBL.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.TrajectoryControl.Pilot.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.TrajectoryControl.Pilot.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'FlightParamAcquisition.PilotFun.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'FlightParamAcquisition.PilotFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'FlightParamAcquisition.VBContengencyDetector.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'FlightParamAcquisition.VBContengencyDetector.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.TrajectoryControl.GuideVBL.fail_err', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'Control.TrajectoryControl.GuideVBL.fail_loss', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'FlightParamAcquisition.VBContengencyDetector.fail_err', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'Control.PropulsionControl.PropulsionControl.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'Control.PropulsionControl.PropulsionControl.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'Control.TrajectoryControl.ActuatorsControl.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'Control.TrajectoryControl.ActuatorsControl.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'Control.TrajectoryControl.GuideVBL.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'Control.TrajectoryControl.GuideVBL.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'Control.TrajectoryControl.Pilot.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'Control.TrajectoryControl.Pilot.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'FlightParamAcquisition.PilotFun.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'FlightParamAcquisition.PilotFun.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'FlightParamAcquisition.VBContengencyDetector.fail_err'}
+{'SafetyMonitoring.Monitoring.alarmTraj.stuck_on_false', 'SafetyMonitoring.Monitoring.alarmGuideParam.stuck_on_true', 'FlightParamAcquisition.VBContengencyDetector.fail_loss'}
+{'SafetyMonitoring.Monitoring.alarmVisualGuideParam.stuck_on_false', 'FlightParamAcquisition.VBContengencyDetector.fail_loss', 'FlightParamAcquisition.GuideFun.fail_loss'}
+end

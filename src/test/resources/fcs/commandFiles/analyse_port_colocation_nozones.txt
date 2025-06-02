@@ -1,0 +1,7 @@
+loadSeq(A,2,-5.0,src/test/resources/fcs/sequences/MCS_nozones.seq)
+resourceMinNbr = 1
+resourceMaxNbr = 3
+indepEnabled = true
+indepSaveAlloc = true
+resultsFile = fcs_indep_analysis.txt
+udefFile = src/test/resources/fcs/userConstraints/constraints_sensor_suit_colocation.udef

@@ -17,7 +17,7 @@
 
 package preprocessor.analysis
 
-import dalculator.model.{DalLevel, FailureMode, Item}
+import dalculator.model.{AllocCstr, DalLevel, FailureMode, IndepRelation, Item, UserDefinedConstraint}
 import preprocessor.ast._
 
 import java.io.File
@@ -109,6 +109,12 @@ object AnalysisTypes {
 
   object DALAnalysis {
     def apply(x:Map[Item, DalLevel]): DALAnalysis = Analysis(x)
+  }
+
+  type ResourceAnalysis = Analysis[Option[(IndepRelation, List[UserDefinedConstraint], List[AllocCstr])]]
+
+  object ResourceAnalysis {
+    def apply(x:Option[(IndepRelation, List[UserDefinedConstraint], List[AllocCstr])]): ResourceAnalysis = Analysis(x)
   }
 
   type OrderAnalysis = Analysis[Map[FC,Option[Int]]]
