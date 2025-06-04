@@ -1,7 +1,17 @@
-nomSensor_failed,nominal sensor fault
-secuSensor_failed,secu sensor fault
-pilotMCU_failed,pilot mcu fault
-secuMCU_failed,secu mcu fault
-guideParam_failed,guide param acquisition fault
-elec_partial_failed,low battery fault
-traj_failed,trajectory fault
+FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed,nominal sensor fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.pilotParam_failed, pilot param fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed,secu sensor fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.pilotMCU_failed,pilot mcu fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.secuMCU_failed,secu mcu fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.guideParam_failed,guide param acquisition fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.elec_partial_failed,low battery fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.elec_total_failed,no battery fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.link_failed,link fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed,trajectory fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed,trajectory fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.piltoMode_failed,upload GD mode fault (UA)
+FAZERFunctionalArchitecture.UA_situation_assessment.navMCU_failed,nav MCU fault (UA)
+FAZERFunctionalArchitecture.Ground_situation_assessment.guideParam_failed,guide param acquisition fault (GD)
+FAZERFunctionalArchitecture.Ground_situation_assessment.pilotParam_failed,pilot param acquisition fault (GD)
+FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed,telemetry fault (GD)
+FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed,trajectory fault (GD)

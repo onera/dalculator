@@ -26,9 +26,8 @@ class FAZERPFQATest extends AnyFlatSpec with PFQAComposer with should.Matchers {
       Sev.values.find(sev => x.contains(sev.toString)).get.name
   }
   val toAlarm: PartialFunction[String, Seq[String]] = {
-    case x if x.contains("UA_situation_assessment") =>
-      val a = x.split("[\\^.]").last
-      ALARM_DICTIONARY.getOrElse(a, Seq(a))
+    case x if x.contains("situation_assessment") =>
+      ALARM_DICTIONARY.getOrElse(x, Seq(x))
   }
   val toAction: PartialFunction[String, String] = {
     case x if x.contains(".O") && !x.contains("GroundRiskPolicy") =>
