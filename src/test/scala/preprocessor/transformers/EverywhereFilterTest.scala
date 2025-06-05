@@ -25,7 +25,7 @@ import scala.collection.immutable.SortedSet
 
 class EverywhereFilterTest  extends AnyFlatSpec with should.Matchers {
 
-  "The Everywhere" should "apply directly on basic cases" in {
+  "The everywhere filter operator" should "apply directly on basic cases" in {
     Everywhere.on("a")
       .filter((s:String) => s.contains("b"))
       .value shouldBe "a"
@@ -35,7 +35,7 @@ class EverywhereFilterTest  extends AnyFlatSpec with should.Matchers {
       .value shouldBe "b" :: Nil
   }
 
-  "The Everywhere" should "apply on recursively if not applicable on type" in {
+  it should "apply on recursively if not applicable on type" in {
     Everywhere.on(Option( "a" :: "b" :: "c" :: Nil))
       .map((s:String) => s"X$s")
       .filter((s:String) => s.contains("b"))

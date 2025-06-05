@@ -22,7 +22,7 @@ import dalculator.model.DalLevel._
 import dalculator.model._
 import dalculator.solver.SolveDal
 import dalculator.translator.ModelParser
-import dalculator.utils.FileManager
+import dalculator.utils.{Configuration, FileManager}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 import preprocessor.analysis.AnalysisTypes.{DALAnalysis, MCS, MCSAnalysis, OCASFile, ResourceAnalysis}
@@ -34,6 +34,8 @@ import java.io.{File, FileWriter}
 import scala.io.Source
 
 class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
+
+  implicit val noWarning: Configuration = Configuration(printWarning = false)
 
   private def exportDalAnalysis(dalAnalysis: Ops[Seq[(Item, DalLevel)]], filename: String, udef:Option[UserDefinedConstraints] = None): Unit = {
     val writer = new FileWriter(FileManager.analysisDirectory.getFile(filename))
@@ -97,7 +99,7 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
     writer.close()
   }
 
-  "For ARP example limited to order 3, the dalculator" should "find a valid DAL allocation" in {
+  "For ARP example, the Dalculator" should "find a valid DAL allocation when limited to order 3" in {
     for {
       arpLoss <- FileManager.extractResourceAsFile("arpModel/sequences/ARP_Loss_3.seq")
       arpUntimely <- FileManager.extractResourceAsFile("arpModel/sequences/ARP_Untimely_3.seq")
@@ -123,7 +125,7 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
     }
   }
 
-  "For ARP example limited to order 4, the dalculator" should "find a valid DAL allocation" in {
+  it should "find a valid DAL allocation when limited to order 4" in {
     for {
       arpLoss <- FileManager.extractResourceAsFile("arpModel/sequences/ARP_Loss_4.seq")
       arpUntimely <- FileManager.extractResourceAsFile("arpModel/sequences/ARP_Untimely_4.seq")
@@ -146,7 +148,7 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
     }
   }
   
-  "For data display the dalculator" should "find a valid DAL allocation with combined DAL downgrade rules" in {
+  "For data display, the Dalculator" should "find a valid DAL allocation with combined DAL downgrade rules" in {
     for {
       f <- List("Sat_Eq", "Sat_Eq_2DALinf", "Sat_Eq_2DALsup", "Sat_Eq_DALAInfDALB", "Sat_Eq_pascout", "Sat_Ge", "Sat_Lt")
       seq <- FileManager.extractResourceAsFile("dataDisplay/sequences/TestOptimBis.seq")
@@ -172,7 +174,7 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
     }
   }
 
-  "For data display the dalculator" should "find a valid DAL allocation with cost criterion using only rule 2 " in {
+  it should "find a valid DAL allocation with cost criterion using only rule 2 " in {
     for {
       seq <- FileManager.extractResourceAsFile("dataDisplay/sequences/DataDisplay_0_order4.seq")
       indepUdef <- FileManager.extractResourceAsFile(s"dataDisplay/userConstraints/DataDisplay_0_order4_indep.udef")
@@ -195,7 +197,7 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
     }
   }
 
-  "For data display the dalculator" should "find a valid DAL allocation with DAL downgrade only rule1 or only rule 2 or common cause rule 2" in {
+  it should "find a valid DAL allocation with DAL downgrade only rule1 or only rule 2 or common cause rule 2" in {
     for{
       seq <- FileManager.extractResourceAsFile("dataDisplay/sequences/DataDisplay_0_order4.seq")
       indepUdef <- FileManager.extractResourceAsFile(s"dataDisplay/userConstraints/DataDisplay_0_order4_indep.udef")
@@ -232,7 +234,7 @@ class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
     }
   }
 
-  "For data display the dalculator" should "not find a valid DAL allocation due to unachievable user constraints" in {
+  it should "not find a valid DAL allocation due to unachievable user constraints" in {
     for {
       f <- List("Unsat_Eq", "Unsat_Lt", "TestOptimbis")
       seq <- FileManager.extractResourceAsFile("dataDisplay/sequences/TestOptimBis.seq")

@@ -18,6 +18,7 @@
 package preprocessor.transformers
 
 import dalculator.model.FailureMode
+import dalculator.utils.Configuration
 import preprocessor.transformers.EverywhereFilter.OpsFilter
 import preprocessor.transformers.EverywhereMap.OpsMap
 import preprocessor.util.Ops
@@ -31,7 +32,7 @@ trait FailureModeOps[T,W[_]] extends Ops[T,W] {
     filter((e:FailureMode) => regex.findFirstIn(e.name.s).isEmpty)(everywhere)
   }
 
-  def replaceEvent(toReplace:String, by:String)(implicit  everywhere: EverywhereMap[T,FailureMode => FailureMode]):W[everywhere.Result]= {
+  def replaceEvent(toReplace:String, by:String)(implicit  everywhere: EverywhereMap[T,FailureMode => FailureMode],conf:Configuration):W[everywhere.Result]= {
     map( (e:FailureMode) => e match {
       case e:FailureMode if e.name.s.contains(toReplace) =>
         FailureMode(by)
@@ -39,7 +40,7 @@ trait FailureModeOps[T,W[_]] extends Ops[T,W] {
     })(everywhere)
   }
 
-  def replaceAll(reps:Map[String,String])(implicit  everywhere: EverywhereMap[T,FailureMode => FailureMode]):W[everywhere.Result]= {
+  def replaceAll(reps:Map[String,String])(implicit  everywhere: EverywhereMap[T,FailureMode => FailureMode],conf:Configuration):W[everywhere.Result]= {
     map((e: FailureMode) => e match {
       case e : FailureMode if reps.exists(r => e.name.s.contains(r._1)) =>
         FailureMode(reps.foldLeft(e.name.s)((acc, rep) => acc.replaceAll(rep._1, rep._2)))

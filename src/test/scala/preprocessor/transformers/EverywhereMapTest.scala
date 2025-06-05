@@ -30,7 +30,7 @@ import scala.io.Source
 
 class EverywhereMapTest  extends AnyFlatSpec with should.Matchers {
 
-  "The Everywhere" should "apply directly on basic cases" in {
+  "The everywhere map operator" should "apply directly on basic cases" in {
     Everywhere.on("a")
       .map((s: String) => s"X$s")
       .value shouldBe "Xa"
@@ -40,7 +40,7 @@ class EverywhereMapTest  extends AnyFlatSpec with should.Matchers {
       .value shouldBe "abc"
   }
 
-  "The Everywhere" should "apply on recursively if not applicable on type" in {
+  it should "apply on recursively if not applicable on type" in {
     Everywhere.on(Option("a" :: "b" :: "c" :: Nil))
       .map((s: String) => s"X$s")
       .value shouldBe Some(List("Xa", "Xb", "Xc"))
@@ -53,51 +53,5 @@ class EverywhereMapTest  extends AnyFlatSpec with should.Matchers {
     Everywhere.on(Some(SortedSet("a", "b", "c"), 1 :: 2 :: 3 :: Nil))
       .map((s: String) => s"X$s")
       .value shouldBe Some(SortedSet("Xa", "Xb", "Xc"), 1 :: 2 :: 3 :: Nil)
-  }
-
-  "For AVEMXL the dalculator" should "provide high level comments for AVEMXL cut sets" in {
-
-    def exportSummarisedFFS(files: List[String], writer: FileWriter, replaces:Map[String,String]): Unit = {
-      writer.write(
-        Everywhere.on(files.map(OCASFile))
-          .map((l: List[OCASFile]) => from(l).derive[MCSAnalysis])
-          .map((mcs: MCSAnalysis) => from(mcs, replaces).derive[TableAnalysis])
-          .showAll
-          .value
-      )
-      writer.close()
-    }
-
-    def extractDictionary(dictionaryPath: String): Map[String, String] = {
-      val s = Source.fromFile(dictionaryPath)
-      val result = s.getLines().filterNot(_.contains("//")).toSeq.map(_.split(",")).collect { case Array(k, v) => k -> v }.toMap
-      s.close()
-      result
-    }
-
-    for {
-      functionalCatSeq <- FileManager.extractResourceAsFile("sequences/expertises/avem/functionalAssessment/noLatentFailure/CAT.O.seq")
-      functionalHazSeq <- FileManager.extractResourceAsFile("sequences/expertises/avem/functionalAssessment/noLatentFailure/HAZ.O.seq")
-      functionalMajSeq <- FileManager.extractResourceAsFile("sequences/expertises/avem/functionalAssessment/noLatentFailure/MAJ.O.seq")
-      functionalFiles = functionalCatSeq :: functionalHazSeq :: functionalMajSeq :: Nil
-      physicalCatSeq <- FileManager.extractResourceAsFile("sequences/expertises/avem/physicalAssessmentWithSW/CAT.O.seq")
-      physicalHazSeq <- FileManager.extractResourceAsFile("sequences/expertises/avem/physicalAssessmentWithSW/HAZ.O.seq")
-      physicalMajSeq <- FileManager.extractResourceAsFile("sequences/expertises/avem/physicalAssessmentWithSW/MAJ.O.seq")
-      physicalFiles = physicalCatSeq :: physicalHazSeq :: physicalMajSeq :: Nil
-      highLevelDictionary <- FileManager.extractResourceAsFile("preprocessor/expertises/avem/highLevelCommentDictionary.txt")
-      highLevelReplaces = extractDictionary(highLevelDictionary)
-      highLevelFunctionResults = new FileWriter(FileManager.exportDirectory.getFile("high_level_summarised_FFS_functions.txt"))
-      highLevelPhysicalResults = new FileWriter(FileManager.exportDirectory.getFile("high_level_summarised_FFS_physical.txt"))
-      lowLevelDictionary <- FileManager.extractResourceAsFile("preprocessor/expertises/avem/lowLevelCommentDictionary.txt")
-      lowLevelReplaces = extractDictionary(lowLevelDictionary)
-      lowLevelFunctionResults = new FileWriter(FileManager.exportDirectory.getFile("low_level_summarised_FFS_functions.txt"))
-      lowLevelPhysicalResults = new FileWriter(FileManager.exportDirectory.getFile("low_level_summarised_FFS_physical.txt"))
-    } yield {
-      exportSummarisedFFS(functionalFiles, highLevelFunctionResults, highLevelReplaces)
-      exportSummarisedFFS(physicalFiles, highLevelPhysicalResults, highLevelReplaces)
-      exportSummarisedFFS(functionalFiles, lowLevelFunctionResults, lowLevelReplaces)
-      exportSummarisedFFS(physicalFiles, lowLevelPhysicalResults, lowLevelReplaces)
-
-    }
   }
 }

@@ -21,6 +21,7 @@ import dalculator.cli.DalculatorParameters
 import dalculator.model.DalLevel._
 import dalculator.model._
 import dalculator.solver.SolveDal
+import dalculator.utils.Configuration
 import preprocessor.analysis.AnalysisTypes.{DALAnalysis, FHA, MCSAnalysis, UDEFFile}
 import preprocessor.ast._
 import preprocessor.transformers.Parser
@@ -34,7 +35,7 @@ trait DALComposer[Pre] extends Composer[Pre] {
 
 trait DALComposerInstances {
 
-  implicit def UDEFFileToDALComposer(implicit parser: Parser.Aux[UDEFFile, Map[Item, DalLevel]]): DALComposer[UDEFFile] = new DALComposer[UDEFFile] {
+  implicit def UDEFFileToDALComposer(implicit parser: Parser.Aux[UDEFFile, Map[Item, DalLevel]], conf:Configuration): DALComposer[UDEFFile] = new DALComposer[UDEFFile] {
 
     def apply(pre: UDEFFile): DALAnalysis = DALAnalysis(parser.parse(pre))
   }

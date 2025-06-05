@@ -15,36 +15,12 @@
  *  if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
  */
 
-package dalculator.cli
+package dalculator.utils
 
-import dalculator.DalculatorCore
-import dalculator.translator.ModelParser
-import dalculator.utils.Configuration
+case class Configuration(
+    printWarning:Boolean
+                        )
 
-object CLI {
-
-  def printUsage(): Unit = {
-    println("Usage: dalculator <param_file> ")
-    println("-help : print this message and exit.")
-  }
-
-
-  def main(args: Array[String]): Unit = {
-    val params = new DalculatorParameters
-
-    // Decode command line arguments
-    val argsList = args.toList
-
-    for (opt <- argsList) {
-      println("arg: " + opt)
-      if (opt.startsWith("-help")) {
-        printUsage()
-        System.exit(1)
-      } else {
-        ModelParser.loadParamsFile(opt, params)
-        // run specified commands
-        DalculatorCore(params)(Configuration.default)
-      }
-    }
-  }
+object Configuration {
+  val default: Configuration = Configuration(true)
 }

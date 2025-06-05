@@ -18,7 +18,7 @@
 package preprocessor.composer
 
 import dalculator.model.FailureMode
-import dalculator.utils.FileManager
+import dalculator.utils.{Configuration, FileManager}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 import preprocessor.analysis.AnalysisTypes.{MCSAnalysis, TableAnalysis, TableLine}
@@ -31,13 +31,15 @@ import scala.collection.immutable.SortedSet
 
 class ResultFileComposerTest  extends AnyFlatSpec with should.Matchers {
 
-  "The export" should "apply directly on any FC -> result map" in {
+  implicit val noWarning: Configuration = Configuration(printWarning = false)
+
+  "The export operator" should "apply directly on any FC -> result map" in {
     Everywhere.on(MCSAnalysis(FC(Symbol("fc")), SortedSet(SortedSet(FailureMode("a.f"), FailureMode("b.f")))))
       .exportResult
       .value.path shouldBe FileManager.exportDirectory.getFile("fc.txt").getPath
   }
 
-  "The export" should "apply directly on any table result" in {
+  it should "apply directly on any table result" in {
     Everywhere.on(TableAnalysis(TableLine(FC(Symbol("fc")),1,2,"test") :: Nil))
       .exportResult
       .value.path shouldBe FileManager.exportDirectory.getFile("table_fc.txt").getPath

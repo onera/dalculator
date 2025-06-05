@@ -18,7 +18,7 @@
 package dalculator.model
 
 import dalculator.cli.DefaultParameters
-import dalculator.utils.{Stringpool, UniqueString}
+import dalculator.utils.{Configuration, Stringpool, UniqueString}
 
 /** Represents the failure mode 'name' of function 'function'. */
 class FailureMode(val name: UniqueString, val function: Item) {
@@ -99,11 +99,13 @@ object FailureMode extends Iterable[FailureMode] {
   }
 
   /** Simplified constructor, decomposes the given string to find 'func'.'name' */
-  def apply(name: String): FailureMode = {
+  def apply(name: String)(implicit conf:Configuration): FailureMode = {
     val s = name.split('.')
     if (s.length <= 1) {
-      println("[WARNING] FailureMode error: could not identify failure mode in function identifier because it is too short to be decomposed:" + name)
-      println(s"[WARNING] Assuming failure mode is implicit and $name is the name of the item or a common cause failure")
+      if(conf.printWarning) {
+        println("[WARNING] FailureMode error: could not identify failure mode in function identifier because it is too short to be decomposed:" + name)
+        println(s"[WARNING] Assuming failure mode is implicit and $name is the name of the item or a common cause failure")
+      }
       FailureMode("",Item(name))
     } else {
       // call normal constructor
