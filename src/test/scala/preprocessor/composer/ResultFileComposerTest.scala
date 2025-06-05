@@ -18,7 +18,7 @@
 package preprocessor.composer
 
 import dalculator.model.FailureMode
-import dalculator.utils.FileManager
+import dalculator.utils.{Configuration, FileManager}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 import preprocessor.analysis.AnalysisTypes.{MCSAnalysis, TableAnalysis, TableLine}
@@ -30,6 +30,8 @@ import preprocessor.transformers.all._
 import scala.collection.immutable.SortedSet
 
 class ResultFileComposerTest  extends AnyFlatSpec with should.Matchers {
+
+  implicit val noWarning: Configuration = Configuration(printWarning = false)
 
   "The export" should "apply directly on any FC -> result map" in {
     Everywhere.on(MCSAnalysis(FC(Symbol("fc")), SortedSet(SortedSet(FailureMode("a.f"), FailureMode("b.f")))))

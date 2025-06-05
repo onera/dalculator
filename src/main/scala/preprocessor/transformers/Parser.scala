@@ -21,6 +21,7 @@ import dalculator.cli.DalculatorParameters
 import dalculator.model.DalLevel.DalE
 import dalculator.model.{AircraftData, AllocCstr, ColocCstr, Cost, DalCstr, DalLevel, DalLevelCstr, DalRelOp, DalRuleConstraint, FailureMode, IndepCstr, Item, LambdaBoundsCstr, LatentCstr, MaxCost, MinCost, Model, NoneIndepCsrt, NotIndepCstr, UserDefinedConstraints, UserDefinedOptimisation}
 import dalculator.translator.ModelParser
+import dalculator.utils.Configuration
 import preprocessor.analysis.AnalysisTypes._
 import preprocessor.ast.FC
 import preprocessor.transformers.Parser._
@@ -30,7 +31,7 @@ import java.io.File
 trait Parser[FT <: AnalysisFile] {
   type Result
 
-  def parse(file: FT): Result
+  def parse(file: FT)(implicit conf:Configuration): Result
 }
 
 object Parser {
@@ -51,7 +52,7 @@ trait ParserInstances {
   implicit object OCASParser extends Parser[OCASFile] {
     type Result = Option[(FC, List[List[FailureMode]])]
 
-    def parse(file: OCASFile): Option[(FC, List[List[FailureMode]])] = {
+    def parse(file: OCASFile)(implicit conf:Configuration): Option[(FC, List[List[FailureMode]])] = {
       val fm = new Model
       ModelParser.loadFC(file.path, fm, 2, -5, DalE)
       for {h <- fm.failureConditions.headOption} yield {
@@ -63,7 +64,7 @@ trait ParserInstances {
   implicit object UDEFParser extends Parser[UDEFFile] {
     type Result = Map[Item,DalLevel]
 
-    def parse(file: UDEFFile): Map[Item,DalLevel] = {
+    def parse(file: UDEFFile)(implicit conf:Configuration): Map[Item,DalLevel] = {
       val constraints = new UserDefinedConstraints
       ModelParser.loadUDef(file.path, constraints)
       constraints.dalConstraints.collect {

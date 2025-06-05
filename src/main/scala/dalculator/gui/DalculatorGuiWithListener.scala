@@ -30,6 +30,7 @@ import theory.pb.solver._
 import dalculator.cli._
 import dalculator.model.DalLevel._
 import dalculator.model._
+import dalculator.utils.Configuration
 
 import scala.language.postfixOps
 
@@ -194,7 +195,7 @@ class DalculatorGuiWithListener extends DalculatorGui with ActionListener {
           def doInBackground(): Unit = {
             frame.analysisThread = Some(this)
             println("analysis is running")
-            dalculator.DalculatorCore(params)
+            dalculator.DalculatorCore(params)(Configuration.default)
           }
 
           override def done(): Unit = {

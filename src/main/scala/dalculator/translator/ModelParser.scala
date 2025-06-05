@@ -19,6 +19,7 @@ package dalculator.translator
 
 import dalculator.cli.DalculatorParameters
 import dalculator.model._
+import dalculator.utils.Configuration
 import theory.pb.solver.{OpbSolver, Sat4jBoth, Sat4jCP, Sat4jRes}
 
 import java.io.{FileNotFoundException, FileReader}
@@ -45,10 +46,10 @@ object ModelParser extends RegexParsers {
   def qident: Parser[String] = "'" ~> ident <~ "'"
 
   /** Rule for a minmal cut set (a list of quoted identifiers). */
-  def cut: Parser[FailureModeList] = ("{" ~> repsep(qident, ",") <~ "}") ^^ (l => FailureModeList(l.map(f => FailureMode(f))))
+  def cut(implicit conf:Configuration): Parser[FailureModeList] = ("{" ~> repsep(qident, ",") <~ "}") ^^ (l => FailureModeList(l.map(f => FailureMode(f))))
 
   /** Rule for lists of minimal cut sets */
-  def cuts: Parser[List[FailureModeList]] = rep(cut)
+  def cuts(implicit conf:Configuration): Parser[List[FailureModeList]] = rep(cut)
 
   /** Rule for minimal cut sets header, contains name. */
   def fcname: Parser[String] = "products(MCS(" ~> qident <~ "))" ~ "="
@@ -63,7 +64,7 @@ object ModelParser extends RegexParsers {
    * @param xSev   the given xSev value is assigned to the parsed FC
    * @param refDal the given refDal is assigned to the parsed FC
    * */
-  def fc(model: Model, nSev: Int, xSev: BigDecimal, refDal: DalLevel): Parser[Model] = opt(comment) ~> fcname ~ cuts <~ "end" ~ opt(comment) ^^ {
+  def fc(model: Model, nSev: Int, xSev: BigDecimal, refDal: DalLevel)(implicit conf:Configuration): Parser[Model] = opt(comment) ~> fcname ~ cuts <~ "end" ~ opt(comment) ^^ {
     case name ~ cuts =>
       model.add(FailureCondition(name, nSev, xSev, cuts, refDal))
       model
@@ -76,7 +77,7 @@ object ModelParser extends RegexParsers {
    * @param xSev   the given xSev value is assigned to the parsed FC
    * @param refDal the given refDal is assigned to the parsed FC
    */
-  def loadFC(filename: String, model: Model, nSev: Int, xSev: BigDecimal, refDal: DalLevel): Unit = {
+  def loadFC(filename: String, model: Model, nSev: Int, xSev: BigDecimal, refDal: DalLevel)(implicit conf:Configuration): Unit = {
     val reader = try {
       new FileReader(filename)
     } catch {
@@ -310,24 +311,24 @@ object ModelParser extends RegexParsers {
   }
 
   /** Rule for user defined lambda bounds declaration */
-  def lambdaBounds: Parser[UserDefinedConstraint] = ("LambdaBounds(" ~> qident ~ "," ~ decimal ~ "," ~ decimal <~ ")") ^^ {
+  def lambdaBounds(implicit conf:Configuration): Parser[UserDefinedConstraint] = ("LambdaBounds(" ~> qident ~ "," ~ decimal ~ "," ~ decimal <~ ")") ^^ {
     case fm ~ _ ~ l ~ _ ~ u =>
       LambdaBoundsCstr(FailureMode(fm), l, u)
   }
 
   /** Rule for user defined latent failure mode declarations */
-  def latent: Parser[UserDefinedConstraint] = ("Latent(" ~> qident <~ ")") ^^ (fm => LatentCstr(FailureMode(fm)))
+  def latent(implicit conf:Configuration): Parser[UserDefinedConstraint] = ("Latent(" ~> qident <~ ")") ^^ (fm => LatentCstr(FailureMode(fm)))
 
   /** Rule for user defined latent failure mode declarations with special interval checks */
-  def latentItv: Parser[UserDefinedConstraint] = ("Latent(" ~> qident ~ "," ~ repsep(integer, ",") <~ ")") ^^ {
+  def latentItv(implicit conf:Configuration): Parser[UserDefinedConstraint] = ("Latent(" ~> qident ~ "," ~ repsep(integer, ",") <~ ")") ^^ {
     case fm ~ _ ~ itvs => LatentCstr(FailureMode(fm), Some(itvs))
   }
 
   /** Disjunction of user defined constraints */
-  def usrDefCtr: Parser[UserDefinedConstraint] = alloc | coloc | indep | notindep | noneIndep | dalBound | aircraftData | lambdaBounds | latent | latentItv | optimisation | dalRule | maxCost | minCost | DalCost | dalBoundqIdent
+  def usrDefCtr(implicit conf:Configuration): Parser[UserDefinedConstraint] = alloc | coloc | indep | notindep | noneIndep | dalBound | aircraftData | lambdaBounds | latent | latentItv | optimisation | dalRule | maxCost | minCost | DalCost | dalBoundqIdent
 
   /** Rule for user defined constraints file */
-  def usrDefCtrs(c: UserDefinedConstraints): Parser[UserDefinedConstraints] = opt(rep(usrDefCtr | comment)) ^^ {
+  def usrDefCtrs(c: UserDefinedConstraints)(implicit conf:Configuration): Parser[UserDefinedConstraints] = opt(rep(usrDefCtr | comment)) ^^ {
     constraints => {
       if (constraints.isDefined)
         constraints.get collect {case cst:UserDefinedConstraint => cst} foreach c.add
@@ -336,7 +337,7 @@ object ModelParser extends RegexParsers {
   }
 
   /** Loads the given user defined constraints file. */
-  def loadUDef(filename: String, c: UserDefinedConstraints): Unit = {
+  def loadUDef(filename: String, c: UserDefinedConstraints)(implicit conf:Configuration): Unit = {
     val reader = try {
       val reader = new FileReader(filename)
       reader

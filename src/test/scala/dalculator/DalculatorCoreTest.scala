@@ -22,7 +22,7 @@ import dalculator.model.DalLevel._
 import dalculator.model._
 import dalculator.solver.SolveDal
 import dalculator.translator.ModelParser
-import dalculator.utils.FileManager
+import dalculator.utils.{Configuration, FileManager}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 import preprocessor.analysis.AnalysisTypes.{DALAnalysis, MCS, MCSAnalysis, OCASFile, ResourceAnalysis}
@@ -34,6 +34,8 @@ import java.io.{File, FileWriter}
 import scala.io.Source
 
 class DalculatorCoreTest extends AnyFlatSpec with should.Matchers {
+
+  implicit val noWarning: Configuration = Configuration(printWarning = false)
 
   private def exportDalAnalysis(dalAnalysis: Ops[Seq[(Item, DalLevel)]], filename: String, udef:Option[UserDefinedConstraints] = None): Unit = {
     val writer = new FileWriter(FileManager.analysisDirectory.getFile(filename))

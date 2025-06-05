@@ -18,6 +18,7 @@
 package preprocessor.composer
 
 import dalculator.model.FailureMode
+import dalculator.utils.Configuration
 import preprocessor.analysis.AnalysisTypes._
 import preprocessor.ast.ASTImplicits._
 import preprocessor.ast.FC
@@ -40,7 +41,7 @@ trait MCSComposerInstances {
         .value
   }
 
-  implicit def OCASFileToMCSComposer(implicit parser: Parser.Aux[OCASFile,Option[(FC,List[List[FailureMode]])]]): MCSComposer[List[OCASFile]] = new MCSComposer[List[OCASFile]] {
+  implicit def OCASFileToMCSComposer(implicit parser: Parser.Aux[OCASFile,Option[(FC,List[List[FailureMode]])]], conf:Configuration): MCSComposer[List[OCASFile]] = new MCSComposer[List[OCASFile]] {
 
     def apply(files: List[OCASFile]): MCSAnalysis = MCSAnalysis(files.flatMap(parse).toMap)
 

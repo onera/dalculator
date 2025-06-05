@@ -18,6 +18,7 @@
 package preprocessor.composer
 
 import dalculator.model.FailureMode
+import dalculator.utils.Configuration
 import preprocessor.analysis.AnalysisTypes._
 import preprocessor.ast.ASTImplicits._
 import preprocessor.ast.FC
@@ -33,7 +34,7 @@ trait MSSComposer[Pre] extends Composer [Pre]{
 
 trait MSSComposerInstances {
 
-  implicit def FileToMSSComposer(implicit parser:Parser.Aux[OCASFile,Option[(FC,List[MS])]]): MSSComposer[List[OCASFile]] = new MSSComposer[List[OCASFile]] {
+  implicit def FileToMSSComposer(implicit parser:Parser.Aux[OCASFile,Option[(FC,List[MS])]], conf:Configuration): MSSComposer[List[OCASFile]] = new MSSComposer[List[OCASFile]] {
 
     def apply(files: List[OCASFile]): MSSAnalysis = MSSAnalysis(files.flatMap(parse).toMap)
 

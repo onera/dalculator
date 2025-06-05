@@ -21,12 +21,13 @@ import dalculator.cli.DalculatorParameters
 import dalculator.model._
 import dalculator.solver.{SolveBudget, SolveDal, SolveIndep}
 import dalculator.translator.ModelParser
+import dalculator.utils.Configuration
 
 /** The entry point of the dalculator. */
 object DalculatorCore {
 
   /** Runs an analysis according to the given parameters. */
-  def apply(params: DalculatorParameters): Unit = {
+  def apply(params: DalculatorParameters)(implicit conf:Configuration): Unit = {
     this.clear()
     if (!(params.seqFiles.nonEmpty &&
       params.nSevs.length == params.seqFiles.length &&
