@@ -40,7 +40,7 @@ class DalculatorScriptTest extends AnyFlatSpec with should.Matchers {
     }
   }
 
-  "For FAZER, the dalculator CLI" should "find a valid IDAL allocation" in {
+  it should "find a valid IDAL allocation" in {
     for {
       commandFile <- FileManager.extractResourceAsFile("FAZER/commandFiles/idal_analysis.txt")
     } yield {

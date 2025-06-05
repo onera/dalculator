@@ -33,13 +33,13 @@ class ResultFileComposerTest  extends AnyFlatSpec with should.Matchers {
 
   implicit val noWarning: Configuration = Configuration(printWarning = false)
 
-  "The export" should "apply directly on any FC -> result map" in {
+  "The export operator" should "apply directly on any FC -> result map" in {
     Everywhere.on(MCSAnalysis(FC(Symbol("fc")), SortedSet(SortedSet(FailureMode("a.f"), FailureMode("b.f")))))
       .exportResult
       .value.path shouldBe FileManager.exportDirectory.getFile("fc.txt").getPath
   }
 
-  "The export" should "apply directly on any table result" in {
+  it should "apply directly on any table result" in {
     Everywhere.on(TableAnalysis(TableLine(FC(Symbol("fc")),1,2,"test") :: Nil))
       .exportResult
       .value.path shouldBe FileManager.exportDirectory.getFile("table_fc.txt").getPath

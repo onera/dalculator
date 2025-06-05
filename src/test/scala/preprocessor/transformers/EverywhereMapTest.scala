@@ -30,7 +30,7 @@ import scala.io.Source
 
 class EverywhereMapTest  extends AnyFlatSpec with should.Matchers {
 
-  "The Everywhere" should "apply directly on basic cases" in {
+  "The everywhere map operator" should "apply directly on basic cases" in {
     Everywhere.on("a")
       .map((s: String) => s"X$s")
       .value shouldBe "Xa"
@@ -40,7 +40,7 @@ class EverywhereMapTest  extends AnyFlatSpec with should.Matchers {
       .value shouldBe "abc"
   }
 
-  "The Everywhere" should "apply on recursively if not applicable on type" in {
+  it should "apply on recursively if not applicable on type" in {
     Everywhere.on(Option("a" :: "b" :: "c" :: Nil))
       .map((s: String) => s"X$s")
       .value shouldBe Some(List("Xa", "Xb", "Xc"))
