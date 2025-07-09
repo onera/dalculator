@@ -1,6 +1,8 @@
 <div style="text-align: center;">
-        <picture>
-                <img src="dalculatorLogo.png" alt="Library Banner">
+         <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="dalculatorLogoDark.png">
+            <source media="(prefers-color-scheme: light)" srcset="dalculatorLogo.png">
+            <img alt="logo" src="dalculatorLogo.png">
         </picture>
 </div>
 <br>
