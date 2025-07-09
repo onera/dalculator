@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 jobs:
-  cycle-accurate-simulator-test:
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
