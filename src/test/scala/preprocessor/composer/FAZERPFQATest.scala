@@ -15,6 +15,12 @@ class FAZERPFQATest extends AnyFlatSpec with PFQAComposer with should.Matchers {
     getDictionary(file)
   }).getOrElse(Map.empty)
 
+  private val FC_DICTIONARY = (for{
+    file <- FileManager.extractResourceAsFile("FAZER/pfqa/fcDictionary.csv")
+  } yield {
+    getDictionary(file).transform((_,v) => v.head)
+  }).getOrElse(Map.empty)
+
   private val ACTION_DICTIONARY = (for{
     file <- FileManager.extractResourceAsFile("FAZER/pfqa/actionDictionary.csv")
   } yield {
@@ -34,6 +40,11 @@ class FAZERPFQATest extends AnyFlatSpec with PFQAComposer with should.Matchers {
       val m = x.split("[\\^.]").init.last
       ACTION_DICTIONARY.getOrElse(m, m)
   }
+  val toFC: PartialFunction[String, String] = {
+    case x if x.contains("FC_") =>
+      FC_DICTIONARY.getOrElse(x, x)
+  }
+
   "A functional probable failure analysis" should "be able to parse Cecilia XML and save it as CSV" in {
     for {f <- FileManager.extractResourceAsFile("FAZER/pfqa/functionalPFQA.xml")} yield {
       performAndExportPFQA(f,"fazerFunctionalPFQA.csv",removeLayer)

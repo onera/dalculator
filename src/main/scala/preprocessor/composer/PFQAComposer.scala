@@ -32,15 +32,13 @@ trait PFQAComposer {
     }
   }
 
-  private case class TableLine(event: Event, outcome: String, alarms: Set[String], mode: String, law: String) {
+  private case class TableLine(event: Event, outcome: String, alarms: Set[String], mode: String, law: String, failureCondition: String) {
     override def toString: String = alarms match {
-      case s if s.isEmpty => s"$event$SEPARATOR$law$SEPARATOR$outcome$SEPARATOR$mode${SEPARATOR}None\n"
-      case s if s.tail.isEmpty =>
-        s"$event$SEPARATOR$law$SEPARATOR$outcome$SEPARATOR$mode$SEPARATOR${s.head}\n"
+      case s if s.isEmpty => s"$event$SEPARATOR$law$SEPARATOR$outcome$SEPARATOR$mode${SEPARATOR}None$SEPARATOR$failureCondition\n"
       case s =>
-        val ordered = s.toSeq.sorted
-        s"$event$SEPARATOR$law$SEPARATOR$outcome$SEPARATOR$mode$SEPARATOR${ordered.head}" +
-          ordered.tail.map(a => s"${Event.empty}$SEPARATOR$SEPARATOR$SEPARATOR$SEPARATOR$a").mkString("\n", "\n", "\n")
+        (for{ alarm <- s.toSeq.sorted}
+          yield
+            s"$event$SEPARATOR$law$SEPARATOR$outcome$SEPARATOR$mode$SEPARATOR$alarm$SEPARATOR$failureCondition").mkString("","\n","\n")
     }
   }
 
@@ -60,6 +58,8 @@ trait PFQAComposer {
 
   val toOutcome: PartialFunction[String, String]
 
+  val toFC: PartialFunction[String, String]
+
   val toAlarm: PartialFunction[String, Seq[String]]
 
   val toAction: PartialFunction[String, String]
@@ -72,8 +72,10 @@ trait PFQAComposer {
     alarms = names.collect(toAlarm).flatten.toSet
     outcomes = names.collect(toOutcome)
     modes = names.collect(toAction)
+    failureConditions = names.collect(toFC)
     outcome <- if (outcomes.isEmpty) Seq("NSE") else outcomes
     mode = if (modes.isEmpty) "None" else modes.distinct.mkString(" & ")
+    fc = if(failureConditions.isEmpty) "None" else failureConditions.distinct.mkString(" and ")
     e <- Event(reformatName(event.toString()))
   } yield {
     val law = events.get(e) match {
@@ -81,7 +83,7 @@ trait PFQAComposer {
       case Some(s) if s.isEmpty => "N/A"
       case Some(s) => s.head
     }
-    TableLine(e, outcome, alarms, mode, law)
+    TableLine(e, outcome, alarms, mode, law, fc)
   }
 
   final def performAndExportPFQA(
@@ -108,7 +110,7 @@ trait PFQAComposer {
 
     val output = FileManager.analysisDirectory.getFile(outputFile)
     val writer = new FileWriter(output)
-    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Failure mode${SEPARATOR}Law${SEPARATOR}Criticality${SEPARATOR}Recovery action${SEPARATOR}Detection mean(s)\n")
+    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Failure mode${SEPARATOR}Law${SEPARATOR}Criticality${SEPARATOR}Recovery action${SEPARATOR}Detection mean(s)${SEPARATOR}Failure condition(s)\n")
     for {line <- table}
       writer.write(line.toString)
     writer.close()

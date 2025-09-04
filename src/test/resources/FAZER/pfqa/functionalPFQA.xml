@@ -1,304 +1,577 @@
 <?xml version='1.0'?>
 <fmeagen>
 	<define>
-		<param name="select.state" value="none" />
 		<param name="select.flow" value="situation_assessment.*_failed|FAZERFunctionalArchitecture\.(EL\.O|SH\.O|FT\.O|RB\.O|CL\.O)|(FlightControlLoss_CAT\.O|LandImmediately_CAT\.O|LandASAPossible_HAZ\.O|LandASAPracticable_MAJ\.O|FlightControlRecovery_MIN\.O|ContinuedMission_NSE\.O)" />
 		<param name="onlychange" value="true" />
 	</define>
 	<result>
 		<tr id="1" evt="FAZERFunctionalArchitecture.AbstractFlightPhysics.ElecPowerSupply.fail_partial">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.ElecPowerSupply.S" 	value="partialLoss"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_partial_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="3" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.fail_err">
+		<tr id="3" evt="FAZERFunctionalArchitecture.AbstractFlightPhysics.Fuel.fail_partial">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.Fuel.S" 	value="partialLoss"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.fuel_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="5" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.fail_err">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="4" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.fail_loss">
+		<tr id="6" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.fail_loss">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="5" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecPartial.fail">
+		<tr id="7" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecPartial.fail">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecPartial.ok" 	value="false"/>
 		</tr>
-		<tr id="6" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecTotal.fail">
+		<tr id="8" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecTotal.fail">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecTotal.ok" 	value="false"/>
 		</tr>
-		<tr id="7" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.fail_err">
+		<tr id="9" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownFuelParam.fail_err">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownFuelParam.S" 	value="err"/>
+		</tr>
+		<tr id="10" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownFuelParam.fail_loss">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownFuelParam.S" 	value="lost"/>
+		</tr>
+		<tr id="11" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.fail_err">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="8" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.fail_loss">
+		<tr id="12" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.fail_loss">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="9" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.fail_err">
+		<tr id="13" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.fail_err">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="10" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.fail_loss">
+		<tr id="14" evt="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.fail_loss">
+			<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="11" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.fail_err">
+		<tr id="15" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.fail_err">
+			<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="12" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.fail_loss">
+		<tr id="16" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.fail_loss">
+			<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="13" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.fail_err">
+		<tr id="17" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.FuelEstimationFun.fail_err">
+			<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.FuelEstimationFun.S" 	value="err"/>
+		</tr>
+		<tr id="18" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.FuelEstimationFun.fail_loss">
+			<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.FuelEstimationFun.S" 	value="lost"/>
+		</tr>
+		<tr id="19" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.fail_err">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.guideParam_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.guideParam_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="14" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.fail_loss">
+		<tr id="20" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.fail_loss">
+			<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
 			<flow  name="FAZERFunctionalArchitecture.EL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.guideParam_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPossible_HAZ.O" 	value="true"/>
 		</tr>
-		<tr id="15" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.PilotFun.fail_err">
+		<tr id="21" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.PilotFun.fail_err">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.PilotFun.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="FT"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.pilotParam_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotParam_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="16" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.PilotFun.fail_loss">
+		<tr id="22" evt="FAZERFunctionalArchitecture.FlightDataAcquisition.PilotFun.fail_loss">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.PilotFun.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotParam_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="17" evt="FAZERFunctionalArchitecture.FlightPathControl.FTS.FTSEngaged.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="23" evt="FAZERFunctionalArchitecture.FlightPathControl.FTS.FTSEngaged.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.FTSEngaged.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="18" evt="FAZERFunctionalArchitecture.FlightPathControl.FTS.FTSEngaged.stuck_on_true">
+		<tr id="24" evt="FAZERFunctionalArchitecture.FlightPathControl.FTS.FTSEngaged.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.FTSEngaged.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="19" evt="FAZERFunctionalArchitecture.FlightPathControl.FTS.executeFTS.fail">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="25" evt="FAZERFunctionalArchitecture.FlightPathControl.FTS.executeFTS.fail">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.executeFTS.ok" 	value="false"/>
 		</tr>
-		<tr id="20" evt="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.fail_err">
+		<tr id="26" evt="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.fail_err">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="21" evt="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.fail_loss">
+		<tr id="27" evt="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.fail_loss">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="22" evt="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyFlightPlan.fail_err">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="28" evt="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyFlightPlan.fail_err">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyFlightPlan.S" 	value="err"/>
 		</tr>
-		<tr id="23" evt="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyFlightPlan.fail_loss">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="29" evt="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyFlightPlan.fail_loss">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyFlightPlan.S" 	value="lost"/>
 		</tr>
-		<tr id="24" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ActuatorsControl.fail_err">
+		<tr id="30" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ActuatorsControl.fail_err">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ActuatorsControl.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="25" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ActuatorsControl.fail_loss">
+		<tr id="31" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ActuatorsControl.fail_loss">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ActuatorsControl.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="26" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Guide.fail_err">
+		<tr id="32" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Guide.fail_err">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Guide.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
 			<flow  name="FAZERFunctionalArchitecture.EL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPossible_HAZ.O" 	value="true"/>
 		</tr>
-		<tr id="27" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Guide.fail_loss">
+		<tr id="33" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Guide.fail_loss">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Guide.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
 			<flow  name="FAZERFunctionalArchitecture.EL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPossible_HAZ.O" 	value="true"/>
 		</tr>
-		<tr id="28" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Nav.fail_err">
+		<tr id="34" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Nav.fail_err">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Nav.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SH"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SH"/>
 			<flow  name="FAZERFunctionalArchitecture.SH.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
 		</tr>
-		<tr id="29" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Nav.fail_loss">
+		<tr id="35" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Nav.fail_loss">
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Nav.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SH"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SH"/>
 			<flow  name="FAZERFunctionalArchitecture.SH.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
 		</tr>
-		<tr id="30" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Pilot.fail_err">
+		<tr id="36" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Pilot.fail_err">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Pilot.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="31" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Pilot.fail_loss">
+		<tr id="37" evt="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Pilot.fail_loss">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Pilot.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="32" evt="FAZERFunctionalArchitecture.GroundToBoardCommunication.UpRequestedMode.fail">
+		<tr id="38" evt="FAZERFunctionalArchitecture.GroundToBoardCommunication.UpRequestedMode.fail">
+			<state name="FAZERFunctionalArchitecture.GroundToBoardCommunication.UpRequestedMode.isOK" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SH"/>
 			<flow  name="FAZERFunctionalArchitecture.SH.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.piltoMode_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
 		</tr>
-		<tr id="39" evt="FAZERFunctionalArchitecture.LinkPup.fail_err">
-			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pupLink_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
-		</tr>
-		<tr id="40" evt="FAZERFunctionalArchitecture.LinkPup.fail_loss">
-			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pupLink_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
-		</tr>
-		<tr id="41" evt="FAZERFunctionalArchitecture.LinkStick.fail_err">
-			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.stickLink_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
-		</tr>
-		<tr id="42" evt="FAZERFunctionalArchitecture.LinkStick.fail_loss">
-			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.stickLink_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
-		</tr>
-		<tr id="43" evt="FAZERFunctionalArchitecture.LinkTelemetry.fail_err">
-			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
+		<tr id="45" evt="FAZERFunctionalArchitecture.LinkPup.fail_err">
+			<state name="FAZERFunctionalArchitecture.LinkPup.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pupLink_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="44" evt="FAZERFunctionalArchitecture.LinkTelemetry.fail_loss">
-			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
+		<tr id="46" evt="FAZERFunctionalArchitecture.LinkPup.fail_loss">
+			<state name="FAZERFunctionalArchitecture.LinkPup.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pupLink_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="45" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="47" evt="FAZERFunctionalArchitecture.LinkStick.fail_err">
+			<state name="FAZERFunctionalArchitecture.LinkStick.S" 	value="err"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.stickLink_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="46" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.stuck_on_true">
+		<tr id="48" evt="FAZERFunctionalArchitecture.LinkStick.fail_loss">
+			<state name="FAZERFunctionalArchitecture.LinkStick.S" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.stickLink_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="49" evt="FAZERFunctionalArchitecture.LinkTelemetry.fail_err">
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
+			<state name="FAZERFunctionalArchitecture.LinkTelemetry.S" 	value="err"/>
+			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="50" evt="FAZERFunctionalArchitecture.LinkTelemetry.fail_loss">
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
+			<state name="FAZERFunctionalArchitecture.LinkTelemetry.S" 	value="lost"/>
+			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.telemetry_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="51" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.S" 	value="stuck_false"/>
+		</tr>
+		<tr id="52" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_partial_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="47" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="53" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="48" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.stuck_on_true">
+		<tr id="54" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_total_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="49" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="55" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmFuelNotOK.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmFuelNotOK.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="50" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.stuck_on_true">
+		<tr id="56" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmFuelNotOK.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmFuelNotOK.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.fuel_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="57" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.S" 	value="stuck_false"/>
+		</tr>
+		<tr id="58" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
 			<flow  name="FAZERFunctionalArchitecture.EL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.guideParam_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPossible_HAZ.O" 	value="true"/>
 		</tr>
-		<tr id="51" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.stuck_on_false">
+		<tr id="59" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="52" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.stuck_on_true">
+		<tr id="60" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.navMCU_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="53" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.stuck_on_false">
+		<tr id="61" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="54" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.stuck_on_true">
+		<tr id="62" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="55" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.stuck_on_false">
+		<tr id="63" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="56" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.stuck_on_true">
+		<tr id="64" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane.S" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.PSLaneState_failed" 	value="true"/>
+		</tr>
+		<tr id="65" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.S" 	value="stuck_false"/>
+		</tr>
+		<tr id="66" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.S" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.oneStick_failed" 	value="true"/>
+		</tr>
+		<tr id="67" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPayload.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPayload.S" 	value="stuck_false"/>
+		</tr>
+		<tr id="68" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPayload.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPayload.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.payloadControl_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
+		</tr>
+		<tr id="69" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.S" 	value="stuck_false"/>
+		</tr>
+		<tr id="70" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotMCU_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="57" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMode.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="71" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMode.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMode.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="58" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMode.stuck_on_true">
+		<tr id="72" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMode.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMode.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SH"/>
 			<flow  name="FAZERFunctionalArchitecture.SH.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.piltoMode_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.FlightControlRecovery_MIN.O" 	value="true"/>
 		</tr>
-		<tr id="59" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotParam.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="73" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotParam.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotParam.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="60" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotParam.stuck_on_true">
+		<tr id="74" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotParam.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotParam.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotParam_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
-		<tr id="61" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="75" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="62" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.stuck_on_true">
+		<tr id="76" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pupLink_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="63" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.stuck_on_false">
+		<tr id="77" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmRecoveryBat.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmRecoveryBat.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="64" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.stuck_on_true">
+		<tr id="78" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmRecoveryBat.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmRecoveryBat.S" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.recoveryBat_failed" 	value="true"/>
+		</tr>
+		<tr id="79" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.S" 	value="stuck_false"/>
+		</tr>
+		<tr id="80" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuMCU_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="65" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.stuck_on_false">
+		<tr id="81" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="66" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.stuck_on_true">
+		<tr id="82" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="67" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="83" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="68" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.stuck_on_true">
+		<tr id="84" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.RB.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.stickLink_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
+			<flow  name="GroundRiskPolicy.LandASAPracticable_MAJ.O" 	value="true"/>
 		</tr>
-		<tr id="69" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.stuck_on_false">
-			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="true"/>
+		<tr id="85" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.S" 	value="stuck_false"/>
 		</tr>
-		<tr id="70" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.stuck_on_true">
+		<tr id="86" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.S" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.switch_failed" 	value="true"/>
+		</tr>
+		<tr id="87" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.stuck_on_false">
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.S" 	value="stuck_false"/>
+		</tr>
+		<tr id="88" evt="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost"/>
+			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
+			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.S" 	value="stuck_true"/>
+			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="EL"/>
+			<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FT.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.Ground_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.LandImmediately_CAT.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.ContinuedMission_NSE.O" 	value="false"/>
 		</tr>
 	</result>
 	<model>
@@ -320,15 +593,23 @@
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.SH.O" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.PSLaneState_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_partial_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_total_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuel_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.guideParam_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.navMCU_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.oneStick_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.payloadControl_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotMCU_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
@@ -338,18 +619,22 @@
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.pupLink_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.recoveryBat_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.secuMCU_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.stickLink_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.switch_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.traj_once_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="GroundRiskPolicy.ContinuedMission_NSE.O" domain="bool" orientation="out">
-			<init value="false"/></flow>
+			<init value="true"/></flow>
 		<flow name="GroundRiskPolicy.FlightControlLoss_CAT.O" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="GroundRiskPolicy.FlightControlRecovery_MIN.O" domain="bool" orientation="out">
@@ -358,20 +643,238 @@
 			<init value="false"/></flow>
 		<flow name="GroundRiskPolicy.LandASAPracticable_MAJ.O" domain="bool" orientation="out">
 			<init value="false"/></flow>
-		<flow name="GroundRiskPolicy.LandImmediately_CAT.O" domain="bool" orientation="out">
-			<init value="false"/></flow>
+		<state name="AnalysisType.analysisType" domain="drosofilesJerry_analysis_AnalysisType">
+			<init value="Functional"/></state>
+		<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.ElecPowerSupply.S" domain="Quality_Function_OPL">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.Fuel.S" domain="Quality_Function_OPL">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecPartial.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecTotal.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownFuelParam.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.FuelEstimationFun.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightDataAcquisition.PilotFun.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.FTSEngaged.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.executeFTS.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyFlightPlan.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ActuatorsControl.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Guide.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Nav.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.Pilot.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.GroundToBoardCommunication.UpRequestedMode.isOK" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERFunctionalArchitecture.Ground_situation_assessment.alarmGuidParam.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.Ground_situation_assessment.alarmPilotParam.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.Ground_situation_assessment.alarmTraj.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" domain="drosofilesJerry_modes_modes">
+			<init value="C"/></state>
+		<state name="FAZERFunctionalArchitecture.LinkPup.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.LinkStick.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.LinkTelemetry.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmFuelNotOK.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPayload.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMode.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotParam.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmRecoveryBat.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" domain="bool">
+			<init value="false"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" domain="drosofilesJerry_modes_modes">
+			<init value="C"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_supervision.switch_latch1.PrimSelect" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.CANSwitch.switch1.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.CANSwitch.switch2.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.Baro.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.GPS.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.IMU.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu3_3V.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu5V.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.GPSJamming.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.PowerManagement.RecoveryBat.S" domain="Quality_Function_OPL">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.PowerManagement.mainReg1.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.PowerManagement.mainReg2.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.PowerManagement.regHighTension1.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.PowerManagement.regLowTension0.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.PowerManagement.regLowTension1.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.PowerManagement.regLowTension2.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.PowerManagement.regOp.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.Bat.S" domain="Quality_Function_OPL">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.ECU.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.GPS_INS.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L2.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L3.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L4.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.YACSII.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.alternator.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.fuel.S" domain="Quality_Function_OPL">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.motor.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.noOverheat.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.servoMotor.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert1.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert2.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.allJammed.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.no_jamming_2_4GHz.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.no_jamming_444MHz.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.no_jamming_868_MHz.ok" domain="bool">
+			<init value="true"/></state>
+		<state name="FAZERPhysicalArchitecture.payload.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
+		<state name="FAZERPhysicalArchitecture.payloadBus.S" domain="Quality_Function_OLE">
+			<init value="ok"/></state>
 		<event name="FAZERFunctionalArchitecture.AbstractFlightPhysics.ElecPowerSupply.fail_partial">
+			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
+		<event name="FAZERFunctionalArchitecture.AbstractFlightPhysics.Fuel.fail_partial">
 			<law value="constant(1.0E-4)" aralia="constant 1.0E-4" moca="drc 0"/></event>
 		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.fail_err"></event>
 		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecParam.fail_loss"></event>
 		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecPartial.fail"></event>
 		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownElecTotal.fail"></event>
+		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownFuelParam.fail_err"></event>
+		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownFuelParam.fail_loss"></event>
 		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.fail_err"></event>
 		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownGuideParam.fail_loss"></event>
 		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.fail_err"></event>
 		<event name="FAZERFunctionalArchitecture.BoardToGroundCommunication.DownPilotParam.fail_loss"></event>
 		<event name="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.fail_err"></event>
 		<event name="FAZERFunctionalArchitecture.FlightDataAcquisition.ElecEstimationFun.fail_loss"></event>
+		<event name="FAZERFunctionalArchitecture.FlightDataAcquisition.FuelEstimationFun.fail_err"></event>
+		<event name="FAZERFunctionalArchitecture.FlightDataAcquisition.FuelEstimationFun.fail_loss"></event>
 		<event name="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.fail_err"></event>
 		<event name="FAZERFunctionalArchitecture.FlightDataAcquisition.GuideFun.fail_loss"></event>
 		<event name="FAZERFunctionalArchitecture.FlightDataAcquisition.PilotFun.fail_err"></event>
@@ -402,12 +905,20 @@
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecTotal.stuck_on_true"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmFuelNotOK.stuck_on_false"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmFuelNotOK.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.stuck_on_true"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane.stuck_on_false"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane.stuck_on_true"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.stuck_on_false"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.stuck_on_true"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPayload.stuck_on_false"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPayload.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMode.stuck_on_false"></event>
@@ -416,17 +927,21 @@
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotParam.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPupLink.stuck_on_true"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmRecoveryBat.stuck_on_false"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmRecoveryBat.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuSensor.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmStickLink.stuck_on_true"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.stuck_on_false"></event>
+		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.stuck_on_true"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.stuck_on_false"></event>
 		<event name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmTraj.stuck_on_true"></event>
 		<nodeproperty name="projectName" value="withoutProcedures"/>
 		<nodeproperty name="projectVersion" value="8"/>
 		<nodeproperty name="projectConfig" value="functional"/>
-		<nodeproperty name="currentDate" value="2025-06-05 14:08:37"/>
+		<nodeproperty name="currentDate" value="2025-08-27 11:36:30"/>
 	</model>
 </fmeagen>

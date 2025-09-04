@@ -1,0 +1,24 @@
+FAZERFunctionalArchitecture.FC_B2GKO,Failure of board to ground com
+FAZERFunctionalArchitecture.FC_FDAKO,Failure of data acquisition
+FAZERFunctionalArchitecture.FC_FMCKO,Failure of flight mode selection
+FAZERFunctionalArchitecture.FC_FPC_FTSKO,Failure of flight termination system
+FAZERFunctionalArchitecture.FC_FPC_TCKO,Failure of trajectory control
+FAZERFunctionalArchitecture.FC_G2BKO,Failure of ground to board com
+FAZERFunctionalArchitecture.FC_MonitoringKO,Failure of monitoring
+FAZERFunctionalArchitecture.FC_LowBat,Reduced electrical autonomy
+FAZERFunctionalArchitecture.FC_LowFuel,Reduced fuel autonomy
+FAZERFunctionalArchitecture.FC_FPC_FPMKO,Failure of flight plan management
+physical2FunctionalMapping.FC_Degraded_Alt,Loss of alternative altitude estimation
+physical2FunctionalMapping.FC_Degraded_G2B,Loss of alternative telecommand
+physical2FunctionalMapping.FC_Degraded_Pos,Loss of alternative position estimation
+physical2FunctionalMapping.FC_Degraded_PowerDistrib,Loss of alternative power distribution
+physical2FunctionalMapping.FC_Degraded_Rot,Loss of alternative rotational speed estimation
+physical2FunctionalMapping.FC_Degraded_Trans,Loss of alternative translational speed estimation
+physical2FunctionalMapping.FC_Degraded_YAMAHA_FAZER_Gateway,Loss of alternative FAZER gateway to YAMAHA
+physical2FunctionalMapping.FC_YAMAHA_TCKO,Loss of internal YAMAHA control
+physical2FunctionalMapping.FC_YAMAHA_TCUsed,Triggering of internal YAMAHA emergency landing
+physical2FunctionalMapping.FC_Payload,Payload Failure
+physical2FunctionalMapping.FC_Degraded_EmergencyPlan,Loss of emergency flight plan management alternative
+physical2FunctionalMapping.FC_Degraded_Telemetry,Loss of board to ground com alternative
+physical2FunctionalMapping.FC_Degraded_SW_Main,Loss of alternative control/FTS/monitoring/supervision alternatives
+
