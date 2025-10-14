@@ -111,6 +111,15 @@ class DalculatorParameters {
   /** Save the resource allocation to file if one is found. */
   var indepSaveAlloc: Boolean = false
 
+  //----------- PFQA parameters ----------------
+  var fmeaFile: Option[String] = None
+  var actionDictionary: Option[String] = None
+  var alarmDictionary: Option[String] = None
+  var fcDictionary: Option[String] = None
+  var pfqaEnabled: Boolean = false
+  var pfqaResultFile: String = FileManager.analysisDirectory.getFile("pfqaResult.csv").getAbsolutePath
+  var pfqaSeverityDictionary: Option[String] = None
+
   //----------- Dal parameters ----------------
   /** DAL analysis 'enabled' status */
   var dalEnabled = false

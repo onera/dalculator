@@ -6,7 +6,7 @@ import java.io.{File, FileWriter}
 import scala.io.Source
 import scala.xml.{Node, NodeSeq, XML, Source => XMLSource}
 
-trait PFQAComposer {
+object PFQAComposer {
 
   final val SEPARATOR = ", "
 
@@ -56,15 +56,13 @@ trait PFQAComposer {
     result
   }
 
-  val toOutcome: PartialFunction[String, String]
-
-  val toFC: PartialFunction[String, String]
-
-  val toAlarm: PartialFunction[String, Seq[String]]
-
-  val toAction: PartialFunction[String, String]
-
-  private final def buildTable(lines: NodeSeq, events: Map[Event, Seq[String]], reformatName: String => String): Seq[TableLine] = for {
+  private final def buildTable(lines: NodeSeq,
+                               events: Map[Event, Seq[String]],
+                               reformatName: String => String,
+                               toAction: Map[String, String],
+                               toAlarm: Map[String, Seq[String]],
+                               toFC: Map[String, String],
+                               toOutcome: Map[String, String]): Seq[TableLine] = for {
     line <- lines
     event <- line \ "@evt"
     flows = (line \ "flow").filter(n => (n \ "@value").exists(_.toString().contains("true")))
@@ -90,7 +88,12 @@ trait PFQAComposer {
                                   fileName: String,
                                   outputFile:String,
                                   reformatName: String => String = x => x,
-                                  filterEvents: Node => Boolean =  _ => true): File = {
+                                  toAction: Map[String, String],
+                                  toAlarm: Map[String, Seq[String]],
+                                  toFC: Map[String, String],
+                                  toSeverity: Map[String, String],
+                                  filterEvents: Node => Boolean =  _ => true
+                                ): File = {
     val reader = XMLSource.fromFile(fileName)
     val result = XML.load(reader)
     val events = {
@@ -106,7 +109,7 @@ trait PFQAComposer {
 
     val analysisLines = (result \\ "tr").filter(n => (n \ "@evt").exists(filterEvents))
 
-    val table = buildTable(analysisLines, events, reformatName)
+    val table = buildTable(analysisLines, events, reformatName, toAction, toAlarm, toFC, toSeverity)
 
     val output = FileManager.analysisDirectory.getFile(outputFile)
     val writer = new FileWriter(output)
