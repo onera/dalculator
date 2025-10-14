@@ -104,26 +104,50 @@ object ModelParser extends RegexParsers {
   def loadSeqCmd(params: DalculatorParameters): Parser[Unit] =
     ("loadSeq(" ~> (dalLevel <~ ",") ~ (integer <~ ",") ~ (decimal <~ ",") ~ filePath <~ ")") ^^ {
       case refDal ~ nSev ~ xSev ~ path =>
-        println("loadSeq", refDal, nSev, xSev, path)
         params.seqFiles ::= path
         params.nSevs ::= nSev
         params.xSevs ::= xSev
         params.refDals ::= refDal
     }
 
+  def loadFMEACmd(params: DalculatorParameters): Parser[Unit] =
+    ("loadFMEA(" ~> filePath <~ ")" ) ^^ {
+      path => params.fmeaFile = Some(path)
+    }
+
+  def loadActionDictionary(params: DalculatorParameters): Parser[Unit] =
+    ("loadActionDictionary(" ~> filePath <~ ")" ) ^^ {
+      path => params.actionDictionary = Some(path)
+    }
+
+  def loadAlarmDictionary(params: DalculatorParameters): Parser[Unit] =
+    ("loadAlarmDictionary(" ~> filePath <~ ")" ) ^^ {
+      path => params.alarmDictionary = Some(path)
+    }
+
+  def loadFCDictionary(params: DalculatorParameters): Parser[Unit] =
+    ("loadFCDictionary(" ~> filePath <~ ")" ) ^^ {
+      path => params.fcDictionary = Some(path)
+    }
+
+  def loadSeverityDictionary(params: DalculatorParameters): Parser[Unit] =
+    ("loadSeverityDictionary(" ~> filePath <~ ")" ) ^^ {
+      path => params.pfqaSeverityDictionary = Some(path)
+    }
+
+
   def integerParam: Parser[String] = "resourceMaxNbr" | "resourceMinNbr"
 
   def setIntegerParamCmd(params: DalculatorParameters): Parser[Unit] =
     ((integerParam <~ "=") ~ integer) ^^ {
       case param ~ value =>
-        println(param, value)
         param match {
           case "resourceMinNbr" => params.indepResourcesStart = value
           case "resourceMaxNbr" => params.indepResourcesStop = value
         }
     }
 
-  def booleanParam: Parser[String] = "indepEnabled" | "indepSaveAlloc" | "dalEnabled" | "dalImportIndep" | "budgetEnabled" | "budgetImportIndep"
+  def booleanParam: Parser[String] = "indepEnabled" | "indepSaveAlloc" | "dalEnabled" | "dalImportIndep" | "budgetEnabled" | "budgetImportIndep" | "pfqaEnabled"
 
   def booleanValue: Parser[Boolean] = ("true" | "false") ^^ {
     case "true" => true
@@ -132,7 +156,6 @@ object ModelParser extends RegexParsers {
 
   def setBooleanParamCmd(params: DalculatorParameters): Parser[Unit] = ((booleanParam <~ "=") ~ booleanValue) ^^ {
     case param ~ value =>
-      println(param, value)
       param match {
         case "indepEnabled" => params.indepEnabled = value
         case "dalEnabled" => params.dalEnabled = value
@@ -140,6 +163,7 @@ object ModelParser extends RegexParsers {
         case "budgetEnabled" => params.budgetEnabled = value
         case "budgetImportIndep" => params.budgetImportIndep = value
         case "indepSaveAlloc" =>  params.indepSaveAlloc = value
+        case "pfqaEnabled" => params.pfqaEnabled = value
         case _ =>
       }
   }
@@ -154,18 +178,16 @@ object ModelParser extends RegexParsers {
 
   def setSolverParamCmd(params: DalculatorParameters): Parser[Unit] = ((solverParam <~ "=") ~ solverValue) ^^ {
     case param ~ value =>
-      println(param, value)
       param match {
         case "indepSolver" | "solver" => params.indepSolver = value
         case "dalSolver" => params.dalSolver = value
       }
   }
 
-  def pathParam: Parser[String] = "resultsFile" | "opbFile" | "indepResultsFile" | "dalResultsFile" | "indepOpbFile" | "dalOpbFile" | "indepUdefFile" | "dalUdefFile" | "udefFile"
+  def pathParam: Parser[String] = "resultsFile" | "opbFile" | "indepResultsFile" | "dalResultsFile" | "indepOpbFile" | "dalOpbFile" | "indepUdefFile" | "dalUdefFile" | "udefFile" | "pfqaResultFile"
 
   def setPathParamCmd(params: DalculatorParameters): Parser[Unit] = ((pathParam <~ "=") ~ filePath) ^^ {
     case param ~ value =>
-      println(param, value)
       param match {
         case "resultsFile" | "indepResultsFile" => params.indepResultsFile = value
         case "opbFile" | "indepOpbFile" => params.indepOpbFile = value
@@ -173,11 +195,12 @@ object ModelParser extends RegexParsers {
           params.indepUdefFile = Some(value)
         case "dalResultsFile" => params.dalResultsFile = value
         case "dalOpbFile" => params.dalOpbFile = value
+        case "pfqaResultFile" => params.pfqaResultFile = value
       }
   }
 
   def paramCmd(params: DalculatorParameters): Parser[Unit] = {
-    setPathParamCmd(params) | setBooleanParamCmd(params) | setIntegerParamCmd(params) | setSolverParamCmd(params) | loadSeqCmd(params)
+    setPathParamCmd(params) | setBooleanParamCmd(params) | setIntegerParamCmd(params) | setSolverParamCmd(params) | loadSeqCmd(params) | loadFMEACmd(params) | loadAlarmDictionary(params) | loadActionDictionary(params) | loadFCDictionary(params) | loadSeverityDictionary(params)
   }
 
   def cmdFileParser(params: DalculatorParameters): Parser[_] = rep(paramCmd(params))
