@@ -1,5 +1,5 @@
-CL,Land On Predetermined Site
-EL,Land As Soon As Possible
-SH,Hovering
-FT,FTS Activation
-RB,Return to Home
+FAZERFunctionalArchitecture.CL.O,Land On Predetermined Site
+FAZERFunctionalArchitecture.EL.O,Land As Soon As Possible
+FAZERFunctionalArchitecture.SH.O,Hovering
+FAZERFunctionalArchitecture.FT.O,FTS Activation
+FAZERFunctionalArchitecture.RB.O,Return to Home

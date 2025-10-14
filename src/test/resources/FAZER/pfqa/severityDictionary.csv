@@ -1,5 +1,6 @@
-CL,MAJ
-EL,HAZ
-SH,MIN
-FT,HAZ
-RB,MAJ
+GroundRiskPolicy.FlightControlLoss_O.O,CAT
+GroundRiskPolicy.LandASAPossible_O.O,HAZ
+GroundRiskPolicy.FTSActivation_O.O,HAZ
+GroundRiskPolicy.LandOnPredeterminedSite_O.O,MAJ
+GroundRiskPolicy.FlightControlRecovery_O.O,MIN
+GroundRiskPolicy.ContinuedMission_O.O,NSE
