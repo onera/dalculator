@@ -32,13 +32,13 @@ object PFQAComposer {
     }
   }
 
-  private case class TableLine(event: Event, outcome: String, alarms: Set[String], mode: String, law: String, failureCondition: String) {
+  private case class TableLine(event: Event, severity: String, alarms: Set[String], mode: String, law: String, failureCondition: String) {
     override def toString: String = alarms match {
-      case s if s.isEmpty => s"$event$SEPARATOR$law$SEPARATOR$outcome$SEPARATOR$mode${SEPARATOR}None$SEPARATOR$failureCondition\n"
+      case s if s.isEmpty => s"$event$SEPARATOR$law$SEPARATOR$severity$SEPARATOR$mode${SEPARATOR}None$SEPARATOR$failureCondition\n"
       case s =>
         (for{ alarm <- s.toSeq.sorted}
           yield
-            s"$event$SEPARATOR$law$SEPARATOR$outcome$SEPARATOR$mode$SEPARATOR$alarm$SEPARATOR$failureCondition").mkString("","\n","\n")
+            s"$event$SEPARATOR$law$SEPARATOR$severity$SEPARATOR$mode$SEPARATOR$alarm$SEPARATOR$failureCondition").mkString("","\n","\n")
     }
   }
 
@@ -62,16 +62,16 @@ object PFQAComposer {
                                toAction: Map[String, String],
                                toAlarm: Map[String, Seq[String]],
                                toFC: Map[String, String],
-                               toOutcome: Map[String, String]): Seq[TableLine] = for {
+                               toSeverity: Map[String, String]): Seq[TableLine] = for {
     line <- lines
     event <- line \ "@evt"
     flows = (line \ "flow").filter(n => (n \ "@value").exists(_.toString().contains("true")))
     names = (flows \\ "@name").map(_.toString())
     alarms = names.collect(toAlarm).flatten.toSet
-    outcomes = names.collect(toOutcome)
+    severity = names.collect(toSeverity)
     modes = names.collect(toAction)
     failureConditions = names.collect(toFC)
-    outcome <- if (outcomes.isEmpty) Seq("NSE") else outcomes
+    severity <- if (severity.isEmpty) Seq("Unknown") else severity
     mode = if (modes.isEmpty) "None" else modes.distinct.mkString(" & ")
     fc = if(failureConditions.isEmpty) "None" else failureConditions.distinct.mkString(" and ")
     e <- Event(reformatName(event.toString()))
@@ -81,7 +81,7 @@ object PFQAComposer {
       case Some(s) if s.isEmpty => "N/A"
       case Some(s) => s.head
     }
-    TableLine(e, outcome, alarms, mode, law, fc)
+    TableLine(e, severity, alarms, mode, law, fc)
   }
 
   final def performAndExportPFQA(
