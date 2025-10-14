@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <fmeagen>
 	<define>
-		<param name="select.flow" value="FC_|situation_assessment.*_failed|FAZERFunctionalArchitecture\.(EL\.O|SH\.O|FT\.O|RB\.O|CL\.O)|(FlightControlLoss_CAT\.O|LandImmediately_HAZ\.O|LandASAPossible_HAZ\.O|LandASAPracticable_MAJ\.O|FlightControlRecovery_MIN\.O|ContinuedMission_NSE\.O)" />
+		<param name="select.flow" value="FC_|situation_assessment.*_failed|FAZERFunctionalArchitecture\.(EL\.O|SH\.O|FT\.O|RB\.O|CL\.O)|(FlightControlLoss_CAT\.O|FTSActivation_HAZ\.O|LandASAPossible_HAZ\.O|LandOnPredeterminedSite_MAJ\.O|FlightControlRecovery_MIN\.O|ContinuedMission_NSE\.O)" />
 		<param name="onlychange" value="true" />
 	</define>
 	<result>
