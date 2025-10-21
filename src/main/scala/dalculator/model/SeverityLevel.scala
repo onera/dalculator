@@ -18,29 +18,36 @@
 package dalculator.model
 
 /** Severity levels for failure conditions. */
-abstract class SeverityLevel(val nSev: Int, val xSev: Int, val sRepr: String) {
+abstract class SeverityLevel(val nSev: Int, val xSev: Int, val sRepr: String, val intRepr:Int) {
   override def toString: String = sRepr
 }
 
 /** Used for creating Severity levels from their string representation or numerical value. */
 object SeverityLevel {
 
+  case object Unknown extends SeverityLevel(0,0, "Unknow", -1)
+
+  /** The NSE severity level */
+  case object NSE extends SeverityLevel(1,0,"NSE", 0)
+
   /** The MIN severity level */
-  case object MIN extends SeverityLevel(1, 3, "MIN")
+  case object MIN extends SeverityLevel(1, 3, "MIN", 1)
 
   /** The MAJ severity level */
-  case object MAJ extends SeverityLevel(2, 5, "MAJ")
+  case object MAJ extends SeverityLevel(2, 5, "MAJ", 2)
 
   /** The HAZ severity level */
-  case object HAZ extends SeverityLevel(2, 7, "HAZ")
+  case object HAZ extends SeverityLevel(2, 7, "HAZ", 3)
 
   /** The CAT severity level */
-  case object CAT extends SeverityLevel(3, 9, "CAT")
+  case object CAT extends SeverityLevel(3, 9, "CAT", 4)
 
   /** From a numerical value. MAJ
    * and HAZ both correspond to value 2, by default HAZ is returned.
    * */
   def apply(nSev: Int): SeverityLevel = nSev match {
+    case -1 => Unknown
+    case 0 => NSE
     case 1 => MIN
     case 2 => HAZ
     case 3 => CAT
@@ -49,6 +56,8 @@ object SeverityLevel {
 
   /** From a textual representation. */
   def apply(name: String): SeverityLevel = name match {
+    case "Unknown" => Unknown
+    case "NSE" => NSE
     case "MIN" => MIN
     case "MAJ" => MAJ
     case "HAZ" => HAZ

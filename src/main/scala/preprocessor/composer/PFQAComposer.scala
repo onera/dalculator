@@ -1,5 +1,7 @@
 package preprocessor.composer
 
+import dalculator.model.SeverityLevel
+import dalculator.model.SeverityLevel.Unknown
 import dalculator.utils.FileManager
 
 import java.io.{File, FileWriter}
@@ -32,7 +34,7 @@ object PFQAComposer {
     }
   }
 
-  private case class TableLine(event: Event, severity: String, alarms: Set[String], mode: String, law: String, failureCondition: String) {
+  private case class TableLine(event: Event, severity: SeverityLevel, alarms: Set[String], mode: String, law: String, failureCondition: String) {
     override def toString: String = alarms match {
       case s if s.isEmpty => s"$event$SEPARATOR$law$SEPARATOR$severity$SEPARATOR$mode${SEPARATOR}None$SEPARATOR$failureCondition\n"
       case s =>
@@ -62,16 +64,16 @@ object PFQAComposer {
                                toAction: Map[String, String],
                                toAlarm: Map[String, Seq[String]],
                                toFC: Map[String, String],
-                               toSeverity: Map[String, String]): Seq[TableLine] = for {
+                               toSeverity: Map[String, SeverityLevel]): Seq[TableLine] = for {
     line <- lines
     event <- line \ "@evt"
     flows = (line \ "flow").filter(n => (n \ "@value").exists(_.toString().contains("true")))
     names = (flows \\ "@name").map(_.toString())
     alarms = names.collect(toAlarm).flatten.toSet
-    severity = names.collect(toSeverity)
+    severities = names.collect(toSeverity)
     modes = names.collect(toAction)
     failureConditions = names.collect(toFC)
-    severity <- if (severity.isEmpty) Seq("Unknown") else severity
+    severity = if (severities.isEmpty) Unknown else severities.maxBy(_.intRepr)
     mode = if (modes.isEmpty) "None" else modes.distinct.mkString(" & ")
     fc = if(failureConditions.isEmpty) "None" else failureConditions.distinct.mkString(" and ")
     e <- Event(reformatName(event.toString()))
@@ -91,7 +93,7 @@ object PFQAComposer {
                                   toAction: Map[String, String],
                                   toAlarm: Map[String, Seq[String]],
                                   toFC: Map[String, String],
-                                  toSeverity: Map[String, String],
+                                  toSeverity: Map[String, SeverityLevel],
                                   filterEvents: Node => Boolean =  _ => true
                                 ): File = {
     val reader = XMLSource.fromFile(fileName)
@@ -113,7 +115,7 @@ object PFQAComposer {
 
     val output = FileManager.analysisDirectory.getFile(outputFile)
     val writer = new FileWriter(output)
-    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Failure mode${SEPARATOR}Law${SEPARATOR}Criticality${SEPARATOR}Recovery action${SEPARATOR}Detection mean(s)${SEPARATOR}Failure condition(s)\n")
+    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Failure mode${SEPARATOR}Law${SEPARATOR}Severity${SEPARATOR}Recovery action${SEPARATOR}Detection mean(s)${SEPARATOR}Failure condition(s)\n")
     for {line <- table}
       writer.write(line.toString)
     writer.close()

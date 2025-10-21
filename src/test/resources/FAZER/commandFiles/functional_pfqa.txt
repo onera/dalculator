@@ -1,7 +1,7 @@
 loadFMEA(src/test/resources/FAZER/pfqa/functionalPFQA.xml)
 loadActionDictionary(src/test/resources/FAZER/pfqa/actionDictionary.csv)
 loadAlarmDictionary(src/test/resources/FAZER/pfqa/alarmDictionary.csv)
-loadFCDictionary(src/test/resources/FAZER/pfqa/fcDictionary.csv)
+loadFCDictionary(src/test/resources/FAZER/pfqa/highLevelFCDictionary.csv)
 loadSeverityDictionary(src/test/resources/FAZER/pfqa/severityDictionary.csv)
-pfqaEnabled=true
+pfqaEnabled = true
 pfqaResultFile = fazerFunctionalPFQA.csv
