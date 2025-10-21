@@ -36,10 +36,10 @@ object DalculatorCore {
       for {
         fmeaFile <- params.fmeaFile
       } yield {
-          val toSeverity: Map[String, String] =  (for {
+          val toSeverity: Map[String, SeverityLevel] =  (for {
             filename <- params.pfqaSeverityDictionary
           } yield {
-            PFQAComposer.getDictionary(filename).transform((_, v) => v.head)
+            PFQAComposer.getDictionary(filename).transform((_, v) => SeverityLevel(v.head))
           }).getOrElse(Map.empty)
 
           val toAlarm: Map[String, Seq[String]] =  (for {
