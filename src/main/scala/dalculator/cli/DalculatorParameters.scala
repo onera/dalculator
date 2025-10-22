@@ -69,6 +69,7 @@ package dalculator.cli
 
 import dalculator.model._
 import dalculator.utils.FileManager
+import preprocessor.composer.PFQAComposer.MergeMethod
 import theory.pb.solver.{OpbSolver, Sat4jBoth}
 
 import java.io.File
@@ -113,12 +114,9 @@ class DalculatorParameters {
 
   //----------- PFQA parameters ----------------
   var fmeaFile: Option[String] = None
-  var actionDictionary: Option[String] = None
-  var alarmDictionary: Option[String] = None
-  var fcDictionary: Option[String] = None
+  var pfqaDictionaries: Seq[(String,Option[MergeMethod])] = Seq.empty
   var pfqaEnabled: Boolean = false
   var pfqaResultFile: String = FileManager.analysisDirectory.getFile("pfqaResult.csv").getAbsolutePath
-  var pfqaSeverityDictionary: Option[String] = None
 
   //----------- Dal parameters ----------------
   /** DAL analysis 'enabled' status */
