@@ -1,3 +1,4 @@
+Flow,Detection means
 FAZERFunctionalArchitecture.UA_situation_assessment.nomSensor_failed,nominal sensor fault (UA/physical)
 FAZERFunctionalArchitecture.UA_situation_assessment.pilotParam_failed, pilot param fault (UA/functional)
 FAZERFunctionalArchitecture.UA_situation_assessment.secuSensor_failed,secu sensor fault (UA/physical)

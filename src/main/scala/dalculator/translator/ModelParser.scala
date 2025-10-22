@@ -20,6 +20,7 @@ package dalculator.translator
 import dalculator.cli.DalculatorParameters
 import dalculator.model._
 import dalculator.utils.Configuration
+import preprocessor.composer.PFQAComposer.{CollapseMerge, MergeMethod, OrderedMerge}
 import theory.pb.solver.{OpbSolver, Sat4jBoth, Sat4jCP, Sat4jRes}
 
 import java.io.{FileNotFoundException, FileReader}
@@ -115,26 +116,20 @@ object ModelParser extends RegexParsers {
       path => params.fmeaFile = Some(path)
     }
 
-  def loadActionDictionary(params: DalculatorParameters): Parser[Unit] =
-    ("loadActionDictionary(" ~> filePath <~ ")" ) ^^ {
-      path => params.actionDictionary = Some(path)
+  def getOrderedMerge: Parser[MergeMethod] =
+    "ordered" ~ "," ~> repsep(ident, ",")  ^^ {
+      l => OrderedMerge(l)
     }
 
-  def loadAlarmDictionary(params: DalculatorParameters): Parser[Unit] =
-    ("loadAlarmDictionary(" ~> filePath <~ ")" ) ^^ {
-      path => params.alarmDictionary = Some(path)
+  def getCollapseMerge: Parser[MergeMethod] =
+    "merge" ^^ {
+      _ => CollapseMerge
     }
 
-  def loadFCDictionary(params: DalculatorParameters): Parser[Unit] =
-    ("loadFCDictionary(" ~> filePath <~ ")" ) ^^ {
-      path => params.fcDictionary = Some(path)
+  def loadDictionary(params: DalculatorParameters): Parser[Unit] =
+    ("loadDictionary(" ~> filePath ~ opt("," ~> (getCollapseMerge | getOrderedMerge)) <~ ")" ) ^^ {
+      case path ~ mergeMethod => params.pfqaDictionaries :+= (path,mergeMethod)
     }
-
-  def loadSeverityDictionary(params: DalculatorParameters): Parser[Unit] =
-    ("loadSeverityDictionary(" ~> filePath <~ ")" ) ^^ {
-      path => params.pfqaSeverityDictionary = Some(path)
-    }
-
 
   def integerParam: Parser[String] = "resourceMaxNbr" | "resourceMinNbr"
 
@@ -200,7 +195,7 @@ object ModelParser extends RegexParsers {
   }
 
   def paramCmd(params: DalculatorParameters): Parser[Unit] = {
-    setPathParamCmd(params) | setBooleanParamCmd(params) | setIntegerParamCmd(params) | setSolverParamCmd(params) | loadSeqCmd(params) | loadFMEACmd(params) | loadAlarmDictionary(params) | loadActionDictionary(params) | loadFCDictionary(params) | loadSeverityDictionary(params)
+    setPathParamCmd(params) | setBooleanParamCmd(params) | setIntegerParamCmd(params) | setSolverParamCmd(params) | loadSeqCmd(params) | loadFMEACmd(params) | loadDictionary(params)
   }
 
   def cmdFileParser(params: DalculatorParameters): Parser[_] = rep(paramCmd(params))

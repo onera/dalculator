@@ -16,6 +16,25 @@ object PFQAComposer {
     override def toString: String = s"$equipment$SEPARATOR$component$SEPARATOR$failureMode"
   }
 
+  sealed trait MergeMethod {
+    def merge(s:Seq[String]):String
+  }
+  case object CollapseMerge extends MergeMethod {
+    def merge(s:Seq[String]):String =
+      s.mkString(" and ")
+  }
+  case class OrderedMerge(order:Seq[String]) extends MergeMethod{
+    def merge(s:Seq[String]):String = {
+      val missing = s.filter(x => !order.contains(x))
+      if (missing.nonEmpty)
+        println(s"[WARNING] the order ${order.mkString(" < ")} provided for dictionary does not contain ${missing.mkString(", ")}")
+      s.minBy(s => order.indexOf(s))
+    }
+
+  }
+
+  case class ColumnInfo(name:String, map:Map[String,Seq[String]], merge:Option[MergeMethod] = None)
+
   private object Event {
     def empty: Event = Event("", "", "")
 
@@ -34,17 +53,19 @@ object PFQAComposer {
     }
   }
 
-  private case class TableLine(event: Event, severity: SeverityLevel, alarms: Set[String], mode: String, law: String, failureCondition: String) {
-    override def toString: String = alarms match {
-      case s if s.isEmpty => s"$event$SEPARATOR$law$SEPARATOR$severity$SEPARATOR$mode${SEPARATOR}None$SEPARATOR$failureCondition\n"
-      case s =>
-        (for{ alarm <- s.toSeq.sorted}
-          yield
-            s"$event$SEPARATOR$law$SEPARATOR$severity$SEPARATOR$mode$SEPARATOR$alarm$SEPARATOR$failureCondition").mkString("","\n","\n")
+  private case class TableLine(event: Event, columns:Seq[Seq[String]]) {
+    override def toString: String = {
+        columns.foldLeft(Seq(s"$event"))((acc,values) =>
+          for {
+            a <- acc
+            v <- values
+          } yield
+            a + s"$SEPARATOR$v"
+        ).mkString("","\n","\n")
     }
   }
 
-  final def getDictionary(file: String): Map[String, Seq[String]] = {
+  final def getDictionary(file: String): Option[(String,Map[String, Seq[String]])] = {
     val source = Source.fromFile(file)
     val result =
       (for {
@@ -53,69 +74,62 @@ object PFQAComposer {
         if elements.size >= 2
       } yield {
         elements.head -> elements.tail
-      }).toMap
+      }).toSeq
     source.close()
-    result
+    for{
+      (_,l) <- result.headOption
+      title <- l.headOption
+    } yield
+      (title, result.tail.toMap)
   }
 
   private final def buildTable(lines: NodeSeq,
-                               events: Map[Event, Seq[String]],
                                reformatName: String => String,
-                               toAction: Map[String, String],
-                               toAlarm: Map[String, Seq[String]],
-                               toFC: Map[String, String],
-                               toSeverity: Map[String, SeverityLevel]): Seq[TableLine] = for {
+                               columns: Seq[ColumnInfo]): Seq[TableLine] = for {
     line <- lines
     event <- line \ "@evt"
+    e <- Event(reformatName(event.toString()))
     flows = (line \ "flow").filter(n => (n \ "@value").exists(_.toString().contains("true")))
     names = (flows \\ "@name").map(_.toString())
-    alarms = names.collect(toAlarm).flatten.toSet
-    severities = names.collect(toSeverity)
-    modes = names.collect(toAction)
-    failureConditions = names.collect(toFC)
-    severity = if (severities.isEmpty) Unknown else severities.maxBy(_.intRepr)
-    mode = if (modes.isEmpty) "None" else modes.distinct.mkString(" & ")
-    fc = if(failureConditions.isEmpty) "None" else failureConditions.distinct.mkString(" and ")
-    e <- Event(reformatName(event.toString()))
   } yield {
-    val law = events.get(e) match {
-      case None => "N/A"
-      case Some(s) if s.isEmpty => "N/A"
-      case Some(s) => s.head
+    val values = {
+      for {
+        c <- columns
+      } yield {
+        val valuesOnFlows = c.map.filter(p => names.contains(p._1))
+        if (valuesOnFlows.isEmpty)
+          Seq("None")
+        else {
+          val valuesForC = valuesOnFlows.values.flatten.toSeq.distinct
+          c.merge match {
+            case Some(merge) => Seq(merge.merge(valuesForC))
+            case None => valuesForC
+          }
+        }
+      }
     }
-    TableLine(e, severity, alarms, mode, law, fc)
+    TableLine(e, values)
   }
 
   final def performAndExportPFQA(
                                   fileName: String,
                                   outputFile:String,
                                   reformatName: String => String = x => x,
-                                  toAction: Map[String, String],
-                                  toAlarm: Map[String, Seq[String]],
-                                  toFC: Map[String, String],
-                                  toSeverity: Map[String, SeverityLevel],
+                                  columns: Seq[ColumnInfo],
                                   filterEvents: Node => Boolean =  _ => true
                                 ): File = {
     val reader = XMLSource.fromFile(fileName)
     val result = XML.load(reader)
-    val events = {
-      for {
-        event <- result \\ "event"
-        law <- event \ "law"
-        name <- event \ "@name"
-        e <- Event(reformatName(name.toString()))
-      } yield {
-        e -> (law \ "@value").map(_.toString())
-      }
-    }.toMap
 
     val analysisLines = (result \\ "tr").filter(n => (n \ "@evt").exists(filterEvents))
 
-    val table = buildTable(analysisLines, events, reformatName, toAction, toAlarm, toFC, toSeverity)
-
+    val table = buildTable(analysisLines, reformatName, columns)
     val output = FileManager.analysisDirectory.getFile(outputFile)
     val writer = new FileWriter(output)
-    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Failure mode${SEPARATOR}Law${SEPARATOR}Severity${SEPARATOR}Recovery action${SEPARATOR}Detection mean(s)${SEPARATOR}Failure condition(s)\n")
+    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Failure mode")
+    for {c <- columns}
+      writer.write(s"${SEPARATOR}${c.name}")
+    writer.write("\n")
     for {line <- table}
       writer.write(line.toString)
     writer.close()

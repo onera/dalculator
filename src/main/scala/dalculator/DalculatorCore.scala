@@ -23,6 +23,9 @@ import dalculator.solver.{SolveBudget, SolveDal, SolveIndep}
 import dalculator.translator.ModelParser
 import dalculator.utils.Configuration
 import preprocessor.composer.PFQAComposer
+import preprocessor.composer.PFQAComposer.ColumnInfo
+
+import scala.reflect.internal.util.TableDef.Column
 
 /** The entry point of the dalculator. */
 object DalculatorCore {
@@ -36,38 +39,20 @@ object DalculatorCore {
       for {
         fmeaFile <- params.fmeaFile
       } yield {
-          val toSeverity: Map[String, SeverityLevel] =  (for {
-            filename <- params.pfqaSeverityDictionary
-          } yield {
-            PFQAComposer.getDictionary(filename).transform((_, v) => SeverityLevel(v.head))
-          }).getOrElse(Map.empty)
 
-          val toAlarm: Map[String, Seq[String]] =  (for {
-            filename <- params.alarmDictionary
+        val columns =
+          for {
+            (path, mergeMetho) <- params.pfqaDictionaries
+            (name, map) <- PFQAComposer.getDictionary(path)
           } yield {
-            PFQAComposer.getDictionary(filename)
-          }).getOrElse(Map.empty)
-
-          val toAction: Map[String, String] =  (for {
-            filename <- params.actionDictionary
-          } yield {
-            PFQAComposer.getDictionary(filename).transform((_, v) => v.head)
-          }).getOrElse(Map.empty)
-
-          val toFC: Map[String, String] = (for {
-            filename <- params.fcDictionary
-          } yield {
-            PFQAComposer.getDictionary(filename).transform((_, v) => v.head)
-          }).getOrElse(Map.empty)
+            ColumnInfo(name, map, mergeMetho)
+          }
 
         PFQAComposer.performAndExportPFQA(
           fmeaFile,
           params.pfqaResultFile,
           (x:String) => x.split("\\.").tail.mkString("."),
-          toAction,
-          toAlarm,
-          toFC,
-          toSeverity
+          columns
         )
         println(s"PFQA analysis exported in ${params.pfqaResultFile}")
       }
