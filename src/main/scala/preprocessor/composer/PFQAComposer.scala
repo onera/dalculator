@@ -33,7 +33,7 @@ object PFQAComposer {
 
   }
 
-  case class ColumnInfo(name:String, map:Map[String,Seq[String]], merge:Option[MergeMethod] = None)
+  case class ColumnInfo(name:String, isFLowDictionary: Boolean, map:Map[String,Seq[String]], merge:Option[MergeMethod] = None)
 
   private object Event {
     def empty: Event = Event("", "", "")
@@ -92,15 +92,19 @@ object PFQAComposer {
     flows = (line \ "flow").filter(n => (n \ "@value").exists(_.toString().contains("true")))
     names = (flows \\ "@name").map(_.toString())
   } yield {
-    val values = {
+    val finalValues = {
       for {
         c <- columns
       } yield {
-        val valuesOnFlows = c.map.filter(p => names.contains(p._1))
-        if (valuesOnFlows.isEmpty)
+        val values =
+          if(c.isFLowDictionary) {
+            c.map.filter(p => names.contains(p._1))
+          } else
+            c.map.filter(p => p._1 == event.toString())
+        if (values.isEmpty)
           Seq("None")
         else {
-          val valuesForC = valuesOnFlows.values.flatten.toSeq.distinct
+          val valuesForC = values.values.flatten.toSeq.distinct
           c.merge match {
             case Some(merge) => Seq(merge.merge(valuesForC))
             case None => valuesForC
@@ -108,7 +112,7 @@ object PFQAComposer {
         }
       }
     }
-    TableLine(e, values)
+    TableLine(e, finalValues)
   }
 
   final def performAndExportPFQA(

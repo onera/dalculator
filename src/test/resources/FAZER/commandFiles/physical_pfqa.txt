@@ -1,7 +1,8 @@
 loadFMEA(src/test/resources/FAZER/pfqa/physicalPFQA.xml)
-loadDictionary(src/test/resources/FAZER/pfqa/severityDictionary.csv, ordered, CAT, HAZ, MAJ, MIN, NSE)
-loadDictionary(src/test/resources/FAZER/pfqa/actionDictionary.csv)
-loadDictionary(src/test/resources/FAZER/pfqa/alarmDictionary.csv)
-loadDictionary(src/test/resources/FAZER/pfqa/lowLevelFCDictionary.csv, merge)
+loadEventDictionary(src/test/resources/FAZER/pfqa/isProbableEventDictionary.csv)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/severityDictionary.csv, ordered, CAT, HAZ, MAJ, MIN, NSE)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/actionDictionary.csv)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/alarmDictionary.csv)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/lowLevelFCDictionary.csv, merge)
 pfqaEnabled=true
 pfqaResultFile = fazerPhysicalPFQA.csv

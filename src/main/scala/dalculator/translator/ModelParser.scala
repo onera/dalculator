@@ -126,9 +126,14 @@ object ModelParser extends RegexParsers {
       _ => CollapseMerge
     }
 
-  def loadDictionary(params: DalculatorParameters): Parser[Unit] =
-    ("loadDictionary(" ~> filePath ~ opt("," ~> (getCollapseMerge | getOrderedMerge)) <~ ")" ) ^^ {
-      case path ~ mergeMethod => params.pfqaDictionaries :+= (path,mergeMethod)
+  def loadFlowDictionary(params: DalculatorParameters): Parser[Unit] =
+    ("loadFlowDictionary(" ~> filePath ~ opt("," ~> (getCollapseMerge | getOrderedMerge)) <~ ")" ) ^^ {
+      case path ~ mergeMethod => params.pfqaDictionaries :+= (true,path,mergeMethod)
+    }
+
+  def loadEventDictionary(params: DalculatorParameters): Parser[Unit] =
+    ("loadEventDictionary(" ~> filePath ~ opt("," ~> (getCollapseMerge | getOrderedMerge)) <~ ")" ) ^^ {
+      case path ~ mergeMethod => params.pfqaDictionaries :+= (false,path,mergeMethod)
     }
 
   def integerParam: Parser[String] = "resourceMaxNbr" | "resourceMinNbr"
@@ -195,7 +200,7 @@ object ModelParser extends RegexParsers {
   }
 
   def paramCmd(params: DalculatorParameters): Parser[Unit] = {
-    setPathParamCmd(params) | setBooleanParamCmd(params) | setIntegerParamCmd(params) | setSolverParamCmd(params) | loadSeqCmd(params) | loadFMEACmd(params) | loadDictionary(params)
+    setPathParamCmd(params) | setBooleanParamCmd(params) | setIntegerParamCmd(params) | setSolverParamCmd(params) | loadSeqCmd(params) | loadFMEACmd(params) | loadFlowDictionary(params) | loadEventDictionary(params)
   }
 
   def cmdFileParser(params: DalculatorParameters): Parser[_] = rep(paramCmd(params))

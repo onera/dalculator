@@ -1,7 +1,7 @@
 loadFMEA(src/test/resources/FAZER/pfqa/functionalPFQA.xml)
-loadDictionary(src/test/resources/FAZER/pfqa/severityDictionary.csv, ordered, CAT, HAZ, MAJ, MIN, NSE)
-loadDictionary(src/test/resources/FAZER/pfqa/actionDictionary.csv)
-loadDictionary(src/test/resources/FAZER/pfqa/alarmDictionary.csv)
-loadDictionary(src/test/resources/FAZER/pfqa/highLevelFCDictionary.csv, merge)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/severityDictionary.csv, ordered, CAT, HAZ, MAJ, MIN, NSE)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/actionDictionary.csv)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/alarmDictionary.csv)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/highLevelFCDictionary.csv, merge)
 pfqaEnabled = true
 pfqaResultFile = fazerFunctionalPFQA.csv

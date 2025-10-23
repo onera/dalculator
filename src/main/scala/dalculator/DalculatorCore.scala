@@ -42,10 +42,10 @@ object DalculatorCore {
 
         val columns =
           for {
-            (path, mergeMetho) <- params.pfqaDictionaries
+            (isFlowDic, path, mergeMetho) <- params.pfqaDictionaries
             (name, map) <- PFQAComposer.getDictionary(path)
           } yield {
-            ColumnInfo(name, map, mergeMetho)
+            ColumnInfo(name, isFlowDic, map, mergeMetho)
           }
 
         PFQAComposer.performAndExportPFQA(
