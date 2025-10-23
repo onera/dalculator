@@ -114,7 +114,7 @@ class DalculatorParameters {
 
   //----------- PFQA parameters ----------------
   var fmeaFile: Option[String] = None
-  var pfqaDictionaries: Seq[(String,Option[MergeMethod])] = Seq.empty
+  var pfqaDictionaries: Seq[(Boolean,String,Option[MergeMethod])] = Seq.empty
   var pfqaEnabled: Boolean = false
   var pfqaResultFile: String = FileManager.analysisDirectory.getFile("pfqaResult.csv").getAbsolutePath
 
