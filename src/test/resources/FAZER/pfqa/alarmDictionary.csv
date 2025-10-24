@@ -23,3 +23,6 @@ FAZERFunctionalArchitecture.UA_situation_assessment.payloadControl_failed,payloa
 FAZERFunctionalArchitecture.UA_situation_assessment.oneStick_failed,one stick com loss (UA/physical)
 FAZERFunctionalArchitecture.UA_situation_assessment.recoveryBat_failed,avionics recovery bat lost (UA/physical)
 FAZERFunctionalArchitecture.UA_situation_assessment.PSLaneState_failed,one power supply lane loss (UA/physical)
+FAZERFunctionalArchitecture.UA_situation_assessment.pupLink_t_failed,transient loss pup Link fault (UA/functional)
+FAZERFunctionalArchitecture.UA_situation_assessment.stickLink_t_failed,transient stick link fault (UA/functional)
+FAZERFunctionalArchitecture.Ground_situation_assessment.guideParam_t_failed,transient guide param loss (UA/functional)

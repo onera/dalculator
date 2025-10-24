@@ -5,6 +5,16 @@ GroundRiskPolicy.FTSActivation_O.O,HAZ
 GroundRiskPolicy.LandOnPredeterminedSite_O.O,MAJ
 GroundRiskPolicy.FlightControlRecovery_O.O,MIN
 GroundRiskPolicy.ContinuedMission_O.O,NSE
+FAZERFunctionalArchitecture.FC_B2GKO,MAJ
+FAZERFunctionalArchitecture.FC_FDAKO,HAZ
+FAZERFunctionalArchitecture.FC_FDAtempKO,MIN
+FAZERFunctionalArchitecture.FC_FPC_FTSKO,HAZ
+FAZERFunctionalArchitecture.FC_G2BKO,MAJ
+FAZERFunctionalArchitecture.FC_Degraded_G2B,MIN
+FAZERFunctionalArchitecture.FC_MonitoringKO,MAJ
+FAZERFunctionalArchitecture.FC_LowBat,MAJ
+FAZERFunctionalArchitecture.FC_LowFuel,MAJ
+FAZERFunctionalArchitecture.FC_FPC_FPMKO,MAJ
 physical2FunctionalMapping.FC_Degraded_Alt,MAJ
 physical2FunctionalMapping.FC_Degraded_G2B,MIN
 physical2FunctionalMapping.FC_Degraded_Pos,MIN
@@ -18,3 +28,7 @@ physical2FunctionalMapping.FC_Payload,MIN
 physical2FunctionalMapping.FC_Degraded_EmergencyPlan,MAJ
 physical2FunctionalMapping.FC_Degraded_Telemetry,MIN
 physical2FunctionalMapping.FC_Degraded_SW_Main,MAJ
+physical2FunctionalMapping.FC_lossMonitoringCapability,MAJ
+physical2FunctionalMapping.FC_limitedAutonomyLoss,MIN
+physical2FunctionalMapping.FC_spuriousDetection,MAJ
+FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability,MAJ

@@ -130,7 +130,7 @@ object PFQAComposer {
     val table = buildTable(analysisLines, reformatName, columns)
     val output = FileManager.analysisDirectory.getFile(outputFile)
     val writer = new FileWriter(output)
-    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Failure mode")
+    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Event")
     for {c <- columns}
       writer.write(s"${SEPARATOR}${c.name}")
     writer.write("\n")

@@ -3912,6 +3912,7 @@
 			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_B2GKO" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_FPC_FPMKO" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FPC_nominal_plan_R" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.O" 	value="err"/>
@@ -4396,6 +4397,7 @@
 			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_B2GKO" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_FPC_FPMKO" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FPC_nominal_plan_R" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.O" 	value="lost"/>
@@ -5566,7 +5568,12 @@
 		</tr>
 		<tr id="122" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.S" 	value="stuck_false"/>
+			<flow  name="FAZERFunctionalArchitecture.Monitoring_RSecuMCU" 	value="stuck_false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.RSecuMCUMonitoring" 	value="stuck_false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.R" 	value="stuck_false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.icone" 	value="4"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.icone" 	value="4"/>
+			<flow  name="FAZERPhysicalArchitecture.Monitoring_secuMCU" 	value="stuck_false"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.icone" 	value="1"/>
@@ -5587,38 +5594,232 @@
 			<flow  name="functional2PolicyMapping.NSEBarrier_applied_in" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.FC_lossMonitoringCapability" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.Monitoring_RSecuMCU" 	value="stuck_false"/>
+			<flow  name="physical2FunctionalMapping.Monitoring_RSecuMCU_I" 	value="stuck_false"/>
+			<flow  name="physical2FunctionalMapping.SWAlloc.Monitoring_secuMCU" 	value="stuck_false"/>
+			<flow  name="physical2FunctionalMapping.SWAlloc.checkSecuMCU" 	value="stuck_false"/>
 		</tr>
 		<tr id="123" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.S" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.CL.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UseEmergyPlan" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.IsSH1.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UseFlightPlan.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UseNavCmd.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UseNavCmd.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UseNavCmd.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UsePilotCmd.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.selectNavCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.selectNavCmd.icone" 	value="4"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.need_urgencyFlightPlan" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.switch3.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.switch3.icone" 	value="4"/>
+			<flow  name="FAZERFunctionalArchitecture.Monitoring_RSecuMCU" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.RSecuMCUMonitoring" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.R" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSecuMCU.icone" 	value="3"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.secuMCU_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.IsCL.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.IsCL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.IsCL.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.SWIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.SWIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.TrajKOAndNeedFT.I2" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.FTIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.FTIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.IsEL.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.NeedGuideParam.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.NeedGuideParam.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.NeedGuideParam.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.SMIfGuideKO.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.SMIfGuideKO.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.and22.I2" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLossTThenSH.IfLinkLostThenSH.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLossTThenSH.IfLinkLostThenSH.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLossTThenSH.pre_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLossTThenSH.safe_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLostPThenSRB.IfLinkLostThenSRB.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLostPThenSRB.IfLinkLostThenSRB.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLostPThenSRB.pre_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLostPThenSRB.safe_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfModeKOThenSH.IfNavKO.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfModeKOThenSH.IfNavKO.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfModeKOThenSH.InitialMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfModeKOThenSH.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.FTIfPilotKO.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.FTIfPilotKO.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.KOAndNeeded.I2" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.NeedPilotParam.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.NeedPilotParam.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.NeedPilotParam.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.FTIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.FTIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.IsSRB.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.FTIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.FTIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.IsSH.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfTrajKOThenSRB.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfTrajKOThenSRB.RBIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfTrajKOThenSRB.RBIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfTrajKOThenSRB.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IsFT2.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IsFT3.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.icone" 	value="7"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.new_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.oneSecuOrMonResource_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.pre_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.switch1.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.switch1.Select1" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.switch1.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst1.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst1.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst1.I3" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst1.O" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst2.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst2.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst2.I3" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst2.O" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst210.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst210.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst210.I3" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst210.O" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst3.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst3.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst3.I3" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst3.O" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsCL.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsCL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsCL.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsEL.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsRB.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsSRB.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.NeedUrgencyPlan.I4" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.NeedUrgencyPlan.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.NeedUrgencyPlan.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.SelectPilotMode.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.SelectPilotMode.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.SelectPilotMode.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.SelectPilotMode.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.dismissPilotMode.I4" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.dismissPilotMode.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.dismissPilotMode.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.mode_board" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.need_urgencyFlightPlan" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.new_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.oneSecuOrNomResource_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.or21.I1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.or21.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.or21.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.selectPilotMode.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.selectPilotMode.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.selectPilotMode.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.switch1.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.switch1.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.need_urgencyFlightPlan" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.oneFailed.I5" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.oneFailed.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.oneFailed.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.preMode.current_val" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.preMode.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.preMode.pre_val" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.secuMCU_failed" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.CANSwitch.detectedSecuFailed" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.O" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.icone" 	value="3"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.safetyMCUFailed" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.detectedSecuMCUFailed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_O.icone" 	value="1"/>
-			<flow  name="GroundRiskPolicy.MINEvent_in.barrierPerformed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.MINEvent_in.barrierTryApply" 	value="true"/>
+			<flow  name="FAZERPhysicalArchitecture.Monitoring_secuMCU" 	value="stuck_true"/>
+			<flow  name="GroundRiskPolicy.DegradedFlightControl.I" 	value="true"/>
+			<flow  name="GroundRiskPolicy.DegradedFlightControl.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.DegradedFlightControl.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.barrierApplicable" 	value="true"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.barrierPerformed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.barrierTryApply" 	value="true"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.hazard_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.Hover.applicable" 	value="false"/>
+			<flow  name="GroundRiskPolicy.Hover.applicableO" 	value="false"/>
+			<flow  name="GroundRiskPolicy.Hover.icone" 	value="6"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.applicable" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.applicableO" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.applied" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.appliedO" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite_O.I" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite_O.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite_O.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.MAJBarrier_applicable_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MAJBarrier_applied_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MAJEvent_in.barrierApplicable" 	value="false"/>
+			<flow  name="GroundRiskPolicy.MAJEvent_in.hazard_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MAJEvent_in.hazard_out" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MINBarrier_applicable_in" 	value="false"/>
+			<flow  name="GroundRiskPolicy.MINEvent_in.barrierApplicable" 	value="false"/>
 			<flow  name="GroundRiskPolicy.MINEvent_in.hazard_in" 	value="true"/>
-			<flow  name="GroundRiskPolicy.MINEvent_in.icone" 	value="1"/>
-			<flow  name="GroundRiskPolicy.NSEBarrier_applied_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MINEvent_in.hazard_out" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MIN_failure.I" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MIN_failure.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MIN_failure.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.NSEBarrier_applicable_in" 	value="false"/>
 			<flow  name="GroundRiskPolicy.NSEEvent_in" 	value="true"/>
 			<flow  name="GroundRiskPolicy.NSE_failure.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.NSE_failure.O" 	value="true"/>
 			<flow  name="GroundRiskPolicy.NSE_failure.icone" 	value="1"/>
-			<flow  name="GroundRiskPolicy.Tolerance.applied" 	value="true"/>
-			<flow  name="GroundRiskPolicy.Tolerance.appliedO" 	value="true"/>
-			<flow  name="GroundRiskPolicy.Tolerance.icone" 	value="1"/>
-			<flow  name="GroundRiskPolicy.icone" 	value="5"/>
-			<flow  name="functional2PolicyMapping.NSEBarrier_applied_O" 	value="true"/>
-			<flow  name="functional2PolicyMapping.NSEBarrier_applied_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.Tolerance.applicable" 	value="false"/>
+			<flow  name="GroundRiskPolicy.Tolerance.applicableO" 	value="false"/>
+			<flow  name="GroundRiskPolicy.Tolerance.icone" 	value="6"/>
+			<flow  name="GroundRiskPolicy.icone" 	value="3"/>
+			<flow  name="functional2PolicyMapping.MAJBarrier_applicable_O" 	value="true"/>
+			<flow  name="functional2PolicyMapping.MAJBarrier_applicable_in" 	value="true"/>
+			<flow  name="functional2PolicyMapping.MAJBarrier_applied_O" 	value="true"/>
+			<flow  name="functional2PolicyMapping.MAJBarrier_applied_in" 	value="true"/>
+			<flow  name="functional2PolicyMapping.MINBarrier_applicable_O" 	value="false"/>
+			<flow  name="functional2PolicyMapping.MINBarrier_applicable_in" 	value="false"/>
+			<flow  name="functional2PolicyMapping.NSEBarrier_applicable_O" 	value="false"/>
+			<flow  name="functional2PolicyMapping.NSEBarrier_applicable_in" 	value="false"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.FC_spuriousDetection" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.Monitoring_RSecuMCU" 	value="stuck_true"/>
+			<flow  name="physical2FunctionalMapping.Monitoring_RSecuMCU_I" 	value="stuck_true"/>
+			<flow  name="physical2FunctionalMapping.SWAlloc.Monitoring_secuMCU" 	value="stuck_true"/>
+			<flow  name="physical2FunctionalMapping.SWAlloc.checkSecuMCU" 	value="stuck_true"/>
 		</tr>
 		<tr id="124" evt="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.S" 	value="err"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UseEmergyPlan" 	value="true"/>
@@ -5864,6 +6065,7 @@
 		<tr id="125" evt="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.S" 	value="lost"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UseEmergyPlan" 	value="true"/>
@@ -6790,7 +6992,12 @@
 		</tr>
 		<tr id="128" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.S" 	value="stuck_false"/>
+			<flow  name="FAZERFunctionalArchitecture.Monitoring_RPilotMCU" 	value="stuck_false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.RPilotMCUMonitoring" 	value="stuck_false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.R" 	value="stuck_false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.icone" 	value="4"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.icone" 	value="4"/>
+			<flow  name="FAZERPhysicalArchitecture.Monitoring_pilotMCU" 	value="stuck_false"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.icone" 	value="1"/>
@@ -6811,9 +7018,166 @@
 			<flow  name="functional2PolicyMapping.NSEBarrier_applied_in" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.FC_lossMonitoringCapability" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.Monitoring_RPilotMCU" 	value="stuck_false"/>
+			<flow  name="physical2FunctionalMapping.Monitoring_RPilotMCU_I" 	value="stuck_false"/>
+			<flow  name="physical2FunctionalMapping.SWAlloc.Monitoring_pilotMCU" 	value="stuck_false"/>
+			<flow  name="physical2FunctionalMapping.SWAlloc.checkPilotMCU" 	value="stuck_false"/>
 		</tr>
 		<tr id="129" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.stuck_on_true">
+			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.S" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.CL.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UseEmergyPlan" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.IsSH1.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UseFlightPlan.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UseNavCmd.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UseNavCmd.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UseNavCmd.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.UsePilotCmd.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.selectNavCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCmd.selectNavCmd.icone" 	value="4"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.need_urgencyFlightPlan" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.switch3.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.switch3.icone" 	value="4"/>
+			<flow  name="FAZERFunctionalArchitecture.Monitoring_RPilotMCU" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.RPilotMCUMonitoring" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.R" 	value="stuck_true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPilotMCU.icone" 	value="3"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.pilotMCU_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.IsCL.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.IsCL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.IsCL.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.SWIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.SWIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.TrajKOAndNeedFT.I2" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.FTIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.FTIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.IsEL.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfELAndTrajKOThenFT.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.NeedGuideParam.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.NeedGuideParam.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.NeedGuideParam.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.SMIfGuideKO.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.SMIfGuideKO.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfGuideKOAndNeededThenSMOrEL.and22.I2" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLossTThenSH.IfLinkLostThenSH.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLossTThenSH.IfLinkLostThenSH.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLossTThenSH.pre_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLossTThenSH.safe_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLostPThenSRB.IfLinkLostThenSRB.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLostPThenSRB.IfLinkLostThenSRB.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLostPThenSRB.pre_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfLinkLostPThenSRB.safe_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfModeKOThenSH.IfNavKO.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfModeKOThenSH.IfNavKO.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfModeKOThenSH.InitialMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfModeKOThenSH.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.FTIfPilotKO.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.FTIfPilotKO.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.KOAndNeeded.I2" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.NeedPilotParam.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.NeedPilotParam.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.NeedPilotParam.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfPilotKOAndNeededThenFT.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.FTIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.FTIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.IsSRB.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfRBAndTrajKOThenCL.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.FTIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.FTIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.IsSH.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfSHAndTrajKOThenEL.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfTrajKOThenSRB.CurrentMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfTrajKOThenSRB.RBIfNeeded.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfTrajKOThenSRB.RBIfNeeded.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfTrajKOThenSRB.SafeMode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IsFT2.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IsFT3.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.icone" 	value="7"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.new_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.oneSecuOrMonResource_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.pre_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.switch1.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.switch1.Select1" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.switch1.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst1.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst1.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst1.I3" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst1.O" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst2.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst2.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst2.I3" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst2.O" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst210.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst210.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst210.I3" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst210.O" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst3.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst3.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst3.I3" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.worst3.O" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsCL.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsCL.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsCL.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsEL.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsRB.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.IsSRB.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.NeedUrgencyPlan.I4" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.NeedUrgencyPlan.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.NeedUrgencyPlan.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.SelectPilotMode.I2" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.SelectPilotMode.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.SelectPilotMode.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.SelectPilotMode.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.dismissPilotMode.I4" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.dismissPilotMode.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.dismissPilotMode.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.mode_board" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.need_urgencyFlightPlan" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.new_mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.oneSecuOrNomResource_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.or21.I1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.or21.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.or21.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.selectPilotMode.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.selectPilotMode.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.selectPilotMode.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.switch1.I1" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FlightModeEngagementLogic.switch1.Out" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.need_urgencyFlightPlan" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.oneFailed.I4" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.oneFailed.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.oneFailed.icone" 	value="1"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.pilotMCU_failed" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.preMode.current_val" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.preMode.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_supervision.preMode.pre_val" 	value="CL"/>
 			<flow  name="FAZERPhysicalArchitecture.CANSwitch.detectedPilotFailed" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.CANSwitch.isOK1.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.CANSwitch.isOK1.O" 	value="false"/>
@@ -6827,26 +7191,62 @@
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.icone" 	value="3"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.pilotMCUFailed" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.detectedPilotMCUFailed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
-			<flow  name="GroundRiskPolicy.ContinuedMission_O.icone" 	value="1"/>
-			<flow  name="GroundRiskPolicy.MINEvent_in.barrierPerformed" 	value="true"/>
-			<flow  name="GroundRiskPolicy.MINEvent_in.barrierTryApply" 	value="true"/>
+			<flow  name="FAZERPhysicalArchitecture.Monitoring_pilotMCU" 	value="stuck_true"/>
+			<flow  name="GroundRiskPolicy.DegradedFlightControl.I" 	value="true"/>
+			<flow  name="GroundRiskPolicy.DegradedFlightControl.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.DegradedFlightControl.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.barrierApplicable" 	value="true"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.barrierPerformed" 	value="true"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.barrierTryApply" 	value="true"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.hazard_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.HAZEvent_in.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.Hover.applicable" 	value="false"/>
+			<flow  name="GroundRiskPolicy.Hover.applicableO" 	value="false"/>
+			<flow  name="GroundRiskPolicy.Hover.icone" 	value="6"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.applicable" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.applicableO" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.applied" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.appliedO" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite_O.I" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite_O.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.LandOnPredeterminedSite_O.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.MAJBarrier_applicable_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MAJBarrier_applied_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MAJEvent_in.barrierApplicable" 	value="false"/>
+			<flow  name="GroundRiskPolicy.MAJEvent_in.hazard_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MAJEvent_in.hazard_out" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MINBarrier_applicable_in" 	value="false"/>
+			<flow  name="GroundRiskPolicy.MINEvent_in.barrierApplicable" 	value="false"/>
 			<flow  name="GroundRiskPolicy.MINEvent_in.hazard_in" 	value="true"/>
-			<flow  name="GroundRiskPolicy.MINEvent_in.icone" 	value="1"/>
-			<flow  name="GroundRiskPolicy.NSEBarrier_applied_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MINEvent_in.hazard_out" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MIN_failure.I" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MIN_failure.O" 	value="true"/>
+			<flow  name="GroundRiskPolicy.MIN_failure.icone" 	value="1"/>
+			<flow  name="GroundRiskPolicy.NSEBarrier_applicable_in" 	value="false"/>
 			<flow  name="GroundRiskPolicy.NSEEvent_in" 	value="true"/>
 			<flow  name="GroundRiskPolicy.NSE_failure.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.NSE_failure.O" 	value="true"/>
 			<flow  name="GroundRiskPolicy.NSE_failure.icone" 	value="1"/>
-			<flow  name="GroundRiskPolicy.Tolerance.applied" 	value="true"/>
-			<flow  name="GroundRiskPolicy.Tolerance.appliedO" 	value="true"/>
-			<flow  name="GroundRiskPolicy.Tolerance.icone" 	value="1"/>
-			<flow  name="GroundRiskPolicy.icone" 	value="5"/>
-			<flow  name="functional2PolicyMapping.NSEBarrier_applied_O" 	value="true"/>
-			<flow  name="functional2PolicyMapping.NSEBarrier_applied_in" 	value="true"/>
+			<flow  name="GroundRiskPolicy.Tolerance.applicable" 	value="false"/>
+			<flow  name="GroundRiskPolicy.Tolerance.applicableO" 	value="false"/>
+			<flow  name="GroundRiskPolicy.Tolerance.icone" 	value="6"/>
+			<flow  name="GroundRiskPolicy.icone" 	value="3"/>
+			<flow  name="functional2PolicyMapping.MAJBarrier_applicable_O" 	value="true"/>
+			<flow  name="functional2PolicyMapping.MAJBarrier_applicable_in" 	value="true"/>
+			<flow  name="functional2PolicyMapping.MAJBarrier_applied_O" 	value="true"/>
+			<flow  name="functional2PolicyMapping.MAJBarrier_applied_in" 	value="true"/>
+			<flow  name="functional2PolicyMapping.MINBarrier_applicable_O" 	value="false"/>
+			<flow  name="functional2PolicyMapping.MINBarrier_applicable_in" 	value="false"/>
+			<flow  name="functional2PolicyMapping.NSEBarrier_applicable_O" 	value="false"/>
+			<flow  name="functional2PolicyMapping.NSEBarrier_applicable_in" 	value="false"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.FC_spuriousDetection" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.Monitoring_RPilotMCU" 	value="stuck_true"/>
+			<flow  name="physical2FunctionalMapping.Monitoring_RPilotMCU_I" 	value="stuck_true"/>
+			<flow  name="physical2FunctionalMapping.SWAlloc.Monitoring_pilotMCU" 	value="stuck_true"/>
+			<flow  name="physical2FunctionalMapping.SWAlloc.checkPilotMCU" 	value="stuck_true"/>
 		</tr>
 		<tr id="130" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu3_3V.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
@@ -10190,6 +10590,7 @@
 			<flow  name="functional2PolicyMapping.NSEBarrier_applied_in" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
+			<flow  name="physical2FunctionalMapping.FC_limitedAutonomyLoss" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.recoveryBatState" 	value="partialLoss"/>
 			<flow  name="physical2FunctionalMapping.recoveryBatState_O" 	value="partialLoss"/>
 		</tr>
@@ -10409,6 +10810,7 @@
 			<flow  name="FAZERFunctionalArchitecture.CL.O" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_B2GKO" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_FPC_FPMKO" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FPC_nominal_plan_R" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.NormalFlightPlan.O" 	value="lost"/>
@@ -12401,7 +12803,7 @@
 			<flow  name="FAZERPhysicalArchitecture.O_transfert2" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.O" 	value="err"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.O" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.icone" 	value="1"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANStatus" 	value="err"/>
@@ -12415,7 +12817,10 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.neg1.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.neg1.O" 	value="false"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.neg1.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.testI_err1.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.testI_err1.O" 	value="true"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.testI_err1.icone" 	value="1"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.O" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.icone" 	value="1"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANStatus" 	value="err"/>
@@ -12429,7 +12834,10 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.neg1.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.neg1.O" 	value="false"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.neg1.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.testI_err1.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.testI_err1.O" 	value="true"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.testI_err1.icone" 	value="1"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.O" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.icone" 	value="1"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANStatus" 	value="err"/>
@@ -12443,7 +12851,10 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.neg1.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.neg1.O" 	value="false"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.neg1.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.testI_err1.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.testI_err1.O" 	value="true"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.testI_err1.icone" 	value="1"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.O" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.icone" 	value="1"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANStatus" 	value="err"/>
@@ -12457,7 +12868,10 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.neg1.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.neg1.O" 	value="false"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.neg1.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.testI_err1.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.testI_err1.O" 	value="true"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.testI_err1.icone" 	value="1"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.O" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.icone" 	value="1"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANStatus" 	value="err"/>
@@ -12471,6 +12885,9 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.neg1.I" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.neg1.O" 	value="false"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.neg1.icone" 	value="2"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.testI_err1.I" 	value="err"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.testI_err1.O" 	value="true"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.testI_err1.icone" 	value="1"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.O" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.icone" 	value="4"/>
@@ -13129,7 +13546,6 @@
 			<flow  name="FAZERPhysicalArchitecture.O_transfert2" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.O" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.icone" 	value="1"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANStatus" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.O" 	value="lost"/>
@@ -13137,7 +13553,7 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.ignoreErrCAN.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.ignoreErrCAN.O" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.ignoreErrCAN.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.I" 	value="lost"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.testI_err1.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANStatus" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.O" 	value="lost"/>
@@ -13145,7 +13561,7 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.ignoreErrCAN.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.ignoreErrCAN.O" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.ignoreErrCAN.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.I" 	value="lost"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.testI_err1.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANStatus" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.O" 	value="lost"/>
@@ -13153,7 +13569,7 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.ignoreErrCAN.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.ignoreErrCAN.O" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.ignoreErrCAN.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.I" 	value="lost"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.testI_err1.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANStatus" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.O" 	value="lost"/>
@@ -13161,7 +13577,7 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.ignoreErrCAN.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.ignoreErrCAN.O" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.ignoreErrCAN.icone" 	value="2"/>
-			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.I" 	value="lost"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.testI_err1.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANStatus" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.O" 	value="lost"/>
@@ -13169,6 +13585,7 @@
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.ignoreErrCAN.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.ignoreErrCAN.O" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.ignoreErrCAN.icone" 	value="2"/>
+			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.testI_err1.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.I" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.O" 	value="lost"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.icone" 	value="4"/>
@@ -13346,6 +13763,7 @@
 		</tr>
 		<tr id="159" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.S" 	value="stuck_false"/>
+			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.icone" 	value="4"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
@@ -13910,6 +14328,7 @@
 		</tr>
 		<tr id="161" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.S" 	value="stuck_false"/>
+			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.icone" 	value="4"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
@@ -14474,6 +14893,7 @@
 		</tr>
 		<tr id="163" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.S" 	value="stuck_false"/>
+			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.icone" 	value="4"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
@@ -15038,6 +15458,7 @@
 		</tr>
 		<tr id="165" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.S" 	value="stuck_false"/>
+			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.icone" 	value="4"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
@@ -15602,6 +16023,7 @@
 		</tr>
 		<tr id="167" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.S" 	value="stuck_false"/>
+			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.icone" 	value="4"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.I" 	value="true"/>
 			<flow  name="GroundRiskPolicy.ContinuedMission_O.O" 	value="true"/>
@@ -23453,6 +23875,7 @@
 		<tr id="190" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.S" 	value="err"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UseEmergyPlan" 	value="true"/>
@@ -23731,6 +24154,7 @@
 		<tr id="191" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_loss_p">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.S" 	value="lost_p"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UseEmergyPlan" 	value="true"/>
@@ -24009,6 +24433,7 @@
 		<tr id="192" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_loss_t">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SH"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.S" 	value="lost_t"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.CurrentMode" 	value="SH"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.IsSH1.I" 	value="SH"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.IsSH1.O" 	value="true"/>
@@ -24282,6 +24707,7 @@
 		<tr id="194" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation444MHz.S" 	value="err"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UseEmergyPlan" 	value="true"/>
@@ -24531,6 +24957,7 @@
 		<tr id="195" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_loss_p">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation444MHz.S" 	value="lost_p"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UseEmergyPlan" 	value="true"/>
@@ -24780,6 +25207,7 @@
 		<tr id="196" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_loss_t">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SH"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation444MHz.S" 	value="lost_t"/>
+			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.CurrentMode" 	value="SH"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.IsSH1.I" 	value="SH"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.IsSH1.O" 	value="true"/>
@@ -27159,7 +27587,11 @@
 			<init value="2"/></flow>
 		<flow name="FAZERFunctionalArchitecture.FC_B2GKO" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.FC_Degraded_G2B" domain="bool" orientation="out">
+			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.FC_FDAKO" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.FC_FDAtempKO" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.FC_FMCKO" domain="bool" orientation="out">
 			<init value="false"/></flow>
@@ -28859,6 +29291,10 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERFunctionalArchitecture.Monitoring_R" domain="Quality_Function_OLE" orientation="in">
 			<init value="ok"/></flow>
+		<flow name="FAZERFunctionalArchitecture.Monitoring_RPilotMCU" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="FAZERFunctionalArchitecture.Monitoring_RSecuMCU" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
 		<flow name="FAZERFunctionalArchitecture.Monitoring_SecuMCU_state" domain="Quality_Function_OLE" orientation="in">
 			<init value="ok"/></flow>
 		<flow name="FAZERFunctionalArchitecture.Monitoring_nomSensor_state" domain="Quality_Function_OLE" orientation="in">
@@ -28922,6 +29358,10 @@
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.PSLaneState_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.R" domain="Quality_Function_OLE" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.RPilotMCUMonitoring" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.RSecuMCUMonitoring" domain="Quality_Statement_OStSf" orientation="in">
 			<init value="ok"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmElecPartial.A" domain="bool" orientation="in">
 			<init value="false"/></flow>
@@ -31057,6 +31497,8 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.FAZERAvionics.worst.icone" domain="[1,3]" orientation="private">
 			<init value="1"/></flow>
+		<flow name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" domain="bool" orientation="out">
+			<init value="false"/></flow>
 		<flow name="FAZERPhysicalArchitecture.GNSSP_SecurityMCU" domain="Quality_Function_OLtLpE" orientation="out">
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.GPSP_PilotMCU" domain="Quality_Function_OLtLpE" orientation="out">
@@ -31074,6 +31516,10 @@
 		<flow name="FAZERPhysicalArchitecture.MagnetoP_PilotMCU" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.MagnetoP_SecuMCU" domain="Quality_Function_OLE" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.Monitoring_pilotMCU" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.Monitoring_secuMCU" domain="Quality_Statement_OStSf" orientation="out">
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.O_L1" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
@@ -31347,10 +31793,16 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.icone" domain="[1,3]" orientation="private">
 			<init value="3"/></flow>
-		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.I" domain="Quality_Function_OLE" orientation="in">
-			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.I" domain="bool" orientation="in">
+			<init value="false"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.O" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.R" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.icone" domain="[1,4]" orientation="private">
 			<init value="2"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANStatus" domain="Quality_Function_OLE" orientation="in">
@@ -31359,6 +31811,10 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.O" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.const_ok1.O" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.const_ok1.icone" domain="[1,1]" orientation="private">
+			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.icone" domain="[1,5]" orientation="private">
 			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.ignoreErrCAN.CloseCond" domain="bool" orientation="in">
@@ -31375,10 +31831,22 @@
 			<init value="true"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.neg1.icone" domain="[1,2]" orientation="private">
 			<init value="1"/></flow>
-		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.I" domain="Quality_Function_OLE" orientation="in">
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.testI_err1.I" domain="Quality_Function_OLE" orientation="in">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.testI_err1.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.testI_err1.icone" domain="[1,2]" orientation="private">
+			<init value="2"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.I" domain="bool" orientation="in">
+			<init value="false"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.O" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.R" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.icone" domain="[1,4]" orientation="private">
 			<init value="2"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANStatus" domain="Quality_Function_OLE" orientation="in">
@@ -31387,6 +31855,10 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.O" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.const_ok1.O" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.const_ok1.icone" domain="[1,1]" orientation="private">
+			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.icone" domain="[1,5]" orientation="private">
 			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.ignoreErrCAN.CloseCond" domain="bool" orientation="in">
@@ -31403,10 +31875,22 @@
 			<init value="true"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.neg1.icone" domain="[1,2]" orientation="private">
 			<init value="1"/></flow>
-		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.I" domain="Quality_Function_OLE" orientation="in">
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.testI_err1.I" domain="Quality_Function_OLE" orientation="in">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.testI_err1.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.testI_err1.icone" domain="[1,2]" orientation="private">
+			<init value="2"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.I" domain="bool" orientation="in">
+			<init value="false"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.O" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.R" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.icone" domain="[1,4]" orientation="private">
 			<init value="2"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANStatus" domain="Quality_Function_OLE" orientation="in">
@@ -31415,6 +31899,10 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.O" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.const_ok1.O" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.const_ok1.icone" domain="[1,1]" orientation="private">
+			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.icone" domain="[1,5]" orientation="private">
 			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.ignoreErrCAN.CloseCond" domain="bool" orientation="in">
@@ -31431,10 +31919,22 @@
 			<init value="true"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.neg1.icone" domain="[1,2]" orientation="private">
 			<init value="1"/></flow>
-		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.I" domain="Quality_Function_OLE" orientation="in">
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.testI_err1.I" domain="Quality_Function_OLE" orientation="in">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.testI_err1.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.testI_err1.icone" domain="[1,2]" orientation="private">
+			<init value="2"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.I" domain="bool" orientation="in">
+			<init value="false"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.O" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.R" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.icone" domain="[1,4]" orientation="private">
 			<init value="2"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANStatus" domain="Quality_Function_OLE" orientation="in">
@@ -31443,6 +31943,10 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.O" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.const_ok1.O" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.const_ok1.icone" domain="[1,1]" orientation="private">
+			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.icone" domain="[1,5]" orientation="private">
 			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.ignoreErrCAN.CloseCond" domain="bool" orientation="in">
@@ -31459,10 +31963,22 @@
 			<init value="true"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.neg1.icone" domain="[1,2]" orientation="private">
 			<init value="1"/></flow>
-		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.I" domain="Quality_Function_OLE" orientation="in">
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.testI_err1.I" domain="Quality_Function_OLE" orientation="in">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.testI_err1.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.testI_err1.icone" domain="[1,2]" orientation="private">
+			<init value="2"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.A" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.I" domain="bool" orientation="in">
+			<init value="false"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.O" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.R" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.icone" domain="[1,4]" orientation="private">
 			<init value="2"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANStatus" domain="Quality_Function_OLE" orientation="in">
@@ -31471,6 +31987,10 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.O" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.const_ok1.O" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.const_ok1.icone" domain="[1,1]" orientation="private">
+			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.icone" domain="[1,5]" orientation="private">
 			<init value="1"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.ignoreErrCAN.CloseCond" domain="bool" orientation="in">
@@ -31487,6 +32007,12 @@
 			<init value="true"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.neg1.icone" domain="[1,2]" orientation="private">
 			<init value="1"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.testI_err1.I" domain="Quality_Function_OLE" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.testI_err1.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.testI_err1.icone" domain="[1,2]" orientation="private">
+			<init value="2"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.ECU.A" domain="bool" orientation="in">
 			<init value="true"/></flow>
 		<flow name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.ECU.O" domain="Quality_Function_OLE" orientation="out">
@@ -32237,6 +32763,12 @@
 			<init value="false"/></flow>
 		<flow name="physical2FunctionalMapping.FC_YAMAHA_TCUsed" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="physical2FunctionalMapping.FC_limitedAutonomyLoss" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="physical2FunctionalMapping.FC_lossMonitoringCapability" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="physical2FunctionalMapping.FC_spuriousDetection" domain="bool" orientation="out">
+			<init value="false"/></flow>
 		<flow name="physical2FunctionalMapping.FTR_MappingTrajControl" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.FTS_SWAlloc" domain="Quality_Function_OLE" orientation="out">
@@ -32487,6 +33019,14 @@
 			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.Monitoring_PliotMCU_state" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
+		<flow name="physical2FunctionalMapping.Monitoring_RPilotMCU" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="physical2FunctionalMapping.Monitoring_RPilotMCU_I" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="physical2FunctionalMapping.Monitoring_RSecuMCU" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="physical2FunctionalMapping.Monitoring_RSecuMCU_I" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.Monitoring_SecuMCU_state" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.Monitoring_nomSensor_state" domain="Quality_Function_OLE" orientation="out">
@@ -32535,6 +33075,10 @@
 			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.SWAlloc.ModeSelection" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
+		<flow name="physical2FunctionalMapping.SWAlloc.Monitoring_pilotMCU" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="physical2FunctionalMapping.SWAlloc.Monitoring_secuMCU" domain="Quality_Statement_OStSf" orientation="out">
+			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.SWAlloc.NominalFlightPlanMgmt" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.SWAlloc.RAM_Navigation_MCU" domain="Quality_Function_OLE" orientation="in">
@@ -32542,6 +33086,10 @@
 		<flow name="physical2FunctionalMapping.SWAlloc.Telemetry" domain="Quality_Function_OLE" orientation="out">
 			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.SWAlloc.UAMonitoring" domain="Quality_Function_OLE" orientation="out">
+			<init value="ok"/></flow>
+		<flow name="physical2FunctionalMapping.SWAlloc.checkPilotMCU" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="physical2FunctionalMapping.SWAlloc.checkSecuMCU" domain="Quality_Statement_OStSf" orientation="in">
 			<init value="ok"/></flow>
 		<flow name="physical2FunctionalMapping.SWAlloc.or1.I1" domain="Quality_Function_OLE" orientation="in">
 			<init value="ok"/></flow>
@@ -33006,6 +33554,6 @@
 		<nodeproperty name="projectName" value="withoutProcedures"/>
 		<nodeproperty name="projectVersion" value="8"/>
 		<nodeproperty name="projectConfig" value="material"/>
-		<nodeproperty name="currentDate" value="2025-10-22 11:00:45"/>
+		<nodeproperty name="currentDate" value="2025-10-24 17:03:50"/>
 	</model>
 </fmeagen>

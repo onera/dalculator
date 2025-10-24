@@ -1,0 +1,7 @@
+Flow,High level Failure condition
+GroundRiskPolicy.FlightControlLoss_O.O,Unmitigated LOC
+GroundRiskPolicy.FTSActivation_O.O,LOC
+GroundRiskPolicy.LandASAPossible_O.O,LOC
+GroundRiskPolicy.LandOnPredeterminedSite_O.O,Mission interruption
+GroundRiskPolicy.FlightControlRecovery_O.O,Mission continuation with failed elements
+GroundRiskPolicy.ContinuedMission_O.O,Mission continuation with failed elements
