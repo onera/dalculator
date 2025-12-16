@@ -122,8 +122,8 @@ object ModelParser extends RegexParsers {
     }
 
   def getCollapseMerge: Parser[MergeMethod] =
-    "merge" ^^ {
-      _ => CollapseMerge
+    "merge" ~> opt(", " ~> "\"" ~> ident <~ "\"") ^^ {
+      x => CollapseMerge(x)
     }
 
   def loadFlowDictionary(params: DalculatorParameters): Parser[Unit] =

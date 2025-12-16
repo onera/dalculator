@@ -12,16 +12,12 @@ object PFQAComposer {
 
   final val SEPARATOR = ", "
 
-  private case class Event(equipment: String, component: String, failureMode: String) {
-    override def toString: String = s"$equipment$SEPARATOR$component$SEPARATOR$failureMode"
-  }
-
   sealed trait MergeMethod {
     def merge(s:Seq[String]):String
   }
-  case object CollapseMerge extends MergeMethod {
+  case class CollapseMerge(separator:Option[String]) extends MergeMethod {
     def merge(s:Seq[String]):String =
-      s.mkString(" and ")
+      s.mkString(s" ${separator.getOrElse("and")} ")
   }
   case class OrderedMerge(order:Seq[String]) extends MergeMethod{
     def merge(s:Seq[String]):String = {
@@ -33,34 +29,22 @@ object PFQAComposer {
 
   }
 
-  case class ColumnInfo(name:String, isFLowDictionary: Boolean, map:Map[String,Seq[String]], merge:Option[MergeMethod] = None)
-
-  private object Event {
-    def empty: Event = Event("", "", "")
-
-    def apply(s: String): Option[Event] = {
-      val split = s.split("\\.")
-      if (split.size >= 4)
-        Some(new Event(split.head, split.tail.init.mkString("."), split.last))
-      else if (split.size == 3)
-        Some(new Event(split.head, split(1), split.last))
-      else if (split.size == 2)
-        Some(new Event(split.head, "", split.last))
-      else {
-        println(s"[WARNING] $s is not fulfilling format constraints")
-        None
-      }
-    }
+  case class ColumnInfo(name:String, isFLowDictionary: Boolean, map:Map[String,Seq[String]], merge:Option[MergeMethod] = None) {
+    override def toString: String = name
   }
 
-  private case class TableLine(event: Event, columns:Seq[Seq[String]]) {
+  private case class TableLine(columns:Seq[Seq[String]]) {
     override def toString: String = {
-        columns.foldLeft(Seq(s"$event"))((acc,values) =>
+        columns.foldLeft(Seq(""))((acc,values) =>
           for {
             a <- acc
             v <- values
-          } yield
-            a + s"$SEPARATOR$v"
+          } yield {
+            if(a.nonEmpty)
+              a + s"$SEPARATOR$v"
+            else
+              v
+          }
         ).mkString("","\n","\n")
     }
   }
@@ -84,11 +68,9 @@ object PFQAComposer {
   }
 
   private final def buildTable(lines: NodeSeq,
-                               reformatName: String => String,
                                columns: Seq[ColumnInfo]): Seq[TableLine] = for {
     line <- lines
     event <- line \ "@evt"
-    e <- Event(reformatName(event.toString()))
     flows = (line \ "flow").filter(n => (n \ "@value").exists(_.toString().contains("true")))
     names = (flows \\ "@name").map(_.toString())
   } yield {
@@ -112,13 +94,12 @@ object PFQAComposer {
         }
       }
     }
-    TableLine(e, finalValues)
+    TableLine(finalValues)
   }
 
   final def performAndExportPFQA(
                                   fileName: String,
                                   outputFile:String,
-                                  reformatName: String => String = x => x,
                                   columns: Seq[ColumnInfo],
                                   filterEvents: Node => Boolean =  _ => true
                                 ): File = {
@@ -127,12 +108,10 @@ object PFQAComposer {
 
     val analysisLines = (result \\ "tr").filter(n => (n \ "@evt").exists(filterEvents))
 
-    val table = buildTable(analysisLines, reformatName, columns)
+    val table = buildTable(analysisLines, columns)
     val output = FileManager.analysisDirectory.getFile(outputFile)
     val writer = new FileWriter(output)
-    writer.write(s"Equipment${SEPARATOR}Component${SEPARATOR}Event")
-    for {c <- columns}
-      writer.write(s"${SEPARATOR}${c.name}")
+    writer.write(columns.mkString(SEPARATOR))
     writer.write("\n")
     for {line <- table}
       writer.write(line.toString)

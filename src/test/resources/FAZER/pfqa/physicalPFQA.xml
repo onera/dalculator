@@ -4,7 +4,7 @@
 		<param name="onlychange" value="true" />
 	</define>
 	<result>
-		<tr id="100" evt="FAZERPhysicalArchitecture.CANSwitch.switch1.fail_loss">
+		<tr id="102" evt="FAZERPhysicalArchitecture.CANSwitch.switch1.fail_loss">
 			<state name="FAZERPhysicalArchitecture.CANSwitch.switch1.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_switch_lost" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.I" 	value="true"/>
@@ -58,7 +58,7 @@
 			<flow  name="physical2FunctionalMapping.or21.icone" 	value="1"/>
 			<flow  name="physical2FunctionalMapping.switch1Lost" 	value="true"/>
 		</tr>
-		<tr id="101" evt="FAZERPhysicalArchitecture.CANSwitch.switch2.fail_loss">
+		<tr id="103" evt="FAZERPhysicalArchitecture.CANSwitch.switch2.fail_loss">
 			<state name="FAZERPhysicalArchitecture.CANSwitch.switch2.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_switch_lost" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmSwitch.I" 	value="true"/>
@@ -104,7 +104,7 @@
 			<flow  name="physical2FunctionalMapping.or21.icone" 	value="1"/>
 			<flow  name="physical2FunctionalMapping.switch2Lost" 	value="true"/>
 		</tr>
-		<tr id="102" evt="FAZERPhysicalArchitecture.FAZERAvionics.Baro.fail_err">
+		<tr id="104" evt="FAZERPhysicalArchitecture.FAZERAvionics.Baro.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.Baro.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -126,8 +126,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -336,7 +344,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneErrorNom.icone" 	value="3"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="err"/>
 		</tr>
-		<tr id="103" evt="FAZERPhysicalArchitecture.FAZERAvionics.Baro.fail_loss">
+		<tr id="105" evt="FAZERPhysicalArchitecture.FAZERAvionics.Baro.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.Baro.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -358,8 +366,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -568,7 +584,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneErrorNom.icone" 	value="2"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="104" evt="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.fail_err">
+		<tr id="106" evt="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -590,8 +606,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -800,7 +824,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="err"/>
 		</tr>
-		<tr id="105" evt="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.fail_loss">
+		<tr id="107" evt="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.BaroSecu.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -822,8 +846,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -1032,7 +1064,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="106" evt="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.fail_err">
+		<tr id="108" evt="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.fail_err">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
@@ -1060,8 +1092,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -1294,7 +1334,7 @@
 			<flow  name="physical2FunctionalMapping.SWAlloc.or2.O" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.SWAlloc.or2.icone" 	value="3"/>
 		</tr>
-		<tr id="107" evt="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.fail_loss">
+		<tr id="109" evt="FAZERPhysicalArchitecture.FAZERAvionics.FlightPlanRAM.fail_loss">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
@@ -1322,8 +1362,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -1556,7 +1604,7 @@
 			<flow  name="physical2FunctionalMapping.SWAlloc.or2.O" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.SWAlloc.or2.icone" 	value="2"/>
 		</tr>
-		<tr id="108" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPS.fail_err">
+		<tr id="110" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPS.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.GPS.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -1578,8 +1626,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -1793,7 +1849,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneGPS.I1" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="err"/>
 		</tr>
-		<tr id="109" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPS.fail_loss">
+		<tr id="111" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPS.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.GPS.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -1815,8 +1871,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -2030,7 +2094,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneGPS.I1" 	value="lost_p"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="110" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.fail_err">
+		<tr id="112" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -2052,8 +2116,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -2267,7 +2339,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="err"/>
 		</tr>
-		<tr id="111" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.fail_loss">
+		<tr id="113" evt="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -2289,8 +2361,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -2504,7 +2584,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="112" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMU.fail_err">
+		<tr id="114" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMU.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.IMU.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -2526,8 +2606,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -2738,7 +2826,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneIMU.I1" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="err"/>
 		</tr>
-		<tr id="113" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMU.fail_loss">
+		<tr id="115" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMU.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.IMU.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -2760,8 +2848,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -2972,7 +3068,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneIMU.I1" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="114" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.fail_err">
+		<tr id="116" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -2994,8 +3090,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -3206,7 +3310,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="err"/>
 		</tr>
-		<tr id="115" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.fail_loss">
+		<tr id="117" evt="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.IMUSecu.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -3228,8 +3332,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -3440,7 +3552,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="116" evt="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.fail_err">
+		<tr id="118" evt="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -3462,8 +3574,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -3656,7 +3776,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="err"/>
 		</tr>
-		<tr id="117" evt="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.fail_loss">
+		<tr id="119" evt="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.Magneto.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -3678,8 +3798,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -3872,7 +4000,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="118" evt="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.fail_err">
+		<tr id="120" evt="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.fail_err">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.S" 	value="err"/>
@@ -3936,8 +4064,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -4357,7 +4493,7 @@
 			<flow  name="physical2FunctionalMapping.TelemetryCompP" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.TelemetryCompP_O" 	value="err"/>
 		</tr>
-		<tr id="119" evt="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.fail_loss">
+		<tr id="121" evt="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.fail_loss">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.NavMCU.MCUFail.S" 	value="lost"/>
@@ -4421,8 +4557,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -4848,7 +4992,7 @@
 			<flow  name="physical2FunctionalMapping.TelemetryCompP" 	value="lost_p"/>
 			<flow  name="physical2FunctionalMapping.TelemetryCompP_O" 	value="lost_p"/>
 		</tr>
-		<tr id="120" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.fail_err">
+		<tr id="122" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -4870,8 +5014,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -5199,7 +5351,7 @@
 			<flow  name="physical2FunctionalMapping.SWAlloc.MCUPilot" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.SWAlloc.or21.I1" 	value="err"/>
 		</tr>
-		<tr id="121" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.fail_loss">
+		<tr id="123" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.MCUFail.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -5221,8 +5373,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -5566,7 +5726,7 @@
 			<flow  name="physical2FunctionalMapping.or21.icone" 	value="1"/>
 			<flow  name="physical2FunctionalMapping.switch1Lost" 	value="true"/>
 		</tr>
-		<tr id="122" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.stuck_on_false">
+		<tr id="124" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.S" 	value="stuck_false"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_RSecuMCU" 	value="stuck_false"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.RSecuMCUMonitoring" 	value="stuck_false"/>
@@ -5600,7 +5760,7 @@
 			<flow  name="physical2FunctionalMapping.SWAlloc.Monitoring_secuMCU" 	value="stuck_false"/>
 			<flow  name="physical2FunctionalMapping.SWAlloc.checkSecuMCU" 	value="stuck_false"/>
 		</tr>
-		<tr id="123" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.stuck_on_true">
+		<tr id="125" evt="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.stuck_on_true">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PilotMCU.checkSecuMCU.S" 	value="stuck_true"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -5622,8 +5782,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -5816,7 +5984,7 @@
 			<flow  name="physical2FunctionalMapping.SWAlloc.Monitoring_secuMCU" 	value="stuck_true"/>
 			<flow  name="physical2FunctionalMapping.SWAlloc.checkSecuMCU" 	value="stuck_true"/>
 		</tr>
-		<tr id="124" evt="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_err">
+		<tr id="126" evt="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
@@ -5836,8 +6004,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -6062,7 +6238,7 @@
 			<flow  name="physical2FunctionalMapping.PupCompP" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.PupCompP_O" 	value="err"/>
 		</tr>
-		<tr id="125" evt="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_loss">
+		<tr id="127" evt="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.PupManager.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
@@ -6082,8 +6258,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -6308,7 +6492,7 @@
 			<flow  name="physical2FunctionalMapping.PupCompP" 	value="lost_p"/>
 			<flow  name="physical2FunctionalMapping.PupCompP_O" 	value="lost_p"/>
 		</tr>
-		<tr id="126" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.fail_err">
+		<tr id="128" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -6330,8 +6514,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -6637,7 +6829,7 @@
 			<flow  name="physical2FunctionalMapping.SWAlloc.or1.I1" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.SWAlloc.or21.I2" 	value="err"/>
 		</tr>
-		<tr id="127" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.fail_loss">
+		<tr id="129" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.MCUFail.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -6659,8 +6851,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -6990,7 +7190,7 @@
 			<flow  name="physical2FunctionalMapping.or21.icone" 	value="1"/>
 			<flow  name="physical2FunctionalMapping.switch2Lost" 	value="true"/>
 		</tr>
-		<tr id="128" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.stuck_on_false">
+		<tr id="130" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.S" 	value="stuck_false"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_RPilotMCU" 	value="stuck_false"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.RPilotMCUMonitoring" 	value="stuck_false"/>
@@ -7024,7 +7224,7 @@
 			<flow  name="physical2FunctionalMapping.SWAlloc.Monitoring_pilotMCU" 	value="stuck_false"/>
 			<flow  name="physical2FunctionalMapping.SWAlloc.checkPilotMCU" 	value="stuck_false"/>
 		</tr>
-		<tr id="129" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.stuck_on_true">
+		<tr id="131" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.stuck_on_true">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.checkPilotMCU.S" 	value="stuck_true"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -7046,8 +7246,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -7248,7 +7456,7 @@
 			<flow  name="physical2FunctionalMapping.SWAlloc.Monitoring_pilotMCU" 	value="stuck_true"/>
 			<flow  name="physical2FunctionalMapping.SWAlloc.checkPilotMCU" 	value="stuck_true"/>
 		</tr>
-		<tr id="130" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu3_3V.fail_loss">
+		<tr id="132" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu3_3V.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu3_3V.S" 	value="lost"/>
 			<flow  name="BatteryIcon.icone" 	value="2"/>
@@ -7272,8 +7480,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -7639,7 +7855,7 @@
 			<flow  name="physical2FunctionalMapping.or21.icone" 	value="1"/>
 			<flow  name="physical2FunctionalMapping.switch2Lost" 	value="true"/>
 		</tr>
-		<tr id="131" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu5V.fail_loss">
+		<tr id="133" evt="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu5V.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.SecurityMCU.regSecu5V.S" 	value="lost"/>
 			<flow  name="BatteryIcon.icone" 	value="2"/>
@@ -7663,8 +7879,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -8009,7 +8233,7 @@
 			<flow  name="physical2FunctionalMapping.or21.icone" 	value="1"/>
 			<flow  name="physical2FunctionalMapping.switch2Lost" 	value="true"/>
 		</tr>
-		<tr id="132" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.fail_err">
+		<tr id="134" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.fail_err">
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_oneStickFailed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.I" 	value="true"/>
@@ -8058,7 +8282,7 @@
 			<flow  name="physical2FunctionalMapping.oneStickFailed" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.oneStickFailed_O" 	value="true"/>
 		</tr>
-		<tr id="133" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.fail_loss">
+		<tr id="135" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.fail_loss">
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_oneStickFailed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.I" 	value="true"/>
@@ -8107,7 +8331,7 @@
 			<flow  name="physical2FunctionalMapping.oneStickFailed" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.oneStickFailed_O" 	value="true"/>
 		</tr>
-		<tr id="134" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.fail_err">
+		<tr id="136" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.fail_err">
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_oneStickFailed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.I" 	value="true"/>
@@ -8156,7 +8380,7 @@
 			<flow  name="physical2FunctionalMapping.oneStickFailed" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.oneStickFailed_O" 	value="true"/>
 		</tr>
-		<tr id="135" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.fail_loss">
+		<tr id="137" evt="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.fail_loss">
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.StickManager2.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_oneStickFailed" 	value="true"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmPSLane1.I" 	value="true"/>
@@ -8205,7 +8429,7 @@
 			<flow  name="physical2FunctionalMapping.oneStickFailed" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.oneStickFailed_O" 	value="true"/>
 		</tr>
-		<tr id="136" evt="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.fail_err">
+		<tr id="138" evt="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -8227,8 +8451,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -8417,7 +8649,7 @@
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Telemeter_State" 	value="err"/>
 		</tr>
-		<tr id="137" evt="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.fail_loss">
+		<tr id="139" evt="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.Telemeter.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -8439,8 +8671,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -8629,7 +8869,7 @@
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Telemeter_State" 	value="lost"/>
 		</tr>
-		<tr id="138" evt="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.fail_err">
+		<tr id="140" evt="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.fail_err">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.S" 	value="err"/>
 			<flow  name="ComIcon.icone" 	value="2"/>
@@ -8681,8 +8921,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -8909,7 +9157,7 @@
 			<flow  name="physical2FunctionalMapping.TelemetryCompP" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.TelemetryCompP_O" 	value="err"/>
 		</tr>
-		<tr id="139" evt="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.fail_loss">
+		<tr id="141" evt="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.fail_loss">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.TelemetryManager.S" 	value="lost"/>
 			<flow  name="ComIcon.icone" 	value="2"/>
@@ -8961,8 +9209,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -9195,7 +9451,7 @@
 			<flow  name="physical2FunctionalMapping.TelemetryCompP" 	value="lost_p"/>
 			<flow  name="physical2FunctionalMapping.TelemetryCompP_O" 	value="lost_p"/>
 		</tr>
-		<tr id="140" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.fail_err">
+		<tr id="142" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -9217,8 +9473,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -9428,7 +9692,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="err"/>
 		</tr>
-		<tr id="141" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.fail_loss">
+		<tr id="143" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -9450,8 +9714,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -9661,7 +9933,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="142" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.fail_err">
+		<tr id="144" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -9683,8 +9955,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -9870,7 +10150,7 @@
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Telemeter_State" 	value="err"/>
 		</tr>
-		<tr id="143" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.fail_loss">
+		<tr id="145" evt="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.UARTToSPI1.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -9892,8 +10172,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -10079,7 +10367,7 @@
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Telemeter_State" 	value="lost"/>
 		</tr>
-		<tr id="144" evt="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.fail_err">
+		<tr id="146" evt="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -10101,8 +10389,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -10315,7 +10611,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneErrorNom.icone" 	value="3"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="err"/>
 		</tr>
-		<tr id="145" evt="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.fail_loss">
+		<tr id="147" evt="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.FAZERAvionics.magnetoSecu.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -10337,8 +10633,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -10551,7 +10855,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneErrorNom.icone" 	value="2"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="146" evt="FAZERPhysicalArchitecture.PowerManagement.RecoveryBat.fail_partial">
+		<tr id="148" evt="FAZERPhysicalArchitecture.PowerManagement.RecoveryBat.fail_partial">
 			<state name="FAZERPhysicalArchitecture.PowerManagement.RecoveryBat.S" 	value="partialLoss"/>
 			<flow  name="FAZERFunctionalArchitecture.Monitoring_recoveryBatState" 	value="partialLoss"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmRecoveryBat.I" 	value="true"/>
@@ -10594,7 +10898,7 @@
 			<flow  name="physical2FunctionalMapping.recoveryBatState" 	value="partialLoss"/>
 			<flow  name="physical2FunctionalMapping.recoveryBatState_O" 	value="partialLoss"/>
 		</tr>
-		<tr id="148" evt="FAZERPhysicalArchitecture.PowerManagement.mainReg1.fail">
+		<tr id="150" evt="FAZERPhysicalArchitecture.PowerManagement.mainReg1.fail">
 			<state name="FAZERPhysicalArchitecture.PowerManagement.mainReg1.ok" 	value="false"/>
 			<flow  name="BatteryIcon.icone" 	value="2"/>
 			<flow  name="BatteryIcon.isOK" 	value="false"/>
@@ -10652,7 +10956,7 @@
 			<flow  name="physical2FunctionalMapping.testI_lost1.O" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.testI_lost1.icone" 	value="1"/>
 		</tr>
-		<tr id="149" evt="FAZERPhysicalArchitecture.PowerManagement.mainReg2.fail">
+		<tr id="151" evt="FAZERPhysicalArchitecture.PowerManagement.mainReg2.fail">
 			<state name="FAZERPhysicalArchitecture.PowerManagement.mainReg2.ok" 	value="false"/>
 			<flow  name="BatteryIcon.icone" 	value="2"/>
 			<flow  name="BatteryIcon.isOK" 	value="false"/>
@@ -10710,7 +11014,7 @@
 			<flow  name="physical2FunctionalMapping.testI_lost1.O" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.testI_lost1.icone" 	value="1"/>
 		</tr>
-		<tr id="150" evt="FAZERPhysicalArchitecture.PowerManagement.regHighTension1.fail">
+		<tr id="152" evt="FAZERPhysicalArchitecture.PowerManagement.regHighTension1.fail">
 			<state name="FAZERPhysicalArchitecture.PowerManagement.regHighTension1.ok" 	value="false"/>
 			<flow  name="BatteryIcon.icone" 	value="2"/>
 			<flow  name="BatteryIcon.isOK" 	value="false"/>
@@ -10768,7 +11072,7 @@
 			<flow  name="physical2FunctionalMapping.testI_lost1.O" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.testI_lost1.icone" 	value="1"/>
 		</tr>
-		<tr id="151" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension0.fail">
+		<tr id="153" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension0.fail">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.PowerManagement.regLowTension0.ok" 	value="false"/>
@@ -10834,8 +11138,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -11296,7 +11608,7 @@
 			<flow  name="physical2FunctionalMapping.testI_lost1.O" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.testI_lost1.icone" 	value="1"/>
 		</tr>
-		<tr id="152" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension1.fail">
+		<tr id="154" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension1.fail">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.PowerManagement.regLowTension1.ok" 	value="false"/>
 			<flow  name="BatteryIcon.icone" 	value="2"/>
@@ -11320,8 +11632,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -11726,7 +12046,7 @@
 			<flow  name="physical2FunctionalMapping.testI_lost1.O" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.testI_lost1.icone" 	value="1"/>
 		</tr>
-		<tr id="153" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension2.fail">
+		<tr id="155" evt="FAZERPhysicalArchitecture.PowerManagement.regLowTension2.fail">
 			<state name="FAZERPhysicalArchitecture.PowerManagement.regLowTension2.ok" 	value="false"/>
 			<flow  name="BatteryIcon.icone" 	value="2"/>
 			<flow  name="BatteryIcon.isOK" 	value="false"/>
@@ -11780,7 +12100,7 @@
 			<flow  name="physical2FunctionalMapping.testI_lost1.O" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.testI_lost1.icone" 	value="1"/>
 		</tr>
-		<tr id="154" evt="FAZERPhysicalArchitecture.PowerManagement.regOp.fail">
+		<tr id="156" evt="FAZERPhysicalArchitecture.PowerManagement.regOp.fail">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.PowerManagement.regOp.ok" 	value="false"/>
 			<flow  name="BatteryIcon.icone" 	value="2"/>
@@ -11802,8 +12122,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -12026,7 +12354,7 @@
 			<flow  name="physical2FunctionalMapping.testI_lost1.O" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.testI_lost1.icone" 	value="1"/>
 		</tr>
-		<tr id="155" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.Bat.fail_partial">
+		<tr id="157" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.Bat.fail_partial">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.Bat.S" 	value="partialLoss"/>
@@ -12059,8 +12387,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -12320,7 +12656,7 @@
 			<flow  name="physical2FunctionalMapping.APF_Elec" 	value="partialLoss"/>
 			<flow  name="physical2FunctionalMapping.APF_Elec_O" 	value="partialLoss"/>
 		</tr>
-		<tr id="157" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.fail_err">
+		<tr id="159" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.fail_err">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -13063,7 +13399,7 @@
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Transfert_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="158" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.fail_loss">
+		<tr id="160" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CAN.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -13761,7 +14097,7 @@
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Transfert_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="159" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.stuck_on_false">
+		<tr id="161" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.S" 	value="stuck_false"/>
 			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.icone" 	value="4"/>
@@ -13786,7 +14122,7 @@
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
 		</tr>
-		<tr id="160" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.stuck_on_true">
+		<tr id="162" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL1.CANErrCheck.stuck_on_true">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -14326,7 +14662,7 @@
 			<flow  name="physical2FunctionalMapping.NavR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="161" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.stuck_on_false">
+		<tr id="163" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.S" 	value="stuck_false"/>
 			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.icone" 	value="4"/>
@@ -14351,7 +14687,7 @@
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
 		</tr>
-		<tr id="162" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.stuck_on_true">
+		<tr id="164" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL2.CANErrCheck.stuck_on_true">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -14891,7 +15227,7 @@
 			<flow  name="physical2FunctionalMapping.NavR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="163" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.stuck_on_false">
+		<tr id="165" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.S" 	value="stuck_false"/>
 			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.icone" 	value="4"/>
@@ -14916,7 +15252,7 @@
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
 		</tr>
-		<tr id="164" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.stuck_on_true">
+		<tr id="166" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL3.CANErrCheck.stuck_on_true">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -15456,7 +15792,7 @@
 			<flow  name="physical2FunctionalMapping.NavR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="165" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.stuck_on_false">
+		<tr id="167" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.S" 	value="stuck_false"/>
 			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.icone" 	value="4"/>
@@ -15481,7 +15817,7 @@
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
 		</tr>
-		<tr id="166" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.stuck_on_true">
+		<tr id="168" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckL4.CANErrCheck.stuck_on_true">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -16021,7 +16357,7 @@
 			<flow  name="physical2FunctionalMapping.NavR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="167" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.stuck_on_false">
+		<tr id="169" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.stuck_on_false">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.S" 	value="stuck_false"/>
 			<flow  name="FAZERPhysicalArchitecture.FC_YAMAHALimitedMonitoringCapability" 	value="true"/>
 			<flow  name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.icone" 	value="4"/>
@@ -16046,7 +16382,7 @@
 			<flow  name="functional2PolicyMapping.NSEEvent_O" 	value="true"/>
 			<flow  name="functional2PolicyMapping.NSEEvent_in" 	value="true"/>
 		</tr>
-		<tr id="168" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.stuck_on_true">
+		<tr id="170" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.CANCheckMotor.CANErrCheck.stuck_on_true">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -16667,7 +17003,7 @@
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Transfert_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="169" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.ECU.fail_err">
+		<tr id="171" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.ECU.fail_err">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="err"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
 			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
@@ -17380,7 +17716,7 @@
 			<flow  name="physical2FunctionalMapping.YAMAHA_control" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.YAMAHA_control_O" 	value="err"/>
 		</tr>
-		<tr id="170" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.ECU.fail_loss">
+		<tr id="172" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.ECU.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -18079,7 +18415,7 @@
 			<flow  name="physical2FunctionalMapping.YAMAHA_control" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.YAMAHA_control_O" 	value="lost"/>
 		</tr>
-		<tr id="171" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.GPS_INS.fail_err">
+		<tr id="173" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.GPS_INS.fail_err">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.GPS_INS.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.YAMAHA_control" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.switch2.I1" 	value="err"/>
@@ -18122,7 +18458,7 @@
 			<flow  name="physical2FunctionalMapping.YAMAHA_control" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.YAMAHA_control_O" 	value="err"/>
 		</tr>
-		<tr id="172" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.GPS_INS.fail_loss">
+		<tr id="174" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.GPS_INS.fail_loss">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.GPS_INS.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.YAMAHA_control" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.switch2.I1" 	value="lost"/>
@@ -18165,7 +18501,7 @@
 			<flow  name="physical2FunctionalMapping.YAMAHA_control" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.YAMAHA_control_O" 	value="lost"/>
 		</tr>
-		<tr id="173" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.fail_loss">
+		<tr id="175" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L1.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -18696,7 +19032,7 @@
 			<flow  name="physical2FunctionalMapping.NavR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="174" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L2.fail_loss">
+		<tr id="176" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L2.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -19227,7 +19563,7 @@
 			<flow  name="physical2FunctionalMapping.NavR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="175" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L3.fail_loss">
+		<tr id="177" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L3.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -19758,7 +20094,7 @@
 			<flow  name="physical2FunctionalMapping.NavR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="176" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L4.fail_loss">
+		<tr id="178" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.L4.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -20289,7 +20625,7 @@
 			<flow  name="physical2FunctionalMapping.NavR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="177" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.YACSII.fail_err">
+		<tr id="179" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.YACSII.fail_err">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.YACSII.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.YAMAHA_control" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.switch2.I1" 	value="err"/>
@@ -20332,7 +20668,7 @@
 			<flow  name="physical2FunctionalMapping.YAMAHA_control" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.YAMAHA_control_O" 	value="err"/>
 		</tr>
-		<tr id="178" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.YACSII.fail_loss">
+		<tr id="180" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.YACSII.fail_loss">
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.YACSII.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.YAMAHA_control" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.switch2.I1" 	value="lost"/>
@@ -20375,7 +20711,7 @@
 			<flow  name="physical2FunctionalMapping.YAMAHA_control" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.YAMAHA_control_O" 	value="lost"/>
 		</tr>
-		<tr id="179" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.alternator.fail">
+		<tr id="181" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.alternator.fail">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.alternator.ok" 	value="false"/>
@@ -20408,8 +20744,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -20672,7 +21016,7 @@
 			<flow  name="physical2FunctionalMapping.APF_Elec" 	value="partialLoss"/>
 			<flow  name="physical2FunctionalMapping.APF_Elec_O" 	value="partialLoss"/>
 		</tr>
-		<tr id="180" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.fuel.fail_partial">
+		<tr id="182" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.fuel.fail_partial">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.fuel.S" 	value="partialLoss"/>
 			<flow  name="FAZERFunctionalArchitecture.AFP_Fuel_R" 	value="partialLoss"/>
@@ -20697,8 +21041,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -20720,6 +21072,9 @@
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.isEqual3.I2" 	value="partialLoss"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.isEqual3.O" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.isEqual3.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.or21.I1" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.or21.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.UA_situation_assessment.or21.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.CurrentMode" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.IsCL.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.UA_supervision.FDIRBoard.IfCLAndTrajKOThenSH.SWIfNeeded.I2" 	value="SRB"/>
@@ -20895,7 +21250,7 @@
 			<flow  name="physical2FunctionalMapping.APF_Fuel" 	value="partialLoss"/>
 			<flow  name="physical2FunctionalMapping.APF_Fuel_O" 	value="partialLoss"/>
 		</tr>
-		<tr id="182" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.motor.fail_loss">
+		<tr id="184" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.motor.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -21507,7 +21862,7 @@
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Transfert_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="183" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.noOverheat.fail">
+		<tr id="185" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.noOverheat.fail">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -21952,7 +22307,7 @@
 			<flow  name="physical2FunctionalMapping.YAMAHA_recovery" 	value="true"/>
 			<flow  name="physical2FunctionalMapping.YAMAHA_recovery_O" 	value="true"/>
 		</tr>
-		<tr id="184" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert1.fail_loss">
+		<tr id="186" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert1.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -22487,7 +22842,7 @@
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Transfert_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="185" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert2.fail_loss">
+		<tr id="187" evt="FAZERPhysicalArchitecture.YAMAHAInternalArchitecture.transfert2.fail_loss">
 			<state name="FAZERFunctionalArchitecture.AbstractFlightPhysics.pre1.prev_val" 	value="lost_p"/>
 			<state name="FAZERFunctionalArchitecture.FlightPathControl.FTS.switch_latch1.PrimSelect" 	value="false"/>
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="EL"/>
@@ -23018,7 +23373,7 @@
 			<flow  name="physical2FunctionalMapping.PilotR_MappingTrajControl" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Transfert_MappingTrajControl" 	value="lost"/>
 		</tr>
-		<tr id="186" evt="FAZERPhysicalArchitecture.payload.fail_err">
+		<tr id="188" evt="FAZERPhysicalArchitecture.payload.fail_err">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
@@ -23040,8 +23395,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -23249,7 +23612,7 @@
 			<flow  name="physical2FunctionalMapping.PayloadControl_State" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.PayloadControl_State_O" 	value="err"/>
 		</tr>
-		<tr id="187" evt="FAZERPhysicalArchitecture.payload.fail_loss">
+		<tr id="189" evt="FAZERPhysicalArchitecture.payload.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.payload.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
@@ -23269,8 +23632,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -23448,7 +23819,7 @@
 			<flow  name="physical2FunctionalMapping.PayloadControl_State" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PayloadControl_State_O" 	value="lost"/>
 		</tr>
-		<tr id="188" evt="FAZERPhysicalArchitecture.payloadBus.fail_err">
+		<tr id="190" evt="FAZERPhysicalArchitecture.payloadBus.fail_err">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERFunctionalArchitecture.UA_situation_assessment.onceFailed.onceTrue" 	value="true"/>
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
@@ -23470,8 +23841,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -23676,7 +24055,7 @@
 			<flow  name="physical2FunctionalMapping.PayloadControl_State" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.PayloadControl_State_O" 	value="err"/>
 		</tr>
-		<tr id="189" evt="FAZERPhysicalArchitecture.payloadBus.fail_loss">
+		<tr id="191" evt="FAZERPhysicalArchitecture.payloadBus.fail_loss">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.payloadBus.S" 	value="lost"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.FlightPlanSetting.UrgencyPlanSelect.Select1" 	value="true"/>
@@ -23696,8 +24075,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -23872,7 +24259,7 @@
 			<flow  name="physical2FunctionalMapping.PayloadControl_State" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.PayloadControl_State_O" 	value="lost"/>
 		</tr>
-		<tr id="190" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_err">
+		<tr id="192" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
@@ -23892,8 +24279,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -24151,7 +24546,7 @@
 			<flow  name="physical2FunctionalMapping.oneStickManager" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.oneStickManagerO" 	value="err"/>
 		</tr>
-		<tr id="191" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_loss_p">
+		<tr id="193" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_loss_p">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.S" 	value="lost_p"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
@@ -24171,8 +24566,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -24430,7 +24833,7 @@
 			<flow  name="physical2FunctionalMapping.oneStickManager" 	value="lost_p"/>
 			<flow  name="physical2FunctionalMapping.oneStickManagerO" 	value="lost_p"/>
 		</tr>
-		<tr id="192" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_loss_t">
+		<tr id="194" evt="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.fail_loss_t">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SH"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation2_4GHz.S" 	value="lost_t"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
@@ -24704,7 +25107,7 @@
 			<flow  name="physical2FunctionalMapping.oneStickManager" 	value="lost_t"/>
 			<flow  name="physical2FunctionalMapping.oneStickManagerO" 	value="lost_t"/>
 		</tr>
-		<tr id="194" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_err">
+		<tr id="196" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation444MHz.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
@@ -24724,8 +25127,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -24954,7 +25365,7 @@
 			<flow  name="physical2FunctionalMapping.PupCompP" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.PupCompP_O" 	value="err"/>
 		</tr>
-		<tr id="195" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_loss_p">
+		<tr id="197" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_loss_p">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation444MHz.S" 	value="lost_p"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
@@ -24974,8 +25385,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -25204,7 +25623,7 @@
 			<flow  name="physical2FunctionalMapping.PupCompP" 	value="lost_p"/>
 			<flow  name="physical2FunctionalMapping.PupCompP_O" 	value="lost_p"/>
 		</tr>
-		<tr id="196" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_loss_t">
+		<tr id="198" evt="FAZERPhysicalArchitecture.serviceDegradation444MHz.fail_loss_t">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="SH"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation444MHz.S" 	value="lost_t"/>
 			<flow  name="FAZERFunctionalArchitecture.FC_Degraded_G2B" 	value="true"/>
@@ -25449,7 +25868,7 @@
 			<flow  name="physical2FunctionalMapping.PupCompP" 	value="lost_t"/>
 			<flow  name="physical2FunctionalMapping.PupCompP_O" 	value="lost_t"/>
 		</tr>
-		<tr id="198" evt="FAZERPhysicalArchitecture.serviceDegradation868MHz.fail_err">
+		<tr id="200" evt="FAZERPhysicalArchitecture.serviceDegradation868MHz.fail_err">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation868MHz.S" 	value="err"/>
 			<flow  name="ComIcon.icone" 	value="2"/>
@@ -25501,8 +25920,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -25733,7 +26160,7 @@
 			<flow  name="physical2FunctionalMapping.TelemetryCompP" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.TelemetryCompP_O" 	value="err"/>
 		</tr>
-		<tr id="199" evt="FAZERPhysicalArchitecture.serviceDegradation868MHz.fail_loss_p">
+		<tr id="201" evt="FAZERPhysicalArchitecture.serviceDegradation868MHz.fail_loss_p">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation868MHz.S" 	value="lost_p"/>
 			<flow  name="ComIcon.icone" 	value="2"/>
@@ -25785,8 +26212,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -26023,7 +26458,7 @@
 			<flow  name="physical2FunctionalMapping.TelemetryCompP" 	value="lost_p"/>
 			<flow  name="physical2FunctionalMapping.TelemetryCompP_O" 	value="lost_p"/>
 		</tr>
-		<tr id="200" evt="FAZERPhysicalArchitecture.serviceDegradation868MHz.fail_loss_t">
+		<tr id="202" evt="FAZERPhysicalArchitecture.serviceDegradation868MHz.fail_loss_t">
 			<state name="FAZERFunctionalArchitecture.Ground_supervision.preMode.stored_val" 	value="SRB"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradation868MHz.S" 	value="lost_t"/>
 			<flow  name="ComIcon.icone" 	value="2"/>
@@ -26073,8 +26508,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="SRB"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="SRB"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -26311,7 +26754,7 @@
 			<flow  name="physical2FunctionalMapping.TelemetryCompP" 	value="lost_t"/>
 			<flow  name="physical2FunctionalMapping.TelemetryCompP_O" 	value="lost_t"/>
 		</tr>
-		<tr id="202" evt="FAZERPhysicalArchitecture.serviceDegradationGPS.fail_err">
+		<tr id="204" evt="FAZERPhysicalArchitecture.serviceDegradationGPS.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradationGPS.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -26333,8 +26776,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -26552,7 +27003,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneGPS.I1" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="err"/>
 		</tr>
-		<tr id="203" evt="FAZERPhysicalArchitecture.serviceDegradationGPS.fail_loss_p">
+		<tr id="205" evt="FAZERPhysicalArchitecture.serviceDegradationGPS.fail_loss_p">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradationGPS.S" 	value="lost_p"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -26574,8 +27025,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -26793,7 +27252,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneGPS.I1" 	value="lost_p"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_nomSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="204" evt="FAZERPhysicalArchitecture.serviceDegradationGPS.fail_loss_t">
+		<tr id="206" evt="FAZERPhysicalArchitecture.serviceDegradationGPS.fail_loss_t">
 			<state name="FAZERPhysicalArchitecture.serviceDegradationGPS.S" 	value="lost_t"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.GPS.I" 	value="lost_t"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.GPS.O" 	value="lost_t"/>
@@ -26840,7 +27299,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.OLtLpEToOLE2.icone" 	value="1"/>
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.oneGPS.I1" 	value="lost_t"/>
 		</tr>
-		<tr id="206" evt="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.fail_err">
+		<tr id="208" evt="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.fail_err">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.S" 	value="err"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -26862,8 +27321,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -27081,7 +27548,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="err"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="err"/>
 		</tr>
-		<tr id="207" evt="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.fail_loss_p">
+		<tr id="209" evt="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.fail_loss_p">
 			<state name="FAZERFunctionalArchitecture.UA_supervision.preMode.stored_val" 	value="CL"/>
 			<state name="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.S" 	value="lost_p"/>
 			<flow  name="FAZERFunctionalArchitecture.CL.I" 	value="true"/>
@@ -27103,8 +27570,16 @@
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.IsUNKNOWN.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromAct.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.I" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.O" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromGuide.icone" 	value="1"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.UseCtrlFromPilot.I" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.mode" 	value="CL"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.ModeDepToCtrFunc.useFromNav" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.I" 	value="true"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.O" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.notUseFromNav.icone" 	value="2"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.Select1" 	value="false"/>
+			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.TrajectoryControl.selectGuideCmd.icone" 	value="4"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.In2" 	value="CL"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.Out" 	value="false"/>
 			<flow  name="FAZERFunctionalArchitecture.FlightPathControl.equal1.icone" 	value="2"/>
@@ -27322,7 +27797,7 @@
 			<flow  name="physical2FunctionalMapping.MappingParamAcq.secuSensor_state" 	value="lost"/>
 			<flow  name="physical2FunctionalMapping.Monitoring_secuSensor_state" 	value="lost"/>
 		</tr>
-		<tr id="208" evt="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.fail_loss_t">
+		<tr id="210" evt="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.fail_loss_t">
 			<state name="FAZERPhysicalArchitecture.serviceDegradationGPSSecu.S" 	value="lost_t"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.GNSSP_SecurityMCU" 	value="lost_t"/>
 			<flow  name="FAZERPhysicalArchitecture.FAZERAvionics.GPSSecu.I" 	value="lost_t"/>
@@ -29403,6 +29878,16 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.icone" domain="[1,4]" orientation="private">
 			<init value="2"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNFuelEstimation.A" domain="bool" orientation="in">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNFuelEstimation.I" domain="bool" orientation="in">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNFuelEstimation.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNFuelEstimation.R" domain="Quality_Statement_OStSf" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNFuelEstimation.icone" domain="[1,4]" orientation="private">
+			<init value="2"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.A" domain="bool" orientation="in">
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.I" domain="bool" orientation="in">
@@ -29653,6 +30138,22 @@
 			<init value="ok"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.elec_total_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelEstKO.I" domain="bool" orientation="in">
+			<init value="true"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelEstKO.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelEstKO.icone" domain="[1,2]" orientation="private">
+			<init value="2"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelEstOK.I" domain="Quality_Function_OLE" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelEstOK.O" domain="bool" orientation="out">
+			<init value="true"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelEstOK.icone" domain="[1,2]" orientation="private">
+			<init value="1"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelEstimation" domain="Quality_Function_OLE" orientation="in">
+			<init value="ok"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelEstimation_failed" domain="bool" orientation="out">
+			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelKO.I" domain="bool" orientation="in">
 			<init value="true"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.fuelKO.O" domain="bool" orientation="out">
@@ -29807,6 +30308,14 @@
 			<init value="false"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.oneStick_failed" domain="bool" orientation="out">
 			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.or21.I1" domain="bool" orientation="in">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.or21.I2" domain="bool" orientation="in">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.or21.O" domain="bool" orientation="out">
+			<init value="false"/></flow>
+		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.or21.icone" domain="[1,2]" orientation="private">
+			<init value="2"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.payloadControl" domain="Quality_Function_OLE" orientation="in">
 			<init value="ok"/></flow>
 		<flow name="FAZERFunctionalArchitecture.UA_situation_assessment.payloadControl_failed" domain="bool" orientation="out">
@@ -33281,6 +33790,8 @@
 			<init value="ok"/></state>
 		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmGuideParam.S" domain="Quality_Statement_OStSf">
 			<init value="ok"/></state>
+		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNFuelEstimation.S" domain="Quality_Statement_OStSf">
+			<init value="ok"/></state>
 		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNavMCU.S" domain="Quality_Statement_OStSf">
 			<init value="ok"/></state>
 		<state name="FAZERFunctionalArchitecture.UA_situation_assessment.alarmNomSensor.S" domain="Quality_Statement_OStSf">
@@ -33554,6 +34065,6 @@
 		<nodeproperty name="projectName" value="withoutProcedures"/>
 		<nodeproperty name="projectVersion" value="8"/>
 		<nodeproperty name="projectConfig" value="material"/>
-		<nodeproperty name="currentDate" value="2025-10-24 17:03:50"/>
+		<nodeproperty name="currentDate" value="2025-11-24 11:12:54"/>
 	</model>
 </fmeagen>

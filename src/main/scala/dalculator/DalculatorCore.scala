@@ -51,7 +51,6 @@ object DalculatorCore {
         PFQAComposer.performAndExportPFQA(
           fmeaFile,
           params.pfqaResultFile,
-          (x:String) => x.split("\\.").tail.mkString("."),
           columns
         )
         println(s"PFQA analysis exported in ${params.pfqaResultFile}")

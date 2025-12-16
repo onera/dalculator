@@ -1,4 +1,8 @@
 loadFMEA(src/test/resources/FAZER/pfqa/physicalPFQA.xml)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventEquipment.csv)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventSubEquipment.csv)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventComponent.csv)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventFailureMode.csv)
 loadEventDictionary(src/test/resources/FAZER/pfqa/eventTypeDictionary.csv)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/alarmDictionary.csv, merge)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/actionDictionary.csv, merge)
