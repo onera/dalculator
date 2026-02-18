@@ -2,6 +2,6 @@ Flow,Effect on UAV
 GroundRiskPolicy.FlightControlLoss_O.O,FlyAway
 GroundRiskPolicy.FTSActivation_O.O,Crash in GRB
 GroundRiskPolicy.LandASAPossible_O.O,Emergency Landing in OV
-GroundRiskPolicy.LandOnPredeterminedSite_O.O,Landing on pre determined site
+GroundRiskPolicy.LandOnPredeterminedSite_O.O,Landing on pre defined site
 GroundRiskPolicy.FlightControlRecovery_O.O,Nominal flight and landing
 GroundRiskPolicy.ContinuedMission_O.O,Nominal flight and landing

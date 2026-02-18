@@ -1,6 +1,6 @@
 loadFMEA(src/test/resources/FAZER/pfqa/functionalPFQA.xml)
 loadEventDictionary(src/test/resources/FAZER/pfqa/eventFunction.csv)
-loadEventDictionary(src/test/resources/FAZER/pfqa/eventSubfunction.csv)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventSubFunction.csv)
 loadEventDictionary(src/test/resources/FAZER/pfqa/eventFailureMode.csv)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/lowLevelFCDictionary.csv, merge, "and")
 loadEventDictionary(src/test/resources/FAZER/pfqa/eventTypeDictionary.csv)
@@ -10,5 +10,6 @@ loadFlowDictionary(src/test/resources/FAZER/pfqa/UAVEffectsDictionary.csv, merge
 loadFlowDictionary(src/test/resources/FAZER/pfqa/safetyMarginReductionDictionary.csv, ordered, Critical, Significant, Limited)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/operationFCDictionary.csv, merge)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/severityDictionary.csv, ordered, CAT, HAZ, MAJ, MIN, NSE)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventJustification.csv)
 pfqaEnabled = true
 pfqaResultFile = fazerFunctionalPFQA.csv
