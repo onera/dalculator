@@ -1,5 +1,5 @@
 Flow,Severity
-GroundRiskPolicy.FlightControlLoss_O.O,CAT
+GroundRiskPolicy.FlightControlLoss_O.O,HAZ
 GroundRiskPolicy.LandASAPossible_O.O,HAZ
 GroundRiskPolicy.FTSActivation_O.O,HAZ
 GroundRiskPolicy.LandOnPredeterminedSite_O.O,MAJ

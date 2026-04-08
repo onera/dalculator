@@ -1,15 +1,38 @@
 loadFMEA(src/test/resources/FAZER/pfqa/functionalPFQA.xml)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventActor.csv)
 loadEventDictionary(src/test/resources/FAZER/pfqa/eventFunction.csv)
 loadEventDictionary(src/test/resources/FAZER/pfqa/eventSubFunction.csv)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventSubFunctionType.csv)
 loadEventDictionary(src/test/resources/FAZER/pfqa/eventFailureMode.csv)
+loadEventDictionary(src/test/resources/FAZER/pfqa/eventInitialCondition.csv)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/lowLevelFCId.csv, merge, "and")
 loadFlowDictionary(src/test/resources/FAZER/pfqa/lowLevelFCDictionary.csv, merge, "and")
-loadEventDictionary(src/test/resources/FAZER/pfqa/eventTypeDictionary.csv)
-loadFlowDictionary(src/test/resources/FAZER/pfqa/alarmDictionary.csv, merge)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/alarmDictionary.csv, merge, "and")
+loadFlowDictionary(src/test/resources/FAZER/pfqa/detectionJustification.csv, merge, "and")
 loadFlowDictionary(src/test/resources/FAZER/pfqa/actionDictionary.csv)
+loadFlowDictionary(src/test/resources/FAZER/pfqa/recoveryJustification.csv, ordered,
+    P.TRAJ_FAILED,
+    P.PILOT_ACQ_FAILED,
+    P.ELEC_TOTAL,
+    P.GUIDE_ACQ_ERR,
+    P.GUIDE_ACQ_PERM_LOSS,
+    P.YAMAHA,
+    P.MCU_FAILED,
+    P.SINGLE_ACQ_FAILED,
+    P.CAN_SWITCH,
+    P.ELEC_PARTIAL,
+    P.LINK_PERM_FAILED,
+    P.FUEL,
+    P.PAYLOAD,
+    P.GUIDE_ACQ_TEMP_LOSS,
+    P.LINK_TEMP_FAILED,
+    P.ELEC_REC_BAT,
+    P.MONITORING,
+    P.STICK
+)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/UAVEffectsDictionary.csv, merge)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/safetyMarginReductionDictionary.csv, ordered, Critical, Significant, Limited)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/operationFCDictionary.csv, merge)
 loadFlowDictionary(src/test/resources/FAZER/pfqa/severityDictionary.csv, ordered, CAT, HAZ, MAJ, MIN, NSE)
-loadEventDictionary(src/test/resources/FAZER/pfqa/eventJustification.csv)
 pfqaEnabled = true
 pfqaResultFile = fazerFunctionalPFQA.csv

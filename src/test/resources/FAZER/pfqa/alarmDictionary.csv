@@ -28,3 +28,4 @@ FAZERFunctionalArchitecture.UA_situation_assessment.stickLink_t_failed,By UA: tr
 FAZERFunctionalArchitecture.Ground_situation_assessment.guideParam_t_failed,By UA: transient guide param loss (functional)
 FAZERFunctionalArchitecture.UA_situation_assessment.traj_t_failed,By UA: transient trajectory fault (functional)
 FAZERFunctionalArchitecture.UA_situation_assessment.pilotParam_t_failed,By UA: pilot param fault (functional)
+FAZERFunctionalArchitecture.UA_situation_assessment.YAMAHA_control_failed,BY UA: YAMAHA internal control failure (physical)

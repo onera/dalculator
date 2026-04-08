@@ -1,7 +1,7 @@
 Flow,High level Failure condition
-GroundRiskPolicy.FlightControlLoss_O.O,Unmitigated Loss of control
-GroundRiskPolicy.FTSActivation_O.O,Loss of control
-GroundRiskPolicy.LandASAPossible_O.O,Loss of control
+GroundRiskPolicy.FlightControlLoss_O.O,Loss of control leading to crash outside of GRB
+GroundRiskPolicy.FTSActivation_O.O,Loss of control leading to crash within the GRB
+GroundRiskPolicy.LandASAPossible_O.O,Loss of control leading to landing in OV
 GroundRiskPolicy.LandOnPredeterminedSite_O.O,Mission interruption with landing in pre-defined and controlled site
 GroundRiskPolicy.FlightControlRecovery_O.O,Mission continuation with failed elements
 GroundRiskPolicy.ContinuedMission_O.O,Mission continuation with failed elements
